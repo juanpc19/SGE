@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "EjTema6MVC/1.0.0": {
+        "runtime": {
+          "EjTema6MVC.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EjTema6MVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
