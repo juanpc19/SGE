@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    DateTime fechaActual = DateTime.Now;
+    int hora= fechaActual.Hour;
+    int minuto = fechaActual.Minute;
+ 
+}
+
+<h1>Hola, hoy es @fechaActual.ToLongDateString(), son las @hora:@minuto </h1>
+
+@if (hora>=12) {
+    <h3> Son mas de las doce </h3>
+} else
+{
+    <h3>todavia no hemos llegado al mediodia</h3>
+}
