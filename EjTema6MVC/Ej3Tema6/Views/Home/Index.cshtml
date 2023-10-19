@@ -7,7 +7,16 @@
  
 }
 
-<h1>Hola, hoy es @fechaActual.ToLongDateString(), son las @hora:@minuto </h1>
+
+@if (minuto <=9)
+{
+    <h1>Hola, hoy es @fechaActual.ToLongDateString(), son las @hora:0 @minuto </h1>
+}
+else
+{
+    <h1>Hola, hoy es @fechaActual.ToLongDateString(), son las @hora:@minuto </h1>
+}
+
 
 @if (hora>=12) {
     <h3> Son mas de las doce </h3>

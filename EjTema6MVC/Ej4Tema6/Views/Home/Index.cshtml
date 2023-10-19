@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    
+<table style="border: 3px solid black;">
+
+@for (int i=1; i <=12; i++){
+ 
+        
+    <tr>
+    @for (int j=1; j <=10; j++) {
+        int@c = @i * @j;
+            
+                <td style="border: 3px solid black;" > @j * @i = @c </td>
+    }
+    </tr>
+       
+}
+</table>
+ 
