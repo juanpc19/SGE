@@ -28,3 +28,33 @@ C:\Users\jperez\Documents\GitHub\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\refint\E
 C:\Users\jperez\Documents\GitHub\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.pdb
 C:\Users\jperez\Documents\GitHub\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.genruntimeconfig.cache
 C:\Users\jperez\Documents\GitHub\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\ref\Ej1Tema7.dll
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\bin\Debug\net7.0\appsettings.Development.json
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\bin\Debug\net7.0\appsettings.json
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\bin\Debug\net7.0\Ej1Tema7.staticwebassets.runtime.json
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\bin\Debug\net7.0\Ej1Tema7.exe
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\bin\Debug\net7.0\Ej1Tema7.deps.json
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\bin\Debug\net7.0\Ej1Tema7.runtimeconfig.json
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\bin\Debug\net7.0\Ej1Tema7.dll
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\bin\Debug\net7.0\Ej1Tema7.pdb
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.GeneratedMSBuildEditorConfig.editorconfig
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.AssemblyInfoInputs.cache
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.AssemblyInfo.cs
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.csproj.CoreCompileInputs.cache
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.MvcApplicationPartsAssemblyInfo.cache
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.RazorAssemblyInfo.cache
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.RazorAssemblyInfo.cs
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\staticwebassets\msbuild.Ej1Tema7.Microsoft.AspNetCore.StaticWebAssets.props
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\staticwebassets\msbuild.build.Ej1Tema7.props
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Ej1Tema7.props
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Ej1Tema7.props
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\staticwebassets.pack.json
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\staticwebassets.build.json
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\staticwebassets.development.json
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\scopedcss\bundle\Ej1Tema7.styles.css
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\scopedcss\projectbundle\Ej1Tema7.bundle.scp.css
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.dll
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\refint\Ej1Tema7.dll
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.pdb
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\Ej1Tema7.genruntimeconfig.cache
+D:\cosas formateo\Cosas grado 2\SGE\Ej1Tema7\Ej1Tema7\obj\Debug\net7.0\ref\Ej1Tema7.dll
