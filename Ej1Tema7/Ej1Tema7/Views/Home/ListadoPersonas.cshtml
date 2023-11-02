@@ -1,0 +1,38 @@
+﻿@using Ej1Tema7.Models.Entidades;
+@model List<Ej1Tema7.Models.Entidades.clsPersona>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+        </tr>
+       
+    </thead>
+
+  @*   @{
+        for(int i = 0; i<Model.Count; i++)
+        {
+            <tr>
+                <td> @Model[i].Nombre</td>
+                <td> @Model[i].Apellidos</td>
+            </tr>
+        }
+    } *@
+
+    @{
+        foreach (clsPersona persona in Model)
+        {
+            <tr>
+                <td> @persona.Nombre</td>
+                <td> @persona.Apellidos</td>
+            </tr>
+        }
+
+    }
+
+</table>
+
+@Html.ActionLink("Volver a Index", "Index")

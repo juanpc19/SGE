@@ -1,11 +1,19 @@
 ﻿using Ej1Tema7.Models;
+using Ej1Tema7.Models.DAL;
 using Ej1Tema7.Models.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace Ej1Tema7.Controllers
+
 {
     public class HomeController : Controller
+
+        //NOTAS EJ 3
+        //añadir idDepartamento a clsPersona en atributo, constructor , propiedades set get 
+        //crear clase con persona y listado departamento ira a viewModel/dal porque se usa solo en vista
+        //desde el action se enviara el modelo dentro de viewModel/dal
+        //
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -49,19 +57,27 @@ namespace Ej1Tema7.Controllers
 
             ViewBag.MomentoActualLong=momentoActualLong;
 
-
-
             return View(persona);
-
-            //crear vista nueva(hecho) esta vista recibe cosa de controlador Home otra vez(este)
-            //en html de index hacer lo de link del otro ej ,
-            //hacer otro action,
-            //dal de acceso a datos falsos,
-            //clase que devuelve array personas
 
         }
 
-        public IActionResult Privacy()
+        public IActionResult ListadoPersonas()
+        {
+            //al ser static la clase ListaPersonas es asi sin static necesito instanciar objeto
+            try
+            {
+                return View(ListaPersonas.listadoCompletoPersonas());
+
+            } catch (Exception ex) {
+
+                return View("Error");
+                
+            }
+
+        }
+
+
+            public IActionResult Privacy()
         {
             return View();
         }
