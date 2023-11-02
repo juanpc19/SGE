@@ -2,6 +2,9 @@
 
 namespace Ej1Tema7.Models.DAL
 {
+    /// <summary>
+    /// clase estatica
+    /// </summary>
     public static class ListaPersonas
     {
         /// <summary>
