@@ -1,6 +1,7 @@
 ﻿using Ej1Tema7.Models;
 using Ej1Tema7.Models.DAL;
 using Ej1Tema7.Models.Entidades;
+using Ej1Tema7.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -63,17 +64,26 @@ namespace Ej1Tema7.Controllers
 
         public IActionResult ListadoPersonas()
         {
-            //al ser static la clase ListaPersonas es asi sin static necesito instanciar objeto
+            //al ser static la clase ListaPersonas es asi, sin static necesitaria instanciar objeto
             try
             {
                 return View(ListaPersonas.listadoCompletoPersonas());
 
             } catch (Exception ex) {
-
                 return View("Error");
-                
             }
 
+        }
+
+        public IActionResult EditarPersona()
+        {
+            try
+            {
+                return View(PersonaListaDep.listadoCompletoPersonas());
+
+            } catch (Exception ex) {
+                return View("Error");   
+            }
         }
 
 

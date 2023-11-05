@@ -1,19 +1,11 @@
 ﻿using Ej1Tema7.Models.Entidades;
 
-namespace Ej1Tema7.Models.DAL
+namespace Ej1Tema7.Models.ViewModels
 {
-    /// <summary>
-    /// clase estatica
-    /// </summary>
-    public static class ListaPersonas
+    public static class PersonaListaDep
     {
-        /// <summary>
-        /// funcion que devuelve listado de objetocs clsPersonas
-        /// Pre: ninguna
-        /// Post: ninguna
-        /// </summary>
-        /// <returns>listadoPersonas</returns>
-        public static List<clsPersona> listadoCompletoPersonas ()
+        //cambiar lo de abajo por algo como objeto persona y lista departamentos, lo de abajo es placeholder para evita error
+        public static List<clsPersona> listadoCompletoPersonas()
         {
             List<clsPersona> listadoPersonas = new List<clsPersona>() {
                 new clsPersona("Juan", "Gallego Lopez"),
@@ -24,11 +16,9 @@ namespace Ej1Tema7.Models.DAL
 
             };
             //opcional modifica post requisito
-           // throw new Exception();
+            // throw new Exception();
 
             return listadoPersonas;
         }
-
-
     }
 }

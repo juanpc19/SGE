@@ -5,6 +5,7 @@
         #region atributos
         private string nombre;
         private string apellidos;
+        private int departamentoAsociado;
         #endregion
 
         #region constructores
@@ -12,11 +13,20 @@
         {
             nombre = "";
             apellidos = "";
+            departamentoAsociado = 0;
         }
+
         public clsPersona(string nombre, string apellidos)
         {
             this.nombre = nombre;
             this.apellidos = apellidos;
+        }
+
+        public clsPersona(string nombre, string apellidos, int idDepartamento)
+        {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.departamentoAsociado = idDepartamento;
         }
         #endregion
 
@@ -33,12 +43,16 @@
             set { apellidos = value; }
         }
 
-        public string Direccion { get; }
+        public int DepartamentoAsociado
+        {
+            get { return departamentoAsociado;}
+            set { departamentoAsociado = value;}
+        }
 
 
         public string NombreCompleto
         {
-            get { return nombre + " " + apellidos; }
+            get { return nombre + " " + apellidos + " " + departamentoAsociado; }
         }
         #endregion
 
