@@ -2,23 +2,41 @@
 
 namespace Ej1Tema7.Models.ViewModels
 {
-    public static class PersonaListaDep
+   
+    public class PersonaListaDep
     {
-        //cambiar lo de abajo por algo como objeto persona y lista departamentos, lo de abajo es placeholder para evita error
-        public static List<clsPersona> listadoCompletoPersonas()
-        {
-            List<clsPersona> listadoPersonas = new List<clsPersona>() {
-                new clsPersona("Juan", "Gallego Lopez"),
-                new clsPersona("Jaime", "Garcia Lorca"),
-                new clsPersona("Antonio", "Perez Garcia"),
-                new clsPersona("Pepe", "Garcia Gallego"),
-                new clsPersona("Felipe", "Lorca Diaz")
+        #region atributos
+        private clsPersona persona;
+        private List<clsDepartamento> listaDepartamentos;
+        #endregion
 
-            };
-            //opcional modifica post requisito
-            // throw new Exception();
-
-            return listadoPersonas;
+        #region constructores
+        public PersonaListaDep() { 
+        
         }
+        public PersonaListaDep(clsPersona persona, List<clsDepartamento> listaDepartamentos) {
+            this.persona = persona;
+            this.listaDepartamentos = listaDepartamentos;
+        }
+        #endregion
+
+        #region propiedades
+        public clsPersona Persona
+        {
+            get { return persona; }
+            set { persona = value; }
+        }
+        public List<clsDepartamento> ListaDepartamentos
+        {
+            get { return listaDepartamentos; }
+            set { listaDepartamentos = value; }
+        }
+        #endregion
+       
+
+
+
+
+
     }
 }
