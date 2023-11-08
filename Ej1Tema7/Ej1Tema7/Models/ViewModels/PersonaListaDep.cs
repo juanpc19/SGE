@@ -1,4 +1,5 @@
-﻿using Ej1Tema7.Models.Entidades;
+﻿using Ej1Tema7.Models.DAL;
+using Ej1Tema7.Models.Entidades;
 
 namespace Ej1Tema7.Models.ViewModels
 {
@@ -13,27 +14,27 @@ namespace Ej1Tema7.Models.ViewModels
         #region constructores
         public PersonaListaDep() { 
         
+            this.listaDepartamentos = clsListaDepartamentos.listadoCompletoDepartamentos();
         }
-        public PersonaListaDep(clsPersona persona, List<clsDepartamento> listaDepartamentos) {
-            this.persona = persona;
-            this.listaDepartamentos = listaDepartamentos;
-        }
+       
         #endregion
 
         #region propiedades
         public clsPersona Persona
         {
             get { return persona; }
-            set { persona = value; }
+           
         }
         public List<clsDepartamento> ListaDepartamentos
         {
             get { return listaDepartamentos; }
-            set { listaDepartamentos = value; }
+           
         }
         #endregion
-       
 
+
+
+        //añadir funcion que devuelve objeto PersonaListaDep
 
 
 

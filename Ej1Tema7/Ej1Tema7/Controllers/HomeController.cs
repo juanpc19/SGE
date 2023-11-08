@@ -67,7 +67,7 @@ namespace Ej1Tema7.Controllers
             //al ser static la clase ListaPersonas es asi, sin static necesitaria instanciar objeto
             try
             {
-                return View(ListaPersonas.listadoCompletoPersonas());
+                return View(clsListaPersonas.listadoCompletoPersonas());
 
             } catch (Exception ex) {
                 return View("Error");
@@ -75,11 +75,12 @@ namespace Ej1Tema7.Controllers
 
         }
 
+        //faltan cosas para pder usarlo
         public IActionResult EditarPersona()
         {
             try
             {
-                return View(PersonaListaDep.listadoCompletoPersonas());
+               return View(PersonaListaDep.listadoCompletoPersonas());
 
             } catch (Exception ex) {
                 return View("Error");   

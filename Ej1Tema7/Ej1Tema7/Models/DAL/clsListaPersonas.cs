@@ -5,7 +5,7 @@ namespace Ej1Tema7.Models.DAL
     /// <summary>
     /// clase estatica
     /// </summary>
-    public static class ListaPersonas
+    public static class clsListaPersonas
     {
         /// <summary>
         /// funcion que devuelve listado de objetocs clsPersonas
@@ -21,7 +21,6 @@ namespace Ej1Tema7.Models.DAL
                 new clsPersona("Antonio", "Perez Garcia"),
                 new clsPersona("Pepe", "Garcia Gallego"),
                 new clsPersona("Felipe", "Lorca Diaz")
-
             };
             //opcional modifica post requisito
            // throw new Exception();
