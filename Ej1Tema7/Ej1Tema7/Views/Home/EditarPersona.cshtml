@@ -1,9 +1,45 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Ej1Tema7.Models.ViewModels.PersonaListaDep;
 
+<!-- form para indicar formulario-->
+<form>
+	<!--cuadro de texto editable para nombre persona, que usara el modelo entero y dentro de este la propiedad especificada del modelo,
+	es decir de modelo PersonaListaDep cogera la propiedad Persona que le enlazara con clsPersona que a su vez tiene propiedad Nombre 
+	que es la que sera usada para asignar el atributo de persona -->
+	<label for="Nombre">Nombre:</label>
+    @Html.TextBoxFor(model => model.Persona.Nombre, new { placeholder = "Introduce el nombre" })
+    <br/>
+	<br/>
 
-<<!--añadir codigo aqui para vista-->
+    <!-- for es usado para relacionar el label al elemento TextBoxFor, es buena practica por accesibilidad y usabilidad pero no es necesario-->
+    <label for="Apellidos">Apellidos:</label>
+    @Html.TextBoxFor(model => model.Persona.Apellidos, new { placeholder = "Introduce los apellidos" })
+    <br/>
+	<br/>
+
+	<!-- Este sobraria? se puede hacer que esto coja id del select de listadeps?-->
+    <label for="DepartamentoAsociado">Departamento Asociado:</label>
+    @Html.TextBoxFor(model => model.Persona.DepartamentoAsociado, new { placeholder = "Introduce dep asociado" })
+    <br/>
+	<br/>
+
+	<label for="desplegableDeps">Selecciona un departamento:</label>
+	<select id="desplegableDeps" name="depSelected">
+		<!--Recorro la lista de departamentos que me da el model con la propiedad ListaDepartamentos-->
+		@foreach (var departamento in Model.ListaDepartamentos)
+		{
+			//cada option usara IdDepartamento para identificar la opcion en el servidor con value (como name en otros campos)
+			//y mostrara NombreDepartamento en el desplegable al estar dentro de las 2 etiquetas como contenido
+			<option value="@departamento.IdDepartamento"> @departamento.NombreDepartamento </option>
+		}
+	</select>
+
+	<br/>
+	<br/>
+	 <!-- type para tipo accion, id para identificar dentro de la vista, 
+	 name para mandar con ese name al server e identificarlo en el server, value para texto en boton -->
+	<input type="submit" id="botonEnviar" name="formEnviado" value="Guardar">
+</form>
+
+<!--controler innecesario porque usa el mismo-->
 @Html.ActionLink("Volver a Index", "Index")
+

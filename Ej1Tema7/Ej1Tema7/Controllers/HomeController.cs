@@ -10,11 +10,6 @@ namespace Ej1Tema7.Controllers
 {
     public class HomeController : Controller
 
-        //NOTAS EJ 3
-        //añadir idDepartamento a clsPersona en atributo, constructor , propiedades set get 
-        //crear clase con persona y listado departamento ira a viewModel/dal porque se usa solo en vista
-        //desde el action se enviara el modelo dentro de viewModel/dal
-        //
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -23,6 +18,7 @@ namespace Ej1Tema7.Controllers
             _logger = logger;
         }
 
+        //3 formas de pasar datos a la vista
         public IActionResult Index()
         {
             DateTime momentoActual = DateTime.Now;
@@ -75,12 +71,12 @@ namespace Ej1Tema7.Controllers
 
         }
 
-        //faltan cosas para pder usarlo
         public IActionResult EditarPersona()
         {
             try
             {
-               return View(PersonaListaDep.listadoCompletoPersonas());
+				//retorno una nueva instancia de PersonaListaDep que usara clsPersona vacia y List<clsDepartamento> 
+				return View(new PersonaListaDep());
 
             } catch (Exception ex) {
                 return View("Error");   

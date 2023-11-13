@@ -24,7 +24,6 @@ namespace Ej1Tema7.Models.DAL
             };
             //opcional modifica post requisito
            // throw new Exception();
-
             return listadoPersonas;
         }
 

@@ -2,20 +2,30 @@
 
 namespace Ej1Tema7.Models.DAL
 {
+    /// <summary>
+    /// clase estatica
+    /// </summary>
     public class clsListaDepartamentos
     {
-        //igual a listaPersonas pero con departamentos 
+        /// <summary>
+        /// funcion que devuelve listado de objetocs clsPersonas
+        /// Pre: ninguna
+        /// Post: ninguna
+        /// </summary>
+        /// <returns>listadoPersonas</returns>
         public static List<clsDepartamento> listadoCompletoDepartamentos()
         {
             List<clsDepartamento> listaDep = new List<clsDepartamento>() {
-                new clsDepartamento(1,"a"),
-                new clsDepartamento(2,"b"),
-                new clsDepartamento(3,"c"),
-                new clsDepartamento(4,"d"),
-                new clsDepartamento(4,"e")
+                new clsDepartamento(1,"Departamento 1"),
+                new clsDepartamento(2,"Departamento 2"),
+                new clsDepartamento(3,"Departamento 3"),
+                new clsDepartamento(4,"Departamento 4"),
+                new clsDepartamento(5,"Departamento 5")
             };
 
-                return listaDep;
+            //opcional modifica post requisito
+            // throw new Exception();
+            return listaDep;
         }
        
     }

@@ -1,9 +1,7 @@
 ﻿<!--indico modelo que usa el html con razor -->
 @using Ej1Tema7.Models.Entidades;
-<!--el modelo tendra la lista que recorrera el bucle for-->
+<!--el modelo tendra la lista que recorrera el bucle for, no necesita resto de ruta hasta entidades porque esta ya esta en using -->
 @model List<clsPersona>
-
-
 
 <table>
     <thead>
@@ -38,5 +36,5 @@
 
 </table>
 
-<!--controler inncecesario porque usa el mismo-->
+<!--controler innecesario porque usa el mismo-->
 @Html.ActionLink("Volver a Index", "Index")
