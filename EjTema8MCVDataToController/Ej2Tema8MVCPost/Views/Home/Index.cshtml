@@ -1,0 +1,14 @@
+﻿
+<!--Indico uso de inicio de formulario, Indico vista a la que ira, controller usado para ello, y forma de metodo (en este caso post)-->
+@using (Html.BeginForm("Saludo", "Home", FormMethod.Post))
+{
+<label>Nombre</label>
+<br />
+<!--he de hacer conincidir el name (identificador del input en el server) del input con el parametro del viewbag para "enlazarlos" -->
+
+<input type="text" id="inputNombre" name="nombre" placeholder="Introduce tu nombre:">
+<br />
+
+<!--al pulsar enviar se envia formulario mediante BeginForm-->
+<button type="submit" id="botonEnviar">Enviar</button>
+}

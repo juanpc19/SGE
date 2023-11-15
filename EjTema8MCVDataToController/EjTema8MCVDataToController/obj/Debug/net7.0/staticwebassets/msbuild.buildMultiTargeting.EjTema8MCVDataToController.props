@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EjTema8MCVDataToController.props" />
+</Project>

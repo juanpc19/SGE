@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ej2Tema8MVCPost.props" />
+</Project>

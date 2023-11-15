@@ -13,8 +13,18 @@ namespace EjTema8MCVDataToController.Controllers
 			_logger = logger;
 		}
 
+		 
 		public IActionResult Index()
 		{
+				
+			return View();
+		}
+
+		//le digo al controller Home en el action Saludo que parametro que va a recibir desde el action link de Vista Index es nombre
+		public IActionResult Saludo(string nombre)
+		{
+			//y uso el ViewBag para pasar el nombre a la vista
+			ViewBag.nombre = nombre;
 			return View();
 		}
 

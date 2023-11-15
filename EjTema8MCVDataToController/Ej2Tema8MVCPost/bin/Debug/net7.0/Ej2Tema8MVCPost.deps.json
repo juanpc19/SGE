@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Ej2Tema8MVCPost/1.0.0": {
+        "runtime": {
+          "Ej2Tema8MVCPost.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ej2Tema8MVCPost/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
