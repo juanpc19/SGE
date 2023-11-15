@@ -71,6 +71,11 @@ namespace Ej1Tema7.Controllers
 
         }
 
+        public IActionResult GuardarPersona(clsPersona persona) {
+
+            return View();
+        }
+
         public IActionResult EditarPersona()
         {
             try

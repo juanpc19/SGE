@@ -3,6 +3,7 @@
     public class clsPersona
     {
         #region atributos
+        private int id;
         private string nombre;
         private string apellidos;
         private int departamentoAsociado;
@@ -11,6 +12,7 @@
         #region constructores
         public clsPersona()
         {
+            id = 0;
             nombre = "";
             apellidos = "";
             departamentoAsociado = 0;
@@ -22,16 +24,24 @@
             this.apellidos = apellidos;
         }
 
-        public clsPersona(string nombre, string apellidos, int idDepartamento)
+        public clsPersona(int id, string nombre, string apellidos, int departamentoAsociado)
         {
+            this.id = id;
             this.nombre = nombre;
             this.apellidos = apellidos;
-            this.departamentoAsociado = idDepartamento;
+            this.departamentoAsociado = departamentoAsociado;
         }
-        #endregion
+		#endregion
 
-        #region propiedades
-        public string Nombre
+		#region propiedades
+
+		public int Id
+		{
+			get { return id; }
+			
+		}
+
+		public string Nombre
         {
             get { return nombre; }
             set { nombre = value; }

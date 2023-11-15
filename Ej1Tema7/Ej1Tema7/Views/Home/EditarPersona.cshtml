@@ -1,4 +1,5 @@
-﻿@model Ej1Tema7.Models.ViewModels.PersonaListaDep;
+﻿@using Ej1Tema7.Models.Entidades;
+@model Ej1Tema7.Models.ViewModels.PersonaListaDep;
 
 <!-- form para indicar formulario-->
 <form>
@@ -16,17 +17,14 @@
     <br/>
 	<br/>
 
-	<!-- Este sobraria? se puede hacer que esto coja id del select de listadeps?-->
-    <label for="DepartamentoAsociado">Departamento Asociado:</label>
-    @Html.TextBoxFor(model => model.Persona.DepartamentoAsociado, new { placeholder = "Introduce dep asociado" })
-    <br/>
-	<br/>
-
 	<label for="desplegableDeps">Selecciona un departamento:</label>
-	<select id="desplegableDeps" name="depSelected">
+	<select id="desplegableDeps" name="IdDepartamento">
 		<!--Recorro la lista de departamentos que me da el model con la propiedad ListaDepartamentos-->
-		@foreach (var departamento in Model.ListaDepartamentos)
+		@foreach (clsDepartamento departamento in Model.ListaDepartamentos)
 		{
+
+			//if (Model.ListaDepartamentos.IdDepartamento == departamento.IdDepartamento)
+			 
 			//cada option usara IdDepartamento para identificar la opcion en el servidor con value (como name en otros campos)
 			//y mostrara NombreDepartamento en el desplegable al estar dentro de las 2 etiquetas como contenido
 			<option value="@departamento.IdDepartamento"> @departamento.NombreDepartamento </option>
