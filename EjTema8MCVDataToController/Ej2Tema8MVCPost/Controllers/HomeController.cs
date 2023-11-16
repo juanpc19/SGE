@@ -14,28 +14,20 @@ namespace Ej2Tema8MVCPost.Controllers
 			_logger = logger;
 		}
 
-		
+		//action carga pagina primera vez o f5
 		public IActionResult Index()
 		{
 			return View();
 		}
-
-		//indico que el index hara un post en una accion dada(pulsar boton enviar)
+		
+		//action envia datos al pulsar el boton
 		[HttpPost]
-        //indico lo que recibira la accion Index tipo HttpPost para mandar a vistaSaludo (nombre)
-		//debo quitar param entrada de aqui pero peta si lo hago y peta si quito el otro index
+		//al enviar recargara el index para recibir el parametro y luego hacer el return de la vista Saludo que se cargara con el valor nombre
         public IActionResult Index(string nombre)
 		{
-            return View();
+			ViewBag.nombre = nombre;//mando a vista Saludo el nombre en viewbag
+            return View("Saludo");//el return view sera el que me mande a view Saludo
         }
-
-		//indico lo que recibira vista Saludo (nombre)
-		public IActionResult Saludo(string nombre)
-		{
-			// y se lo paso con ViewBag
-            ViewBag.nombre = nombre;
-            return View();
-		}
 
 		public IActionResult Privacy()
 		{

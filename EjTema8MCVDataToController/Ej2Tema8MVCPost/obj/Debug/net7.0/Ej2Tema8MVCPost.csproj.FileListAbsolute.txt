@@ -28,3 +28,33 @@ D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\o
 D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.pdb
 D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.genruntimeconfig.cache
 D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\ref\Ej2Tema8MVCPost.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\bin\Debug\net7.0\appsettings.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\bin\Debug\net7.0\Ej2Tema8MVCPost.staticwebassets.runtime.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\bin\Debug\net7.0\Ej2Tema8MVCPost.exe
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\bin\Debug\net7.0\Ej2Tema8MVCPost.deps.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\bin\Debug\net7.0\Ej2Tema8MVCPost.runtimeconfig.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\bin\Debug\net7.0\Ej2Tema8MVCPost.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\bin\Debug\net7.0\Ej2Tema8MVCPost.pdb
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.AssemblyInfoInputs.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.AssemblyInfo.cs
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.csproj.CoreCompileInputs.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.RazorAssemblyInfo.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.RazorAssemblyInfo.cs
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\staticwebassets\msbuild.Ej2Tema8MVCPost.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\staticwebassets\msbuild.build.Ej2Tema8MVCPost.props
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Ej2Tema8MVCPost.props
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Ej2Tema8MVCPost.props
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\scopedcss\bundle\Ej2Tema8MVCPost.styles.css
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\scopedcss\projectbundle\Ej2Tema8MVCPost.bundle.scp.css
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\refint\Ej2Tema8MVCPost.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.pdb
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\Ej2Tema8MVCPost.genruntimeconfig.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\obj\Debug\net7.0\ref\Ej2Tema8MVCPost.dll

@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjTema8MCVDataToController", "EjTema8MCVDataToController\EjTema8MCVDataToController.csproj", "{6FF6917D-1320-4470-A155-3A7A27298A33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ej2Tema8MVCPost", "Ej2Tema8MVCPost\Ej2Tema8MVCPost.csproj", "{524C2A09-58CC-469C-88F0-6DC0E3C35A5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ej2Tema8MVCPost", "Ej2Tema8MVCPost\Ej2Tema8MVCPost.csproj", "{524C2A09-58CC-469C-88F0-6DC0E3C35A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ej3Tema8MVCModelBind", "Ej3Tema8MVCModelBind\Ej3Tema8MVCModelBind.csproj", "{F30BC02C-930F-4CB5-AA46-73AE581898D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{524C2A09-58CC-469C-88F0-6DC0E3C35A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{524C2A09-58CC-469C-88F0-6DC0E3C35A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{524C2A09-58CC-469C-88F0-6DC0E3C35A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30BC02C-930F-4CB5-AA46-73AE581898D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30BC02C-930F-4CB5-AA46-73AE581898D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30BC02C-930F-4CB5-AA46-73AE581898D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30BC02C-930F-4CB5-AA46-73AE581898D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
