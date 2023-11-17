@@ -21,7 +21,7 @@ namespace Ej3Tema8MVCModelBind.Controllers
 		[HttpPost]
 		public IActionResult Editar(clsPersona persona)
 		{
-			//crear persona aqui
+			//crear persona aqui o en calse persona default values
 			if (persona == null) { 
 			}
 			return View("PersonaModificada");

@@ -1,11 +1,36 @@
-﻿@Model
+﻿
 
 @using (Html.BeginForm(FormMethod.Post))
 {
-	<label for="Nombre">Nombre:</label>
-	//@Html.TextBoxFor(model => model.clsPersona.Nombre)
-	<br />
-	<br />
+
+    <label>Nombre</label>
+    <br />
+    <!--he de hacer conincidir el name (identificador del input en el server) del input con el parametro del viewbag/model persona para "enlazarlos" -->
+    <input type="text" id="inputNombre" name="nombre" placeholder="Introduce tu nombre:">
+    @Html.TextBox(model => model.Persona.Nombre, new { placeholder = "Introduce el nombre" })
+    @Html.TextBoxFor(model => model.Persona.Nombre, new { placeholder = "Introduce el nombre" })
+    <br />
+
+    <label>Apellidos</label>
+    <br />
+     <input type="text" id="inputApellidos" name="nombre" placeholder="Introduce tu nombre:">
+    <br />
+
+
+    <label>Fecha Nacimiento</label>
+    <br />
+     <input type="text" id="inputFechaNac" name="nombre" placeholder="Introduce tu nombre:">
+    <br />
+
+    <label>Direccion</label>
+    <br />
+     <input type="text" id="inputDireccion" name="nombre" placeholder="Introduce tu nombre:">
+    <br />
+
+    <label>Telefono</label>
+    <br />
+     <input type="text" id="inputTelefono" name="nombre" placeholder="Introduce tu nombre:">
+    <br />
 
 }
 
