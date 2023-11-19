@@ -10,33 +10,51 @@ le paso a esta VISTA un objeto persona como MODELO creado a  mano en Action de E
     
         <label>Id:</label>
         <br />
+        // @Html.HiddenFor(model => model.Id) asi tendria sentido uso del hidden
         <input type="text" id="inputId" name="Id" value="@Model.Id">
+        <br />
+        @Html.ValidationMessageFor(model => model.Id)
         <br />
 
         <label>Nombre:</label>
         <br />
         @Html.TextBox("Nombre")
         <br />
+        @Html.ValidationMessageFor(model => model.Nombre)
+        <br />
 
         <label>Apellidos:</label>
         <br />
         @Html.TextBoxFor(model => model.Apellidos)
+        <br />
+        @Html.ValidationMessageFor(model => model.Apellidos)
         <br />
 
         <label>Fecha Nacimiento:</label>
         <br />
         @Html.TextBoxFor(model => model.FechaNac)
         <br />
+        @Html.ValidationMessageFor(model => model.FechaNac)
+        <br />
 
         <label>Direccion:</label>
         <br />
         @Html.TextBoxFor(model => model.Direccion)
         <br />
+        @Html.ValidationMessageFor(model => model.Direccion)
+        <br />
 
         <label>Telefono:</label>
         <br />
         @Html.TextBoxFor(model => model.Telefono)
-        <br />  
+        <br />
+        @Html.ValidationMessageFor(model => model.Telefono)
+        <br />
+        <br />
+
+        <label>Lista total errores:</label>
+        <br />
+        @Html.ValidationSummary()
 
         <button type="submit">Guardar</button>
 }
