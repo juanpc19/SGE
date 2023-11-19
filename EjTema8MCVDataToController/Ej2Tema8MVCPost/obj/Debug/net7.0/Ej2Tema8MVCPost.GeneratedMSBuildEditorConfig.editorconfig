@@ -9,41 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Ej2Tema8MVCPost
 build_property.RootNamespace = Ej2Tema8MVCPost
-build_property.ProjectDir = C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\
+build_property.ProjectDir = D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost
+build_property.MSBuildProjectDirectory = D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej2Tema8MVCPost
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/jperez/Documents/GitHub/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Home/Index.cshtml]
+[D:/cosas formateo/Cosas grado 2/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jperez/Documents/GitHub/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Home/Privacy.cshtml]
+[D:/cosas formateo/Cosas grado 2/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jperez/Documents/GitHub/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Home/Saludo.cshtml]
+[D:/cosas formateo/Cosas grado 2/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Home/Saludo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYWx1ZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jperez/Documents/GitHub/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Shared/Error.cshtml]
+[D:/cosas formateo/Cosas grado 2/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jperez/Documents/GitHub/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/cosas formateo/Cosas grado 2/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jperez/Documents/GitHub/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/_ViewImports.cshtml]
+[D:/cosas formateo/Cosas grado 2/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jperez/Documents/GitHub/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/_ViewStart.cshtml]
+[D:/cosas formateo/Cosas grado 2/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jperez/Documents/GitHub/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Shared/_Layout.cshtml]
+[D:/cosas formateo/Cosas grado 2/SGE/EjTema8MCVDataToController/Ej2Tema8MVCPost/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5ztt6z5mgp

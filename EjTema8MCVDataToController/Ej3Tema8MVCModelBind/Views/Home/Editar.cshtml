@@ -1,38 +1,44 @@
-﻿
+﻿<!--acuerdate del puto modelo animal de bellota,
 
-@using (Html.BeginForm(FormMethod.Post))
-{
+le paso a esta VISTA un objeto persona como MODELO creado a  mano en Action de Editar-->
+@model Ej3Tema8MVCModelBind.Models.clsPersona;
 
-    <label>Nombre</label>
-    <br />
-    <!--he de hacer conincidir el name (identificador del input en el server) del input con el parametro del viewbag/model persona para "enlazarlos" -->
-    <input type="text" id="inputNombre" name="nombre" placeholder="Introduce tu nombre:">
-    @Html.TextBox(model => model.Persona.Nombre, new { placeholder = "Introduce el nombre" })
-    @Html.TextBoxFor(model => model.Persona.Nombre, new { placeholder = "Introduce el nombre" })
-    <br />
+<div class="text-center">
 
-    <label>Apellidos</label>
-    <br />
-     <input type="text" id="inputApellidos" name="nombre" placeholder="Introduce tu nombre:">
-    <br />
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+    
+        <label>Id:</label>
+        <br />
+        <input type="text" id="inputId" name="Id" value="@Model.Id">
+        <br />
 
+        <label>Nombre:</label>
+        <br />
+        @Html.TextBox("Nombre")
+        <br />
 
-    <label>Fecha Nacimiento</label>
-    <br />
-     <input type="text" id="inputFechaNac" name="nombre" placeholder="Introduce tu nombre:">
-    <br />
+        <label>Apellidos:</label>
+        <br />
+        @Html.TextBoxFor(model => model.Apellidos)
+        <br />
 
-    <label>Direccion</label>
-    <br />
-     <input type="text" id="inputDireccion" name="nombre" placeholder="Introduce tu nombre:">
-    <br />
+        <label>Fecha Nacimiento:</label>
+        <br />
+        @Html.TextBoxFor(model => model.FechaNac)
+        <br />
 
-    <label>Telefono</label>
-    <br />
-     <input type="text" id="inputTelefono" name="nombre" placeholder="Introduce tu nombre:">
-    <br />
+        <label>Direccion:</label>
+        <br />
+        @Html.TextBoxFor(model => model.Direccion)
+        <br />
 
+        <label>Telefono:</label>
+        <br />
+        @Html.TextBoxFor(model => model.Telefono)
+        <br />  
+
+        <button type="submit">Guardar</button>
 }
-
-<!--index ej 2-->
+</div>
 

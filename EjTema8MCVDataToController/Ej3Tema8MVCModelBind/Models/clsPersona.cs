@@ -14,12 +14,7 @@
 		#region constructores
 		public clsPersona()
         {
-            id = 1;
-            nombre = "Juan";
-            apellidos = "Pérez Caballero";
-            fechaNac = "03/05/1994";
-            direccion = "Calle Florencia";
-            telefono = 656656656;
+           
         }
 
         public clsPersona(int id, string nombre, string apellidos, string fechaNac, string direccion, int telefono)
@@ -39,8 +34,9 @@
 		public int Id
 		{
 			get { return id; }
+            set { id = value; } // uso para instanciar en controller sino lo quitaria
 
-		}
+        }
 
 		public string Nombre
         {

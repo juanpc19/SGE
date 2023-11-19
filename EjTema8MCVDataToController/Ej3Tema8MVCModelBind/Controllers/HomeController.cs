@@ -11,27 +11,42 @@ namespace Ej3Tema8MVCModelBind.Controllers
 		public HomeController(ILogger<HomeController> logger)
 		{
 			_logger = logger;
-		}
+        }
 
-		public IActionResult Index()
+    //quito index y toco programs.cs para cambiar esto
+    // app.MapControllerRoute(
+    // name: "default",
+	//pattern: "{controller=Home}/{action=Index}/{id?}");
+    // por esto
+
+    // app.MapControllerRoute(
+    //  name: "default",
+	// pattern: "{controller=Home}/{action=Editar}/{id?}");
+       
+        //Cargo Editar desde el principio con persona dando valores por defecto
+        public IActionResult Editar()
+        {
+            //Instancio una persona y le doy valores
+            clsPersona persona = new clsPersona()
+            {
+                Id = 1,
+                Nombre = "Juan",
+                Apellidos = "Pérez Caballero",
+                FechaNac = "03/05/1994",
+                Direccion = "Calle Florencia",
+                Telefono = 656656656
+            };
+            //le paso el MODELO a usar la vista para que carge correctamente con valores por defecto dados en la persona recien creada
+            return View(persona);
+        }
+
+        [HttpPost]
+        //recibira el modelo desde si misma (Editar) despues de instanciar la persona y hacer return View(persona);
+        public IActionResult Editar(clsPersona persona)
 		{
-			return View();
+            //solicito ir a VISTA PersonaModificada y paso a esta el MODELO persona
+            return View("PersonaModificada", persona);
 		}
-
-		[HttpPost]
-		public IActionResult Editar(clsPersona persona)
-		{
-			//crear persona aqui o en calse persona default values
-			if (persona == null) { 
-			}
-			return View("PersonaModificada");
-		}
-
-		public IActionResult PersonaModificada()
-		{
-			return View();
-		}
-
 
 
 		public IActionResult Privacy()
