@@ -1,4 +1,6 @@
 ﻿using ElMandaloriano.Models;
+using ElMandaloriano.Models.DAL;
+using ElMandaloriano.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,27 +8,22 @@ namespace ElMandaloriano.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+    
+        //creo la vista instanciando lista que ya estara rellena porque constructor default le da datos de clsListado misiones
+        public IActionResult Misiones()
         {
-            _logger = logger;
+            clsListadoMisionesVM lista = new clsListadoMisionesVM();
+            return View(lista);
         }
 
-        public IActionResult Index()
+        //tras hacer post al enviar form recarco pagina con mision seleccionada
+        [HttpPost]
+        public IActionResult Misiones(clsListadoMisionesVM lista)
         {
-            return View();
+			//quizas meter codigo aqui para usar valores de clsMision?
+			return View(lista);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
-}
+}   

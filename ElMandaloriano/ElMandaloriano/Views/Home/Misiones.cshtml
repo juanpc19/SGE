@@ -1,0 +1,42 @@
+﻿@using ElMandaloriano.Models.Entities;
+@model ElMandaloriano.Models.ViewModels.clsListadoMisionesVM;
+
+@using (Html.BeginForm("Misiones", "Home", FormMethod.Post))
+{
+	@Html.DropDownList("SelectedMissionId",new SelectList(Model.Listado, "TituloMision", "TituloMision"),"Select a Mission", new { @class = "form-control" })
+
+@* <select id="desplegableMisiones" name="misionSeleccionada">	
+	@foreach (clsMision mision in Model.Listado)
+	{
+		<option value="@mision.TituloMision"> @mision.TituloMision </option>
+	}
+</select> *@
+
+	<br />
+	<br />
+
+	<button type="submit" id="botonEnviar" name="formEnviado" value="Guardar">Ver Detalles</button>
+
+}
+
+
+<!--problema tecnico con boton solapandose a labels-->
+
+	<br />
+	<br />
+
+
+	@Html.LabelFor(model => model.TituloMision)
+	<br />
+	<br />
+
+	@Html.LabelFor(model => model.DescripcionMision)
+	<br />
+	<br />
+
+	@Html.LabelFor(model => model.Recompensa)
+	<br />
+	<br />
+
+
+
