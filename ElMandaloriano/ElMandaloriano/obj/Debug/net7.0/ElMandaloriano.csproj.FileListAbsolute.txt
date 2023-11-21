@@ -28,3 +28,33 @@ D:\cosas formateo\Cosas grado 2\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7
 D:\cosas formateo\Cosas grado 2\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.pdb
 D:\cosas formateo\Cosas grado 2\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.genruntimeconfig.cache
 D:\cosas formateo\Cosas grado 2\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ref\ElMandaloriano.dll
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\bin\Debug\net7.0\appsettings.json
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\bin\Debug\net7.0\ElMandaloriano.staticwebassets.runtime.json
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\bin\Debug\net7.0\ElMandaloriano.exe
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\bin\Debug\net7.0\ElMandaloriano.deps.json
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\bin\Debug\net7.0\ElMandaloriano.runtimeconfig.json
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\bin\Debug\net7.0\ElMandaloriano.dll
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\bin\Debug\net7.0\ElMandaloriano.pdb
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.AssemblyInfoInputs.cache
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.AssemblyInfo.cs
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.csproj.CoreCompileInputs.cache
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.RazorAssemblyInfo.cache
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.RazorAssemblyInfo.cs
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\staticwebassets\msbuild.ElMandaloriano.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\staticwebassets\msbuild.build.ElMandaloriano.props
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.ElMandaloriano.props
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.ElMandaloriano.props
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\scopedcss\bundle\ElMandaloriano.styles.css
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\scopedcss\projectbundle\ElMandaloriano.bundle.scp.css
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.dll
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\refint\ElMandaloriano.dll
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.pdb
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ElMandaloriano.genruntimeconfig.cache
+C:\Users\jperez\Documents\GitHub\SGE\ElMandaloriano\ElMandaloriano\obj\Debug\net7.0\ref\ElMandaloriano.dll

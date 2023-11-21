@@ -17,6 +17,7 @@ namespace ElMandaloriano.Models.ViewModels
         /// </summary>
         #region constructores
         public clsListadoMisionesVM() { 
+
             listado=clsListadoMisiones.GetListadoMisiones();
         }
         #endregion

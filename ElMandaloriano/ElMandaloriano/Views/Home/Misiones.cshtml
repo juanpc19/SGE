@@ -3,14 +3,14 @@
 
 @using (Html.BeginForm("Misiones", "Home", FormMethod.Post))
 {
-	@Html.DropDownList("SelectedMissionId",new SelectList(Model.Listado, "TituloMision", "TituloMision"),"Select a Mission", new { @class = "form-control" })
+	//@Html.DropDownList("SelectedMissionId",new SelectList(Model.Listado, "TituloMision", "TituloMision"),"Select a Mission", new { @class = "form-control" })
 
-@* <select id="desplegableMisiones" name="misionSeleccionada">	
+<select id="desplegableMisiones" name="misionSeleccionada">	
 	@foreach (clsMision mision in Model.Listado)
 	{
-		<option value="@mision.TituloMision"> @mision.TituloMision </option>
+		<option value="@mision.Id"> @mision.TituloMision </option>
 	}
-</select> *@
+</select>
 
 	<br />
 	<br />

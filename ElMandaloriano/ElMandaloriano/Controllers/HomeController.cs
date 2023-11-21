@@ -1,8 +1,10 @@
 ﻿using ElMandaloriano.Models;
 using ElMandaloriano.Models.DAL;
+using ElMandaloriano.Models.Entities;
 using ElMandaloriano.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Reflection.Emit;
 
 namespace ElMandaloriano.Controllers
 {
@@ -18,10 +20,12 @@ namespace ElMandaloriano.Controllers
 
         //tras hacer post al enviar form recarco pagina con mision seleccionada
         [HttpPost]
-        public IActionResult Misiones(clsListadoMisionesVM lista)
+        public IActionResult Misiones(string id)
         {
-			//quizas meter codigo aqui para usar valores de clsMision?
-			return View(lista);
+            //quizas meter codigo aqui para usar valores de clsMision?
+            
+
+            return View(mision);
         }
 
 

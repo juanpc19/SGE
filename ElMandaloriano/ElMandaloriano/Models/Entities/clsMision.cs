@@ -4,6 +4,7 @@
     {
 
         #region atributos
+        private string id;
         private string tituloMision;
         private string descripcionMision;
         private string recompensa;
@@ -14,11 +15,8 @@
         /// constructor sin param entrada con valores default = empty
         /// </summary>
         public clsMision() {
-            this.tituloMision = "";
-            this.descripcionMision = "";
-			this.recompensa = "";
+            
 		}
-        #endregion
 
         /// <summary>
         /// constructor con param entrada
@@ -26,14 +24,22 @@
         /// <param name="tituloMision"></param>
         /// <param name="descripcionMision"></param>
         /// <param name="recompensa"></param>
-        public clsMision(string tituloMision, string descripcionMision, string recompensa)
+        public clsMision(string id, string tituloMision, string descripcionMision, string recompensa)
         {
+            this.id = id;
             this.tituloMision = tituloMision;
             this.descripcionMision = descripcionMision;
             this.recompensa = recompensa;
         }
+        #endregion
 
         #region propiedades
+
+        public string Id
+        {
+            get { return id; }
+        }
+
         public string TituloMision
         {
             get { return tituloMision;}
