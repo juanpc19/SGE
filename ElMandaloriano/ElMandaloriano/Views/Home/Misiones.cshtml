@@ -1,42 +1,77 @@
 ﻿@using ElMandaloriano.Models.Entities;
 @model ElMandaloriano.Models.ViewModels.clsListadoMisionesVM;
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-image: url('/Imagenes/mando.jpeg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
 
-@using (Html.BeginForm("Misiones", "Home", FormMethod.Post))
-{
-	//@Html.DropDownList("SelectedMissionId",new SelectList(Model.Listado, "TituloMision", "TituloMision"),"Select a Mission", new { @class = "form-control" })
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
 
-<select id="desplegableMisiones" name="misionSeleccionada">	
-	@foreach (clsMision mision in Model.Listado)
-	{
-		<option value="@mision.Id"> @mision.TituloMision </option>
-	}
-</select>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
 
-	<br />
-	<br />
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Bienvenido Mando!</h1>
 
-	<button type="submit" id="botonEnviar" name="formEnviado" value="Guardar">Ver Detalles</button>
+        @using (Html.BeginForm("Misiones", "Home", FormMethod.Post))
+        {
+            <select id="desplegableMisiones" name="id">
+                @foreach (clsMision mision in Model.Listado)
+                {
+                    <option value="@mision.Id"> @mision.TituloMision </option>
+                }
+            </select>
+            <br />
 
-}
+            <br />
 
+            <button type="submit" id="botonEnviar" name="formEnviado" value="Guardar">Ver Detalles</button>
+        }
+        <br /><br />
 
-<!--problema tecnico con boton solapandose a labels-->
-
-	<br />
-	<br />
-
-
-	@Html.LabelFor(model => model.TituloMision)
-	<br />
-	<br />
-
-	@Html.LabelFor(model => model.DescripcionMision)
-	<br />
-	<br />
-
-	@Html.LabelFor(model => model.Recompensa)
-	<br />
-	<br />
+        @if (Model.Mision != null)
+        {
+            <div style="text-align: left;">
+                <label>Detalles de la Misión Seleccionada:</label>
+                <br /><br />
+                <label>Mision: @Model.Mision.TituloMision</label>
+                <br /><br />
+                <label>Descripción: @Model.Mision.DescripcionMision</label>
+                <br /><br />
+                <label>Recompensa: @Model.Mision.Recompensa</label>
+                <br /><br />
+            </div>
+        }
+    </div>
+</body>
+</html>
 
 
 
