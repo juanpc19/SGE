@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EjTema10ADO.NET.props" />
+</Project>

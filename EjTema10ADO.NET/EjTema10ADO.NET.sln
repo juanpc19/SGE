@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjTema10ADO.NET", "EjTema10ADO.NET\EjTema10ADO.NET.csproj", "{F34E862D-9080-427F-9E1D-390A2C0CA9E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjTema10ADO.NET", "EjTema10ADO.NET\EjTema10ADO.NET.csproj", "{F34E862D-9080-427F-9E1D-390A2C0CA9E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{D549853D-1799-4C00-93CF-519850530CD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{38664814-A74A-4212-B14B-9E3C2433A3EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F34E862D-9080-427F-9E1D-390A2C0CA9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F34E862D-9080-427F-9E1D-390A2C0CA9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F34E862D-9080-427F-9E1D-390A2C0CA9E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D549853D-1799-4C00-93CF-519850530CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D549853D-1799-4C00-93CF-519850530CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D549853D-1799-4C00-93CF-519850530CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D549853D-1799-4C00-93CF-519850530CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38664814-A74A-4212-B14B-9E3C2433A3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38664814-A74A-4212-B14B-9E3C2433A3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38664814-A74A-4212-B14B-9E3C2433A3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38664814-A74A-4212-B14B-9E3C2433A3EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
