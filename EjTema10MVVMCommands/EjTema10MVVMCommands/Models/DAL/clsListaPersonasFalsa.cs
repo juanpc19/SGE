@@ -11,9 +11,9 @@ namespace Ej5tema9MVVM.Models.DAL
     internal static class clsListaPersonasFalsa
     {   
 
-        public static ObservableCollection <clsPersona> getListaFalsa() {
+        public static List <clsPersona> getListaFalsa() {
 
-            ObservableCollection <clsPersona> listadoFalsa = new ObservableCollection<clsPersona> {
+            List<clsPersona> listadoFalsa = new List<clsPersona> {
                 new clsPersona("Antonio", "Perez de la huerta", "24/07/1995", "cosa", "Calle florencia", 623123123),
                 new clsPersona("Maite", "Diaz Gonzalez", "24/07/1995", "cosa", "Calle Venecia", 656456456),
                 new clsPersona("Federico", "Gil Sabina", "24/07/1995", "cosa", "Calle Urbion", 667567567),
