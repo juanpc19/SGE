@@ -3,95 +3,56 @@ using Entidades;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using System.Diagnostics;
- 
+using DAL;
 
 namespace EjTema10ADO.NET.Controllers
 {
-    public class HomeController : Controller
-    {
+    
 
-        //miConexion.Close();  //cierra conexion
-        //miConexion.Dispose();  //se deshace de la conexion?
-        // ViewData["conexion"] = miConexion.State;
-        // ViewData["conexion"] = "Error: Conexion fallida";
-
-        public IActionResult Index()
+        public class HomeController : Controller
         {
-            return View();
-        }
-
-        public IActionResult Listado()
-        {
-
-                    SqlConnection miConexion = new SqlConnection();
-
-                    List<clsPersona> listadoPersonas = new List<clsPersona>();
-
-                    SqlCommand miComando = new SqlCommand();
-
-                    SqlDataReader miLector;
-
-                    clsPersona oPersona;
-
-                    miConexion.ConnectionString = "server=107-29\\SQLEXPRESS;database=Personas;uid=prueba;pwd=123;";
-
-                    try
-                    {
-                        miConexion.Open();
-                        miComando.CommandText = "SELECT * FROM personas";
-                        miComando.Connection = miConexion;
-                        miLector = miComando.ExecuteReader();
-
-                        if (miLector.HasRows)
-                        {
-                            while (miLector.Read())
-                            {
-                                oPersona = new clsPersona();
-
-                                oPersona.Id = (int)miLector["IDPersona"];
-
-                                oPersona.Nombre = (string)miLector["nombre"];
-
-                                oPersona.Apellidos = (string)miLector["apellidos"];
-
-                                //Si sospechamos que el campo puede ser Null en la BBDD
-                                if (miLector["fechaNac"] != System.DBNull.Value)
-
-                                { oPersona.FechaNac = (DateTime)miLector["fechaNac"]; }
-
-                                oPersona.Direccion = (string)miLector["direccion"];
-
-                                oPersona.Telefono = (string)miLector["telefono"];
-
-                                listadoPersonas.Add(oPersona);
-
-                            }
-
-                        }
-
-                        miLector.Close();
-                        miConexion.Close();
-
-                    return View();
-
-                    }
-
-                    catch (SqlException exSql)
-                    {
-                        throw exSql;
-                    }
-
-            catch (Exception ex)
+            public IActionResult Index()
             {
-                ViewBag.Error = "Ha ocurrido un erorr con la base de datos";
-                return View("Error");
+                SqlConnection connection = new SqlConnection();
+
+                try
+                {
+                    connection.ConnectionString = "Server=DESKTOP-222O0N1\\SQLEXPRESS;database=Personas;uid=prueba;pwd=123;trustServerCertificate=true";
+                    connection.Open();
+                    ViewData["Connection"] = connection.State;
+                }
+                catch (SqlException ex)
+                {
+                    ViewBag.Connection = $"Error: {ex.Message}";
+                }
+
+                return View();
+            }
+
+            public IActionResult Listado()
+            {
+                try
+                {
+                    return View(clsListaPersonas.listadoPersonas());
+                }
+                catch (SqlException ex)
+                {
+                    ViewBag.Error = "Ha ocurrido un error en la base de datos";
+                    return View("Error");
+                }
+            }
+
+            public IActionResult Delete(int id)
+            {
+                try
+                {
+                    return View(clsListaPersonas.getPersona(id));
+                }
+                catch (SqlException ex)
+                {
+                    ViewBag.Error = "Ha ocurrido un error en la base de datos";
+                    return View("Error");
+                }
             }
         }
-
-        public IActionResult Delete()
-        {
-            return View();
-
-        }
     }
-}

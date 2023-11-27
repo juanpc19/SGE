@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\EjTema10ADO.NET.props" />
-</Project>

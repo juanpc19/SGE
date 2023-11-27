@@ -3333,6 +3333,19 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Entidades": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
       "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -9948,6 +9961,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
     "Entidades/1.0.0": {
       "type": "project",
       "path": "../Entidades/Entidades.csproj",
@@ -9956,29 +9974,30 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "DAL >= 1.0.0",
       "Entidades >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.11",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\juanp\\.nuget\\packages\\": {},
+    "C:\\Users\\jperez\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
+      "projectUniqueName": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
       "projectName": "EjTema10ADO.NET",
-      "projectPath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
-      "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-      "outputPath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\obj\\",
+      "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
+      "packagesPath": "C:\\Users\\jperez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9994,8 +10013,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\Entidades\\Entidades.csproj": {
-              "projectPath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\Entidades\\Entidades.csproj"
+            "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\DAL\\DAL.csproj"
+            },
+            "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\Entidades\\Entidades.csproj"
             }
           }
         }
