@@ -18,7 +18,7 @@ namespace DAL
         public static List<clsPersona> listadoPersonas()
         {
             List<clsPersona> listado = new List<clsPersona>();
-            System.Data.SqlClient.SqlConnection connection = new SqlConnection();
+            SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
             SqlDataReader reader;
             clsPersona oPersona;

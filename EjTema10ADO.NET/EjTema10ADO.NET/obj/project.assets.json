@@ -3333,19 +3333,6 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "DAL/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Entidades": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/DAL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DAL.dll": {}
-        }
-      },
       "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -9961,11 +9948,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "DAL/1.0.0": {
-      "type": "project",
-      "path": "../DAL/DAL.csproj",
-      "msbuildProject": "../DAL/DAL.csproj"
-    },
     "Entidades/1.0.0": {
       "type": "project",
       "path": "../Entidades/Entidades.csproj",
@@ -9974,7 +9956,6 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "DAL >= 1.0.0",
       "Entidades >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.11",
       "System.Data.SqlClient >= 4.8.5"
@@ -10013,9 +9994,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\DAL\\DAL.csproj"
-            },
             "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\Entidades\\Entidades.csproj": {
               "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\Entidades\\Entidades.csproj"
             }
