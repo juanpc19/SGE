@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using Entidades;
 using System.Data.SqlClient;
+using CapaEntidades;
 
 namespace DAL
 {
@@ -25,7 +24,7 @@ namespace DAL
 
             try
             {
-                connection.ConnectionString = "Server=DESKTOP-222O0N1\\SQLEXPRESS;database=Personas;uid=prueba;pwd=123;trustServerCertificate=true";
+                connection.ConnectionString = "Server=DESKTOP-175H31S;database=Personas;uid=prueba;pwd=123;trustServerCertificate=true";
                 command.Connection = connection;
                 command.CommandText = "SELECT * FROM personas";
                 connection.Open();
@@ -75,7 +74,7 @@ namespace DAL
             {
                 try
                 {
-                    connection.ConnectionString = "server=107-28\\SQLEXPRESS;database=Personas;uid=prueba;pwd=123;trustServerCertificate=true";
+                    connection.ConnectionString = "Server=DESKTOP-175H31S;database=Personas;uid=prueba;pwd=123;trustServerCertificate=true";
                     command.Connection = connection;
                     command.CommandText = "SELECT * FROM personas WHERE ID = @id";
                     connection.Open();

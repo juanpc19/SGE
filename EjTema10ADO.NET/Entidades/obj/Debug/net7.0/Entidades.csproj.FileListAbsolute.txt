@@ -9,3 +9,15 @@ C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\refint\Entidades.dll
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\Entidades.pdb
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\bin\Debug\net7.0\Entidades.deps.json
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\bin\Debug\net7.0\Entidades.dll
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\bin\Debug\net7.0\Entidades.pdb
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfoInputs.cache
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfo.cs
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\Entidades.csproj.CoreCompileInputs.cache
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\Entidades.dll
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\refint\Entidades.dll
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\Entidades.pdb
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\Entidades\obj\Debug\net7.0\Entidades.csproj.AssemblyReference.cache
