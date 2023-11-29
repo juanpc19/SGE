@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "CapaBL/1.0.0": {
         "dependencies": {
+          "CapaDAL": "1.0.0",
           "CapaEntidades": "1.0.0",
           "System.Data.SqlClient": "4.8.5"
         },
@@ -845,6 +846,15 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
+      "CapaDAL/1.0.0": {
+        "dependencies": {
+          "CapaEntidades": "1.0.0",
+          "System.Data.SqlClient": "4.8.5"
+        },
+        "runtime": {
+          "CapaDAL.dll": {}
+        }
+      },
       "CapaEntidades/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0"
@@ -1448,6 +1458,11 @@
       "sha512": "sha512-Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
+    },
+    "CapaDAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "CapaEntidades/1.0.0": {
       "type": "project",

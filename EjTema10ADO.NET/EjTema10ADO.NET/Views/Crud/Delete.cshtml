@@ -5,7 +5,7 @@
 }
 
 <h1>Delete</h1>
-
+<h2>@ViewBag.Info</h2>
 <h3>Are you sure you want to delete this?</h3>
 <div>
     <h4>clsPersona</h4>
@@ -64,8 +64,8 @@
     <form asp-action="Delete">
         <input type="submit" value="Delete" class="btn btn-danger" /> 
     </form>
-
-    @Html.ActionLink("Back to list", "Listado", "Crud")
-
-    <h1>@ViewBag.Error</h1>
+    <div>
+        <a asp-action="Listado">Back to List</a>
+    </div>
+    
 </div>

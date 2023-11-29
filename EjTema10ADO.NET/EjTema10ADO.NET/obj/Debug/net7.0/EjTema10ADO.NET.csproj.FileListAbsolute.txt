@@ -458,7 +458,6 @@ D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\obj\Debug\ne
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\obj\Debug\net7.0\ref\EjTema10ADO.NET.dll
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
-D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\obj\Debug\net7.0\EjTema10ADO.NET.MvcApplicationPartsAssemblyInfo.cs
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaEntidades.dll
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaEntidades.pdb
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaDAL.dll
@@ -470,3 +469,5 @@ C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\n
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaDAL.pdb
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaEntidades.pdb
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\obj\Debug\net7.0\EjTema10ADO.NET.MvcApplicationPartsAssemblyInfo.cs
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaBL.dll
+D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaBL.pdb

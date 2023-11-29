@@ -1,4 +1,5 @@
 ﻿
+using CapaDAL.Conexion;
 using CapaDAL.Listado;
 using CapaDAL.Manejadoras;
 using CapaEntidades;
@@ -9,10 +10,21 @@ namespace EjTema10ADO.NET.Controllers
 {
     public class CrudController : Controller
     {
-        // GET: CRUD
-        //SOBRA
-        public ActionResult Index()
+
+        public IActionResult Index()
         {
+            SqlConnection connection = new clsMyConnectionDAL().getConnection();
+
+            try
+            {
+                ViewData["Connection"] = connection.State;
+            }
+            catch (SqlException ex)
+            {
+                ViewBag.Error = $"Ha ocurrido un error en la base de datos {ex} ";
+                return View("Error");
+            }
+
             return View();
         }
 
@@ -20,7 +32,7 @@ namespace EjTema10ADO.NET.Controllers
         {
             try
             {
-                return View(clsListaPersonasDAL.listadoPersonas());
+                return View(clsListaPersonasBL.listadoPersonasBL());
             }
             catch (SqlException ex)
             {
@@ -29,7 +41,6 @@ namespace EjTema10ADO.NET.Controllers
             }
         }
 
-        // GET: CRUD/Details/5
         /// <summary>
         /// recibe id de persona clickeada desde view Listado
         /// </summary>
@@ -40,7 +51,7 @@ namespace EjTema10ADO.NET.Controllers
 
             try
             {
-                clsPersona oPersona = clsManejadoraPersonaDAL.getPersonaById(id);
+                clsPersona oPersona = clsManejadoraPersonaBL.getPersonaById(id);
                 return View(oPersona);
             }
             catch (SqlException ex)
@@ -94,11 +105,11 @@ namespace EjTema10ADO.NET.Controllers
         }
 
        
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
             try
             {
-                clsPersona oPersona = clsManejadoraPersonaDAL.getPersonaById(id);
+                clsPersona oPersona = clsManejadoraPersonaBL.getPersonaById(id);
                 return View(oPersona);
             }
             catch (SqlException ex)
@@ -112,32 +123,25 @@ namespace EjTema10ADO.NET.Controllers
         
         [HttpPost]
         [ActionName("Delete")]
-        //cambiar pesona por id
-        public ActionResult DeletePost(clsPersona oPersona)
+        public IActionResult DeletePost(int id)
         {
-            try
-            {
-                //cambiar por BL     y los view bags van a pagina ka la k redirija
-               int numeroFilas clsManejadoraPersonaDAL.deletePersonaDAL(oPersona.Id);
+            
+               int numeroFilas = clsManejadoraPersonaBL.deletePersonaBL(id);
+
                 if (numeroFilas == 0)
                 {
-                    ViewBag.Info = "no existe esa persona";
+                    ViewBag.Info = "No existe esa persona.";
                 } else if (numeroFilas == -1)
                 {
-                    ViewBag.Info = "los viernes no se borra";
+                    ViewBag.Info = "Los viernes no se puede borrar personas.";
                 } else
                 {
-                    ViewBag.Info = "persona borrada";
+                    ViewBag.Info = "Persona borrada.";
                 }
-            } 
-            catch 
-            {
-                ViewBag.Error = "error";
-                return RedirectToAction("Error");
-            }
             
-
-            return RedirectToAction("Listado");
+           
+            //funciona sin crash pero no borra
+            return View("Listado", clsListaPersonasBL.listadoPersonasBL());
         }
     }
 }

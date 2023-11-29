@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "EjTema10ADO.NET/1.0.0": {
         "dependencies": {
-          "CapaDAL": "1.0.0",
+          "CapaBL": "1.0.0",
           "CapaEntidades": "1.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.11",
           "System.Data.SqlClient": "4.8.5"
@@ -2406,6 +2406,16 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "CapaBL/1.0.0": {
+        "dependencies": {
+          "CapaDAL": "1.0.0",
+          "CapaEntidades": "1.0.0",
+          "System.Data.SqlClient": "4.8.5"
+        },
+        "runtime": {
+          "CapaBL.dll": {}
+        }
+      },
       "CapaDAL/1.0.0": {
         "dependencies": {
           "CapaEntidades": "1.0.0",
@@ -3998,6 +4008,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "CapaBL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "CapaDAL/1.0.0": {
       "type": "project",

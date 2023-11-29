@@ -21,7 +21,7 @@ namespace CapaDAL.Manejadoras
         /// <returns></returns>
         public static clsPersona getPersonaById(int Id)
         {
-            List<clsPersona> listaPersonas = clsListaPersonasDAL.listadoPersonas();
+            List<clsPersona> listaPersonas = clsListaPersonasDAL.listadoPersonasDAL();
             return listaPersonas.Find(x => x.Id == Id);
         }
 
@@ -31,24 +31,19 @@ namespace CapaDAL.Manejadoras
         /// </summary>
         /// <param name="id">id de la persona</param>
         /// <returns>devuelve el numero de personas afectadas</returns>
-        public static int deletePersonaDAL(int id)
-
+        public static int deletePersonaBL(int id)
         {
             int numeroFilasAfectadas = 0;
-            //SERVER CASA DESKTOP-175H31S
-            //server clase 107-29\SQLEXPRESS
+            
             DateTime fechaActual = DateTime.Now;    
 
-            if(fechaActual.DayOfWeek==DayOfWeek.Wednesday)
+            if(fechaActual.DayOfWeek==DayOfWeek.Friday)
             {
                 numeroFilasAfectadas = -1;
-                
             } else {
                 numeroFilasAfectadas = clsManejadoraPersonaDAL.deletePersonaDAL(id);
             }
-
             return numeroFilasAfectadas;
-
 
         }
 

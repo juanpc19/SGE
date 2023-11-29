@@ -19,7 +19,14 @@ namespace CapaEntidades
         #region constructores
         public clsPersona()
         {     
-         
+            id= 1;
+            nombre = "";
+            apellidos = "";
+            telefono = "";
+            direccion = "";
+            foto = "";
+            fechaNac = DateTime.Now;
+            idDepartamento= 1;
             
         }
 

@@ -31,7 +31,7 @@ namespace CapaDAL.Conexion
             this.server = "jpc19.database.windows.net";
             this.dataBase = "JPCBBDD";
             this.user = "prueba";            
-            this.pass = "a";
+            this.pass = "fernandoG321";
 
         }
         //Con parámetros por si quisiera cambiar las conexiones
