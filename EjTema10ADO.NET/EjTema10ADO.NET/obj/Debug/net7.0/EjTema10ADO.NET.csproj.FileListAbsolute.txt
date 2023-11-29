@@ -227,8 +227,6 @@ C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\n
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\Entidades.dll
-C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\Entidades.pdb
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\appsettings.Development.json
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\appsettings.json
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\EjTema10ADO.NET.staticwebassets.runtime.json
@@ -465,3 +463,10 @@ D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\ne
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaEntidades.pdb
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaDAL.dll
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaDAL.pdb
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaDAL.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaEntidades.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaDAL.pdb
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaEntidades.pdb
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\obj\Debug\net7.0\EjTema10ADO.NET.MvcApplicationPartsAssemblyInfo.cs

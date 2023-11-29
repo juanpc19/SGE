@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using DAL;
 using CapaDAL.Listado;
 using CapaDAL.Manejadoras;
+using CapaDAL.Conexion;
 
 namespace EjTema10ADO.NET.Controllers
 {
@@ -15,12 +15,12 @@ namespace EjTema10ADO.NET.Controllers
             public IActionResult Index()
             {
             //SERVER CASA DESKTOP-175H31S
-            SqlConnection connection = new SqlConnection();
+            //server clase 107-29\SQLEXPRESS
+            SqlConnection connection = new clsMyConnectionDAL().getConnection();
 
                 try
                 {
-                    connection.ConnectionString = "Server=DESKTOP-175H31S;database=Personas;uid=prueba;pwd=123;trustServerCertificate=true";
-                    connection.Open();
+                     
                     ViewData["Connection"] = connection.State;
                 }
                 catch (SqlException ex)

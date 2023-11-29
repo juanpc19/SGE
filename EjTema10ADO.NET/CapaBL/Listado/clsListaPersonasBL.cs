@@ -12,11 +12,13 @@ namespace CapaDAL.Listado
     public static class clsListaPersonasBL
     {
         /// <summary>
-        /// Funcion que devuelve un listado de personas extraido de la base de datos
+        /// Funcion que devuelve un listado de personas extraido de DAL aplicando las reglas de negocio oportunas
         /// </summary>
-        /// <returns></returns>
+        /// <returns>lista con personas</returns>
         public static List<clsPersona> listadoPersonas()
         {
+            //en un mundo ideal sin normas:
+            //return clsListaPersonasDAL.listadoPersonas();
             List<clsPersona> listado = new List<clsPersona>();
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();

@@ -38,7 +38,7 @@ namespace CapaEntidades
         #endregion
 
         #region propiedades
-        [HiddenInput(DisplayValue=false)]
+        //[HiddenInput(DisplayValue=false)]
         public int Id
         {
             get { return id; }

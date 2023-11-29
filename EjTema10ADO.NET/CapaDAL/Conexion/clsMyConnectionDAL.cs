@@ -28,10 +28,10 @@ namespace CapaDAL.Conexion
         public clsMyConnectionDAL()
         {
             
-            this.server = "vuestraBBDD.database.windows.net";
-            this.dataBase = "nombreBBDD";
-            this.user = "vuestroUsuario";            
-            this.pass = "vuestraPassword";
+            this.server = "jpc19.database.windows.net";
+            this.dataBase = "JPCBBDD";
+            this.user = "prueba";            
+            this.pass = "a";
 
         }
         //Con parámetros por si quisiera cambiar las conexiones

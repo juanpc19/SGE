@@ -1,8 +1,7 @@
-﻿using CapaDAL.Listado;
+﻿
+using CapaDAL.Listado;
 using CapaDAL.Manejadoras;
 using CapaEntidades;
-using DAL;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 
@@ -17,18 +16,32 @@ namespace EjTema10ADO.NET.Controllers
             return View();
         }
 
+        public ActionResult Listado()
+        {
+            try
+            {
+                return View(clsListaPersonasDAL.listadoPersonas());
+            }
+            catch (SqlException ex)
+            {
+                ViewBag.Error = $"Ha ocurrido un error en la base de datos {ex} ";
+                return View("Error");
+            }
+        }
+
         // GET: CRUD/Details/5
         /// <summary>
         /// recibe id de persona clickeada desde view Listado
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public IActionResult Details(int id)
+        public ActionResult Details(int id)
         {
 
             try
             {
-                return View(clsGetPersonaDAL.getPersona(id));
+                clsPersona oPersona = clsManejadoraPersonaDAL.getPersonaById(id);
+                return View(oPersona);
             }
             catch (SqlException ex)
             {
@@ -38,20 +51,23 @@ namespace EjTema10ADO.NET.Controllers
 
         }
 
-        // GET: CRUD/Create
+        [HttpPost]
+        public ActionResult Details()
+        {
+            return View();
+        }
+
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: CRUD/Create
         [HttpPost]
-        //[ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Listado");
             }
             catch
             {
@@ -59,15 +75,12 @@ namespace EjTema10ADO.NET.Controllers
             }
         }
 
-        // GET: CRUD/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: CRUD/Edit/5
         [HttpPost]
-        //[ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
             try
@@ -80,12 +93,13 @@ namespace EjTema10ADO.NET.Controllers
             }
         }
 
-        // GET: CRUD/Delete/5
+       
         public ActionResult Delete(int id)
         {
             try
             {
-                return View(clsDeletePersonaDAL.deletePersonaDAL(id));
+                clsPersona oPersona = clsManejadoraPersonaDAL.getPersonaById(id);
+                return View(oPersona);
             }
             catch (SqlException ex)
             {
@@ -95,19 +109,35 @@ namespace EjTema10ADO.NET.Controllers
            
         }
 
-        // POST: CRUD/Delete/5
+        
         [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        [ActionName("Delete")]
+        //cambiar pesona por id
+        public ActionResult DeletePost(clsPersona oPersona)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
+                //cambiar por BL     y los view bags van a pagina ka la k redirija
+               int numeroFilas clsManejadoraPersonaDAL.deletePersonaDAL(oPersona.Id);
+                if (numeroFilas == 0)
+                {
+                    ViewBag.Info = "no existe esa persona";
+                } else if (numeroFilas == -1)
+                {
+                    ViewBag.Info = "los viernes no se borra";
+                } else
+                {
+                    ViewBag.Info = "persona borrada";
+                }
+            } 
+            catch 
             {
-                return View();
+                ViewBag.Error = "error";
+                return RedirectToAction("Error");
             }
+            
+
+            return RedirectToAction("Listado");
         }
     }
 }

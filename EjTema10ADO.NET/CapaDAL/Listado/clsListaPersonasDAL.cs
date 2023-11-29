@@ -17,17 +17,19 @@ namespace CapaDAL.Listado
         public static List<clsPersona> listadoPersonas()
         {
             //SERVER CASA DESKTOP-175H31S
+            //server clase 107-29\SQLEXPRESS
             List<clsPersona> listado = new List<clsPersona>();
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
             SqlDataReader reader;
             clsPersona oPersona;
 
+            connection.ConnectionString = "Server=jpc19.database.windows.net;database=JPCBBDD;uid=prueba;pwd=fernandoG321;trustServerCertificate=true";
+            command.Connection = connection;
+            command.CommandText = "SELECT * FROM personas";
+
             try
             {
-                connection.ConnectionString = "Server=DESKTOP-175H31S;database=Personas;uid=prueba;pwd=123;trustServerCertificate=true";
-                command.Connection = connection;
-                command.CommandText = "SELECT * FROM personas";
                 connection.Open();
                 reader = command.ExecuteReader();
 

@@ -1397,6 +1397,20 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "CapaDAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CapaEntidades": "1.0.0",
+          "System.Data.SqlClient": "4.8.5"
+        },
+        "compile": {
+          "bin/placeholder/CapaDAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CapaDAL.dll": {}
+        }
+      },
       "CapaEntidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -4585,6 +4599,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "CapaDAL/1.0.0": {
+      "type": "project",
+      "path": "../CapaDAL/CapaDAL.csproj",
+      "msbuildProject": "../CapaDAL/CapaDAL.csproj"
+    },
     "CapaEntidades/1.0.0": {
       "type": "project",
       "path": "../CapaEntidades/CapaEntidades.csproj",
@@ -4593,28 +4612,29 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "CapaDAL >= 1.0.0",
       "CapaEntidades >= 1.0.0",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\juanp\\.nuget\\packages\\": {},
+    "C:\\Users\\jperez\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
+      "projectUniqueName": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
       "projectName": "CapaBL",
-      "projectPath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
-      "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-      "outputPath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaBL\\obj\\",
+      "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
+      "packagesPath": "C:\\Users\\jperez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4630,8 +4650,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
-              "projectPath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
+            "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj": {
+              "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj"
+            },
+            "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
+              "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
             }
           }
         }
