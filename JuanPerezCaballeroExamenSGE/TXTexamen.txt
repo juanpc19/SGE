@@ -1,0 +1,79 @@
+CAPA ENTIDADES:
+clsMarca
+	Id
+	Nombre
+
+clsModelo
+	id 
+	idMarca
+	nombre
+	precio
+
+CAPA DAL:
+	
+	clsListadosDAL 
+	List<clsMarca> listadoMarcasDAL() //devuelve lista marcas
+	List<clsModelo> listadoModelosDAL() //devuelve lista modelos
+	List<clsModelo> obtenerListaModelosPorIdDAL(int id) //devolvera lista de modelos en base a idMarca recibido
+	string getNombreMarcaPorIdModeloDAL(int id) //devolvera el nombre de la marca relacionado al idMarca segun id modelo proporcionado
+	
+	
+CAPA BL:
+	//clase que recibira datos de la DAL y les aplicara reglas de negocio si es pertinente
+	clsListadosBL 
+	List<clsMarca> listadoMarcasBL() //devuelve lista marcas
+	List<clsModelo> listadoModelosBL() //devuelve lista modelos
+	List<clsModelo> obtenerListaModelosPorIdBL(int id) //devolvera lista de modelos en base a id marca recibido
+	string getNombreMarcaPorIdModeloBL(int id) //devolvera el nombre de la marca relacionado al idMarca segun id modelo proporcionado
+
+
+
+CAPA UI:
+
+	Controllers
+
+		//solo usare el controller home
+		Home
+
+		Index()
+
+			return view(ListadosMarcasListadoModelosVM)
+
+		[HttpPost]
+		Index(int id)
+
+			return view(ListadosMarcasListadoModelosVM)
+
+		CambiarPrecio(double precio)
+			
+			return view(CocheInfoCompletaVM)
+
+		[HttpPost]
+		CambiarPrecio()
+	
+			ViewData.mensaje //mensaje de exito o error al pulsar boton guardar
+			return view(CocheInfoCompletaVM)
+
+	Models
+		ViewModels
+		ListadosMarcasListadoModelosVM // compuesto de List<clsMarca> y List<clsModelo>
+		CocheInfoCompletaVM // compuesto de clsMarca y clsModelo
+
+	Views
+		Index
+		//mostrara listado de marcas y tras seleccionar una y pulsar boton mostrara listado de modelos pertenecientes a esa marca
+		y junto a cada uno de ellos un enlace que ponga cambiar precio
+
+		CambiarPrecio
+		//mostrara modelo de coche seleccionado: en lugar de idMarca mostrara nombre marca extraido a partir de idMarca existente en el modelo,
+		nombre de modelo, 
+		input para precio con placeholder value = precio que ya tenia
+		y boton para guardar nuevo precio
+
+		
+
+
+
+
+
+

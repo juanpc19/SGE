@@ -28,3 +28,33 @@ D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelB
 D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.pdb
 D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.genruntimeconfig.cache
 D:\cosas formateo\Cosas grado 2\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\ref\Ej3Tema8MVCModelBind.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\bin\Debug\net7.0\appsettings.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\bin\Debug\net7.0\Ej3Tema8MVCModelBind.staticwebassets.runtime.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\bin\Debug\net7.0\Ej3Tema8MVCModelBind.exe
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\bin\Debug\net7.0\Ej3Tema8MVCModelBind.deps.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\bin\Debug\net7.0\Ej3Tema8MVCModelBind.runtimeconfig.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\bin\Debug\net7.0\Ej3Tema8MVCModelBind.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\bin\Debug\net7.0\Ej3Tema8MVCModelBind.pdb
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.AssemblyInfoInputs.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.AssemblyInfo.cs
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.csproj.CoreCompileInputs.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.RazorAssemblyInfo.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.RazorAssemblyInfo.cs
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\staticwebassets\msbuild.Ej3Tema8MVCModelBind.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\staticwebassets\msbuild.build.Ej3Tema8MVCModelBind.props
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Ej3Tema8MVCModelBind.props
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Ej3Tema8MVCModelBind.props
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\scopedcss\bundle\Ej3Tema8MVCModelBind.styles.css
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\scopedcss\projectbundle\Ej3Tema8MVCModelBind.bundle.scp.css
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\refint\Ej3Tema8MVCModelBind.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.pdb
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\Ej3Tema8MVCModelBind.genruntimeconfig.cache
+C:\Users\jperez\Documents\GitHub\SGE\EjTema8MCVDataToController\Ej3Tema8MVCModelBind\obj\Debug\net7.0\ref\Ej3Tema8MVCModelBind.dll
