@@ -1,57 +1,68 @@
-﻿@model CapaEntidades.clsPersona
+﻿@using CapaEntidades;
+@model EjTema10ADO.NET.Models.ViewModels.clsPersonaListaDepVM
 
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Crear persona</h1>
 
-<h4>clsPersona</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
+        <!--AQUI DIGO DONDE MANDO EL VM(AL ACTION DE CREATE, PERO FORM ASP ACTION HACE POST AL PULSAR BOTON, 
+
+        POR LO QUE VA AL ACTION CON POST, SE MANDARAN TODOS LOS DATOS RECOGIDOS CON INPUTS-->
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!--no necesito id la BBDD la da auto-->
+
             <div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" />
-                <span asp-validation-for="Id" class="text-danger"></span>
+                <label asp-for="Persona.Nombre" class="control-label"></label>
+                <input asp-for="Persona.Nombre" class="form-control" />
+                <span asp-validation-for="Persona.Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
+                <label asp-for="Persona.Apellidos" class="control-label"></label>
+                <input asp-for="Persona.Apellidos" class="form-control" />
+                <span asp-validation-for="Persona.Apellidos" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Apellidos" class="control-label"></label>
-                <input asp-for="Apellidos" class="form-control" />
-                <span asp-validation-for="Apellidos" class="text-danger"></span>
+                <label asp-for="Persona.Telefono" class="control-label"></label>
+                <input asp-for="Persona.Telefono" class="form-control" />
+                <span asp-validation-for="Persona.Telefono" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Telefono" class="control-label"></label>
-                <input asp-for="Telefono" class="form-control" />
-                <span asp-validation-for="Telefono" class="text-danger"></span>
+                <label asp-for="Persona.Direccion" class="control-label"></label>
+                <input asp-for="Persona.Direccion" class="form-control" />
+                <span asp-validation-for="Persona.Direccion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Direccion" class="control-label"></label>
-                <input asp-for="Direccion" class="form-control" />
-                <span asp-validation-for="Direccion" class="text-danger"></span>
+                <label asp-for="Persona.Foto" class="control-label"></label>
+                <input asp-for="Persona.Foto" class="form-control" />
+                <span asp-validation-for="Persona.Foto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Foto" class="control-label"></label>
-                <input asp-for="Foto" class="form-control" />
-                <span asp-validation-for="Foto" class="text-danger"></span>
+                <label asp-for="Persona.FechaNac" class="control-label"></label>
+                <input asp-for="Persona.FechaNac" class="form-control" />
+                <span asp-validation-for="Persona.FechaNac" class="text-danger"></span>
             </div>
+      
+            <!--AQUI LA CHICHA DEL VM DESPLEGABLE LIST DEPS Y MANDAR SELECCIONADO-->
             <div class="form-group">
-                <label asp-for="FechaNac" class="control-label"></label>
-                <input asp-for="FechaNac" class="form-control" />
-                <span asp-validation-for="FechaNac" class="text-danger"></span>
+                <label asp-for="Departamento" class="control-label"></label>
+                <br />
+                <select id="desplegableDepartamentos" name="id">
+                    @foreach (clsDepartamento departamento in Model.ListaDep)
+                    {
+                        <option value="@departamento.Id"> @departamento.NombreDep </option>
+                    }
+                </select>
+                
+                <span asp-validation-for="Departamento.NombreDep" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IdDepartamento" class="control-label"></label>
-                <input asp-for="IdDepartamento" class="form-control" />
-                <span asp-validation-for="IdDepartamento" class="text-danger"></span>
-            </div>
+            <br />
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

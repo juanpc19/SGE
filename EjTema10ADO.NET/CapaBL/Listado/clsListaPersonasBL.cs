@@ -24,18 +24,6 @@ namespace CapaDAL.Listado
             return listado;
         }
 
-        /// <summary>
-        /// Funcion que devuelve una persona segun su Id usando DAL aplicando las reglas de negocio oportunas
-        /// Pre: Int Id > 0
-        /// Pos: Nada
-        /// </summary>
-        /// <returns></returns>
-        public static clsPersona getPersona(int id)
-        {
-            //EN UN MUNDO IDEAL SIN NORMAS
-            clsPersona oPersona = clsManejadoraPersonaDAL.getPersonaById(id);
-            
-            return oPersona;
-        }
+        
     }
 }

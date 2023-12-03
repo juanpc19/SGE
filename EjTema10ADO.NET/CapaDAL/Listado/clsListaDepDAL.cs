@@ -11,7 +11,10 @@ namespace CapaDAL.Listado
 {
     public static class clsListaDepDAL
     {
-
+        /// <summary>
+        /// funcion que deolvera un listado de los departamentos de la BBDD  
+        /// </summary>
+        /// <returns></returns>
         public static List<clsDepartamento> listadoDepartamentosDAL()
         {
 
@@ -34,7 +37,7 @@ namespace CapaDAL.Listado
                 {
                     oDepartamento= new clsDepartamento();
                     oDepartamento.Id = (int)reader["ID"];
-                    oDepartamento.Nombre = (string)reader["Nombre"];
+                    oDepartamento.NombreDep = (string)reader["Nombre"];
                     listado.Add(oDepartamento);
                 }
             }

@@ -12,17 +12,17 @@ namespace CapaDAL.Manejadoras
     public static class clsManejadoraPersonaBL
     {
 
-
         /// <summary>
-        /// Funcion que devuelve una persona segun su Id
+        /// Funcion que devuelve una persona segun su Id usando DAL aplicando las reglas de negocio oportunas
         /// Pre: Int Id > 0
         /// Pos: Nada
         /// </summary>
         /// <returns></returns>
-        public static clsPersona getPersonaById(int Id)
+        public static clsPersona getPersonaByIdBL(int id)
         {
-            List<clsPersona> listaPersonas = clsListaPersonasDAL.listadoPersonasDAL();
-            return listaPersonas.Find(x => x.Id == Id);
+            clsPersona oPersona = clsManejadoraPersonaDAL.getPersonaByIdDAL(id);
+
+            return oPersona;
         }
 
         /// <summary>
@@ -34,20 +34,38 @@ namespace CapaDAL.Manejadoras
         public static int deletePersonaBL(int id)
         {
             int numeroFilasAfectadas = 0;
-            
-            DateTime fechaActual = DateTime.Now;    
 
-            if(fechaActual.DayOfWeek==DayOfWeek.Friday)
+            DateTime fechaActual = DateTime.Now;
+
+            if (fechaActual.DayOfWeek == DayOfWeek.Friday)
             {
                 numeroFilasAfectadas = -1;
-            } else {
+            }
+            else
+            {
                 numeroFilasAfectadas = clsManejadoraPersonaDAL.deletePersonaDAL(id);
             }
             return numeroFilasAfectadas;
 
         }
 
-        
+        /// <summary>
+        /// Funcion que aplicara reglas de negocio pertinentes antes de darle a la capa DAL una persona que añadir a la BBDD
+        /// </summary>
+        /// <param name="persona"></param>
+        public static void createPersonaBL(clsPersona persona)
+        {
+            clsManejadoraPersonaDAL.createPersonaDAL(persona);
+        }
 
+        /// <summary>
+        /// Funcion que aplicara reglas de negocio pertinentes antes de darle a la capa DAL una persona que editar en la BBDD
+        /// </summary>
+        /// <param name="persona"></param>
+        public static void editPersonaBL(clsPersona persona)
+        {
+            clsManejadoraPersonaDAL.editPersonaDAL(persona);
+
+        }
     }
 }

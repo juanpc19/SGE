@@ -1,4 +1,5 @@
-﻿@model IEnumerable<CapaEntidades.clsPersona>
+﻿@using CapaEntidades;
+@model EjTema10ADO.NET.Models.ViewModels.clsPersonaListaDepVM
 
 @{
     ViewData["Title"] = "Listado";
@@ -13,32 +14,33 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nombre)
+                @Html.DisplayNameFor(model => model.Persona.Nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Apellidos)
+                @Html.DisplayNameFor(model => model.Persona.Apellidos)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Telefono)
+                @Html.DisplayNameFor(model => model.Persona.Telefono)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Direccion)
+                @Html.DisplayNameFor(model => model.Persona.Direccion)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Foto)
+                @Html.DisplayNameFor(model => model.Persona.Foto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FechaNac)
+                @Html.DisplayNameFor(model => model.Persona.FechaNac)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdDepartamento)
+                @Html.DisplayNameFor(model => model.Departamento.NombreDep)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 
-@foreach (var item in Model) {
+        <!--recorre atributo ListaPersonas del VM mostrando datos de cada item persona-->
+@foreach (var item in Model.ListaPersonas) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Nombre)
@@ -53,14 +55,20 @@
                 @Html.DisplayFor(modelItem => item.Direccion)
             </td>
             <td>
-
-                @Html.DisplayFor(modelItem => item.Foto)
+                <img src="@item.Foto" alt="Person Image" style="width: 100px; height: auto;" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FechaNac)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdDepartamento)
+                    <!--recorre atributo ListaDep del VM mostrando nombre de departamento cuya id es igual a idDep de item persona actual -->
+                    @foreach (var departamento in Model.ListaDep)
+                    {
+                        if (departamento.Id == item.IdDepartamento)
+                        {
+                            @Html.DisplayFor(modelItem => departamento.NombreDep)
+                        }
+                    }
             </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", "Crud", new { id = item.Id }) |

@@ -9,6 +9,7 @@ namespace EjTema10ADO.NET.Models.ViewModels
 
         #region atributos
         private clsPersona persona;
+        private clsDepartamento departamento;
         private List<clsDepartamento> listaDep;
         private List<clsPersona> listaPersonas;
         #endregion
@@ -17,6 +18,7 @@ namespace EjTema10ADO.NET.Models.ViewModels
         public clsPersonaListaDepVM()
         {
             persona = new clsPersona();
+            departamento = new clsDepartamento();
             listaDep = clsListaDepBL.listadoDepartamentosBL();
             listaPersonas= clsListaPersonasBL.listadoPersonasBL();
         }
@@ -37,7 +39,8 @@ namespace EjTema10ADO.NET.Models.ViewModels
 
         #region propiedades
 
-        public clsPersona Persona { get { return persona; } set {  persona = value; } } 
+        public clsPersona Persona { get { return persona; } set {  persona = value; } }
+        public clsDepartamento Departamento { get { return departamento; } set { departamento = value; } }
         public List<clsDepartamento> ListaDep { get { return listaDep; } set { listaDep = value; } }
         public List<clsPersona> ListaPersonas { get { return listaPersonas; } set { listaPersonas = value; } }
         #endregion
