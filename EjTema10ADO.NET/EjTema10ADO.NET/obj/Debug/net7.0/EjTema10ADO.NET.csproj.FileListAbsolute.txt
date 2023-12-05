@@ -468,6 +468,7 @@ C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\n
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaEntidades.dll
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaDAL.pdb
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaEntidades.pdb
-C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\obj\Debug\net7.0\EjTema10ADO.NET.MvcApplicationPartsAssemblyInfo.cs
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaBL.dll
 D:\cosas formateo\Cosas grado 2\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaBL.pdb
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaBL.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\EjTema10ADO.NET\bin\Debug\net7.0\CapaBL.pdb
