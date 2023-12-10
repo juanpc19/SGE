@@ -11,15 +11,6 @@ namespace CapaBL.Listado
     public static class clsListaDepBL
     {
 
-        /// <summary>
-        /// funcion que deolvera un listado de los departamentos de la BBDD aplicando las reglas de negocio pertinentes
-        /// </summary>
-        /// <returns></returns>
-        public static List<clsDepartamento> listadoDepartamentosBL()
-        {
-            List<clsDepartamento> listado = clsListaDepDAL.listadoDepartamentosDAL();
-            //NO EXISTEN REGLAS 
-            return listado;
-        }
+      
     }
 }
