@@ -25,7 +25,6 @@ namespace CapaDAL.Conexion
         #region Propiedades
         public string Url { 
             get { return url; } 
-            set { url = value; } 
         }
         #endregion
 
