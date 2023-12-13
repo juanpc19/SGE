@@ -6,85 +6,52 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDAL.Conexion;
 using CapaEntidades;
+using Newtonsoft.Json;
 
 namespace CapaDAL.Listado
 {
-    public static class clsListaPersonasDAL
+    public class clsListaPersonasDAL
     {
         /// <summary>
         /// Funcion que devuelve un listado de personas extraido de la base de datos
         /// </summary>
         /// <returns></returns>
-        public static List<clsPersona> listadoPersonasDAL()
+        public async Task <List<clsPersona>> listadoPersonasDAL()
         {
-            List<clsPersona> listado = new List<clsPersona>();
-            SqlCommand command = new SqlCommand();
-            SqlDataReader reader;
-            clsPersona oPersona;
-            SqlConnection connection = new clsMyConnectionDAL().getConnection();
+            clsMyUrlDAL urlDAL = new clsMyUrlDAL();//instancio clase url
+            string miUrl = urlDAL.Url;//cojo valor url con get de objeto url
+            Uri miUri = new Uri($"{miUrl}Personas");//creo uri igual a url+end point
+            List<clsPersona> listadoPersonas = new List<clsPersona>();//creo lista a devolver
+            HttpClient miClienteHttp= new HttpClient();//creo cliente que realizara mis peticiones a la API
+            HttpResponseMessage miCodigoRespuesta;//guardara respuesta del servidor
+            string jsonRecibido;//guardara json recibido en forma de cadena
 
-            command.Connection = connection;
-            command.CommandText = "SELECT * FROM personas";
-
-            
-                connection.Close();
-                connection.Open();
-                reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        oPersona = new clsPersona();
-                        oPersona.Id = (int)reader["ID"];
-                        oPersona.Nombre = (string)reader["Nombre"];
-                        oPersona.Apellidos = (string)reader["Apellidos"];
-                        oPersona.Telefono = (string)reader["Telefono"];
-                        oPersona.Direccion = (string)reader["Direccion"];
-                        oPersona.Foto = (string)reader["Foto"];
-                        oPersona.FechaNac = (DateTime)reader["FechaNacimiento"];
-                        oPersona.IdDepartamento = (int)reader["IDDepartamento"];
-                        listado.Add(oPersona);
-                    }
-                }
-                reader.Close();
-                connection.Close();
-
-            return listado;
-        }
-
-
-        /// <summary>
-        /// funcion que cuenta las personas existentes en una base de datos //podria usar linq en listado
-        /// </summary>
-        /// <returns></returns>
-        public static int cuentaPersonasListadoDAL()
-        {
-            int contador = 0;
-            SqlCommand command = new SqlCommand();
-            SqlDataReader reader;           
-            SqlConnection connection = new clsMyConnectionDAL().getConnection();
-
-            command.Connection = connection;
-            command.CommandText = "SELECT * FROM personas";
-
-
-            connection.Close();
-            connection.Open();
-            reader = command.ExecuteReader();
-
-            if (reader.HasRows)
+            try
             {
-                while (reader.Read())
+                //recibo respuesta del servidor al intentar conectar a la uri
+                miCodigoRespuesta = await miClienteHttp.GetAsync(miUri);
+                //si el codigo respuesta es correcto
+                if(miCodigoRespuesta.IsSuccessStatusCode)
                 {
-                    contador += 1;
+                    //guardo el json de la uri en forma de string
+                    jsonRecibido = await miClienteHttp.GetStringAsync(miUri);
+                    //me deshago del cliente para ahorra recursos
+                    miClienteHttp.Dispose();
+                    //doy a listaoPersonas valor igual a el json deserializado
+                    //lo cual pasara la string previamente recibida (en formato diccionario o json)
+                    //a una lista de personas
+                    listadoPersonas=JsonConvert.DeserializeObject<List<clsPersona>>(jsonRecibido);  
                 }
             }
-            reader.Close();
-            connection.Close();
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
-            return contador;
+            return listadoPersonas;
         }
+
+ 
       
     }
 }
