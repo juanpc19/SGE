@@ -20,10 +20,22 @@ namespace CapaDAL.Listado
         {
             //EN UN MUNDO IDEAL SIN NORMAS
             List<clsPersona> listado = clsListaPersonasDAL.listadoPersonasDAL();
-            
+
             return listado;
         }
 
-        
+        /// <summary>
+        /// funcion que devolvera cantidad de personas en la base de datos aplicando las reglas de negocio oportunas
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static int cuentaPersonasListadoBL()
+        {
+            int contador = 0;
+
+            contador = clsListaPersonasDAL.cuentaPersonasListadoDAL();
+
+            return contador;
+        }
     }
 }

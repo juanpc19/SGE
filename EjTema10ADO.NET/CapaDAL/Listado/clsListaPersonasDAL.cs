@@ -53,6 +53,38 @@ namespace CapaDAL.Listado
             return listado;
         }
 
+
+        /// <summary>
+        /// funcion que cuenta las personas existentes en una base de datos //podria usar linq en listado
+        /// </summary>
+        /// <returns></returns>
+        public static int cuentaPersonasListadoDAL()
+        {
+            int contador = 0;
+            SqlCommand command = new SqlCommand();
+            SqlDataReader reader;           
+            SqlConnection connection = new clsMyConnectionDAL().getConnection();
+
+            command.Connection = connection;
+            command.CommandText = "SELECT * FROM personas";
+
+
+            connection.Close();
+            connection.Open();
+            reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    contador += 1;
+                }
+            }
+            reader.Close();
+            connection.Close();
+
+            return contador;
+        }
       
     }
 }

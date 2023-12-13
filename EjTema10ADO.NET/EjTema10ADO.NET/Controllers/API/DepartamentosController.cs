@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CapaBL.Listado;
+using CapaEntidades;
+using Microsoft.AspNetCore.Mvc;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,9 +13,9 @@ namespace EjTema10ADO.NET.Controllers.API
     {
         // GET: api/<DepartamentosController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<clsDepartamento> Get()
         {
-            return new string[] { "value1", "value2" };
+            return clsListaDepBL.listadoDepartamentosBL();
         }
 
         // GET api/<DepartamentosController>/5
