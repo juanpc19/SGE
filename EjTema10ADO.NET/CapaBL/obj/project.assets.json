@@ -4613,6 +4613,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "CapaDAL >= 1.0.0",
+      "CapaEntidades >= 1.0.0",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
@@ -4651,6 +4652,9 @@
           "projectReferences": {
             "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj": {
               "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj"
+            },
+            "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
+              "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
             }
           }
         }

@@ -6,52 +6,53 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDAL.Conexion;
 using CapaEntidades;
-using Newtonsoft.Json;
 
 namespace CapaDAL.Listado
 {
-    public class clsListaPersonasDAL
+    public static class clsListaPersonasDAL
     {
-      
         /// <summary>
-        /// funcion que devolvera un listado de personas extraido de una API
+        /// Funcion que devuelve un listado de personas extraido de la base de datos
         /// </summary>
         /// <returns></returns>
-        public async Task<List<clsPersona>> listadoPersonasDAL()
+        public static List<clsPersona> listadoPersonasDAL()
         {
-            List<clsPersona> listado = new List<clsPersona>();//lista para guardar personas
-          
-            clsMyUrlDAL myUrl = new clsMyUrlDAL();//recojo valor de clsMyUrlDAL y se lo doy a myUrl
-            Uri uriListaPersonas = new Uri($"{myUrl.Url}Personas");//creo uri concatenando url (IMPORTANTE HACER GET PARA OBTENER VALOR EN STRING Y NO EN OBJETO y endpoint (Personas)
-            HttpClient miHttpClient = new HttpClient();//Creo cliente http que manejara mis peticiones
-            HttpResponseMessage miCodigoRespuesta;//creo codigo http que guarde respuesta de servidor
-            string jsonRecibido;//creo variable que guarda json recibido con todas las personas
+            List<clsPersona> listado = new List<clsPersona>();
+            SqlCommand command = new SqlCommand();
+            SqlDataReader reader;
+            clsPersona oPersona;
+            SqlConnection connection = new clsMyConnectionDAL().getConnection();
 
-            //abro try porque intento conectar a recurso externo
-            try
-            {
-                //guardo en codigo respuesta el codigo devuelto por mi cliente al intentar conectar con el get de uriListaPersonas
-                miCodigoRespuesta = await miHttpClient.GetAsync(uriListaPersonas);
+            command.Connection = connection;
+            command.CommandText = "SELECT * FROM personas";
 
-                //si el codigo es correcto 
-                if(miCodigoRespuesta.IsSuccessStatusCode)
+            
+                connection.Close();
+                connection.Open();
+                reader = command.ExecuteReader();
+
+                if (reader.HasRows)
                 {
-                    //guardo en string el string recibido al atacar el end point uriListaPersonas
-                    jsonRecibido = await miHttpClient.GetStringAsync(uriListaPersonas);
-                    //me deshago de mi cliente porque ya no lo necesito(como cerrar conexion)
-                    miHttpClient.Dispose(); 
-                    //guardo en listado el resultado de aplicar deserializacion al string jsonRecibido
-                    //pasando el json con las personas en formato diccionario a un List<clsPersona>
-                    listado = JsonConvert.DeserializeObject<List<clsPersona>>(jsonRecibido);
+                    while (reader.Read())
+                    {
+                        oPersona = new clsPersona();
+                        oPersona.Id = (int)reader["ID"];
+                        oPersona.Nombre = (string)reader["Nombre"];
+                        oPersona.Apellidos = (string)reader["Apellidos"];
+                        oPersona.Telefono = (string)reader["Telefono"];
+                        oPersona.Direccion = (string)reader["Direccion"];
+                        oPersona.Foto = (string)reader["Foto"];
+                        oPersona.FechaNac = (DateTime)reader["FechaNacimiento"];
+                        oPersona.IdDepartamento = (int)reader["IDDepartamento"];
+                        listado.Add(oPersona);
+                    }
                 }
-            } 
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error en funcion listadoPersonasDAL(): {ex.Message}");               
-            }
+                reader.Close();
+                connection.Close();
 
             return listado;
         }
+
       
     }
 }

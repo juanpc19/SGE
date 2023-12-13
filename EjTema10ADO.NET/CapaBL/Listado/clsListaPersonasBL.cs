@@ -10,21 +10,17 @@ using System.Threading.Tasks;
 
 namespace CapaDAL.Listado
 {
-    public class clsListaPersonasBL
+    public static class clsListaPersonasBL
     {
         /// <summary>
-        /// Funcion que devuelve un listado de personas extraido de DAL aplicando las reglas de negocio oportunas teniendo en cuenta la asincronia
+        /// Funcion que devuelve un listado de personas extraido de DAL aplicando las reglas de negocio oportunas
         /// </summary>
         /// <returns>lista con personas</returns>
-        public async Task<List<clsPersona>> listadoPersonasBL()
+        public static List<clsPersona> listadoPersonasBL()
         {
-            //creo instancia de la clase de listados de personas de DAL, necesario en lugar de estatico por asincronia
-            clsListaPersonasDAL oDal = new clsListaPersonasDAL();
-
-            //creo el listado y le indico que valor a recibir es asincrono con await
-            List<clsPersona> listado = await oDal.listadoPersonasDAL();
-
-            //EN UN MUNDO IDEAL SIN NORMAS devuelvo el listado sin hacer nada mas
+            //EN UN MUNDO IDEAL SIN NORMAS
+            List<clsPersona> listado = clsListaPersonasDAL.listadoPersonasDAL();
+            
             return listado;
         }
 
