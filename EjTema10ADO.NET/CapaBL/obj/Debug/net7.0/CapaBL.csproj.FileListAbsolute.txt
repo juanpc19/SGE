@@ -47,3 +47,5 @@ C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaBL\obj\Debug\net7.0\CapaBL.dll
 C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaBL\obj\Debug\net7.0\refint\CapaBL.dll
 C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaBL\obj\Debug\net7.0\CapaBL.pdb
 C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaBL\obj\Debug\net7.0\ref\CapaBL.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\CapaBL\bin\Debug\net7.0\CapaDAL.dll
+C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\CapaBL\bin\Debug\net7.0\CapaDAL.pdb

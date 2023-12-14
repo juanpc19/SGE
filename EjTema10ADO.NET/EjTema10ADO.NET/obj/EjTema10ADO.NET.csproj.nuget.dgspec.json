@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj": {}
+    "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj": {
+    "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
+        "projectUniqueName": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
         "projectName": "CapaBL",
-        "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
+        "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
         "packagesPath": "C:\\Users\\jperez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaBL\\obj\\",
+        "outputPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj": {
-                "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj"
+              "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj": {
+                "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj"
               },
-              "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
-                "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
+              "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
+                "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj": {
+    "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
+        "projectUniqueName": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
         "projectName": "CapaDAL",
-        "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
+        "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
         "packagesPath": "C:\\Users\\jperez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaDAL\\obj\\",
+        "outputPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -106,8 +106,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
-                "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
+              "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
+                "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
               }
             }
           }
@@ -147,14 +147,14 @@
         }
       }
     },
-    "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
+    "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
+        "projectUniqueName": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
         "projectName": "CapaEntidades",
-        "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
+        "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
         "packagesPath": "C:\\Users\\jperez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\obj\\",
+        "outputPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -213,14 +213,14 @@
         }
       }
     },
-    "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj": {
+    "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
+        "projectUniqueName": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
         "projectName": "EjTema10ADO.NET",
-        "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
+        "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
         "packagesPath": "C:\\Users\\jperez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\EjTema10ADO.NET\\obj\\",
+        "outputPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -242,11 +242,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj": {
-                "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj"
+              "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj": {
+                "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj"
               },
-              "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
-                "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
+              "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
+                "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
               }
             }
           }

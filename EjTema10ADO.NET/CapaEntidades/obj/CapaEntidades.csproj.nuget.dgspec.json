@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {}
+    "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
+    "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
+        "projectUniqueName": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
         "projectName": "CapaEntidades",
-        "projectPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
+        "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
         "packagesPath": "C:\\Users\\jperez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaEntidades\\obj\\",
+        "outputPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaEntidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

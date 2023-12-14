@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fi3D0y1vYHuo6RzwtThSLEaoyGja63+VPNo6D3feDpGMWvv/ZnkNDnbOxg/lyP52tqQDYYpp7P3SEkHsnoDdaQ==",
+  "dgSpecHash": "jDPgYzlf/TkGIiAoC1+Sk14VCuo+48GhSfzd03zaItC+wJxdX/xg6WWtyLvopfHdaH7WSMhXOk6VMje05KQuFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jperez\\Desktop\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
+  "projectFilePath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\EjTema10ADO.NET\\CapaBL\\CapaBL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jperez\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\jperez\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
