@@ -22,3 +22,15 @@ C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\CapaEntidades\obj\Debug\net
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\refint\CapaEntidades.dll
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\CapaEntidades.pdb
 C:\Users\jperez\Documents\GitHub\SGE\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\ref\CapaEntidades.dll
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\bin\Debug\net7.0\CapaEntidades.deps.json
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\bin\Debug\net7.0\CapaEntidades.dll
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\bin\Debug\net7.0\CapaEntidades.pdb
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\CapaEntidades.csproj.AssemblyReference.cache
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\CapaEntidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\CapaEntidades.AssemblyInfoInputs.cache
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\CapaEntidades.AssemblyInfo.cs
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\CapaEntidades.csproj.CoreCompileInputs.cache
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\CapaEntidades.dll
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\refint\CapaEntidades.dll
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\CapaEntidades.pdb
+C:\Users\jperez\Desktop\EjTema10ADO.NET\CapaEntidades\obj\Debug\net7.0\ref\CapaEntidades.dll

@@ -34,7 +34,8 @@ namespace EjTema10ADO.NET.Controllers.API
         {
             //REQUIERE POSTMAN
             IActionResult respuestaApi;
-            int contadorPreInsert = clsListaPersonasBL.cuentaPersonasListadoBL();
+            int contadorPreInsert=0;
+            //= clsListaPersonasBL.cuentaPersonasListadoBL();
             int contadorPostInsert = 0;
             string newlyCreatedResourceURI = "/api/personas/" + persona.Id; //end point donde añado persona + id de la persona que he añadido
 
@@ -43,7 +44,7 @@ namespace EjTema10ADO.NET.Controllers.API
             {
                 clsManejadoraPersonaBL.createPersonaBL(persona);
 
-                contadorPostInsert = clsListaPersonasBL.cuentaPersonasListadoBL();
+                //contadorPostInsert = clsListaPersonasBL.cuentaPersonasListadoBL();
 
                 if (contadorPreInsert < contadorPostInsert)
                 {

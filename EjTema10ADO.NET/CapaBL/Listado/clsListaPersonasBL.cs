@@ -10,22 +10,20 @@ using System.Threading.Tasks;
 
 namespace CapaDAL.Listado
 {
-    public class clsListaPersonasBL
+    public static class clsListaPersonasBL
     {
         /// <summary>
         /// Funcion que devuelve un listado de personas extraido de DAL aplicando las reglas de negocio oportunas
         /// </summary>
         /// <returns>lista con personas</returns>
-        public async Task <List<clsPersona>> listadoPersonasBL()
+        public static List<clsPersona> listadoPersonasBL()
         {
             //EN UN MUNDO IDEAL SIN NORMAS
-            clsListaPersonasDAL oDal = new clsListaPersonasDAL();
-
-            List<clsPersona> listado = await oDal.listadoPersonasDAL();
-
+            List<clsPersona> listado = clsListaPersonasDAL.listadoPersonasDAL();
+            
             return listado;
         }
 
-       
+        
     }
 }
