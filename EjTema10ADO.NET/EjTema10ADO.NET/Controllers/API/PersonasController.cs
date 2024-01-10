@@ -11,20 +11,66 @@ namespace EjTema10ADO.NET.Controllers.API
     [ApiController]
     public class PersonasController : ControllerBase
     {
+        //// GET: api/<PersonasController>
+        //[HttpGet]
+        ////ESTO ES GET LISTADO, END POINT Personas, devuelve listado 
+        //public IEnumerable<clsPersona> Get()
+        //{
+        //    return clsListaPersonasBL.listadoPersonasBL();
+        //}
+
         // GET: api/<PersonasController>
         [HttpGet]
-        //ESTO ES GET LISTADO, END POINT Personas, devuelve listado 
-        public IEnumerable<clsPersona> Get()
+        public IActionResult Get()
         {
-            return clsListaPersonasBL.listadoPersonasBL();
+            IActionResult salida;
+            List<clsPersona> listadoCompleto = new List<clsPersona>();
+         
+            try
+            {             
+                listadoCompleto = clsListaPersonasBL.listadoPersonasBL();
+                if (listadoCompleto.Count() == 0)
+                {
+                    salida = NoContent();
+                }
+                else
+                {
+                    salida = Ok(listadoCompleto);
+                }
+            }
+            catch
+            {
+                salida = BadRequest();
+            }
+            return salida;
         }
 
         // GET api/<PersonasController>/5
         [HttpGet("{id}")]
         //ESTO ES GET BY ID, END POINT Personas / id, devuelve persona
-        public clsPersona Get(int id)
+        public IActionResult Get(int id)
         {
-            return clsManejadoraPersonaBL.getPersonaByIdBL(id);
+            IActionResult salida;
+            clsPersona persona = new clsPersona();
+
+            try
+            {
+                persona = clsManejadoraPersonaBL.getPersonaByIdBL(id);
+                if (persona==null)
+                {
+                    salida = NoContent();
+                }
+                else
+                {
+                    salida = Ok();
+                }
+            }
+            catch
+            {
+                salida = BadRequest();
+            }
+            return salida;
+             
         }
 
         // POST api/<PersonasController>
