@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Ej1",
     "\\Ej2",
+    "\\Ej3",
     "\\EjemplosEj1"
   ],
-  "SelectedNode": "\\Ej2",
+  "SelectedNode": "\\Ej3\\clsListadoMarcas.cs",
   "PreviewInSolutionExplorer": false
 }
