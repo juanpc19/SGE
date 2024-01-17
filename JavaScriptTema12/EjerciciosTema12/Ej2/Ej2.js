@@ -1,7 +1,9 @@
-// JavaScript source code
+window.onload = inicializaEventos;
 
+function inicializaEventos() {
+    document.getElementById("btn").addEventListener("click",enviar, false)
+}
 
-//de una ya tiene set get a la mierda el tipo variable
 class Persona {
     constructor(nombre, apellidos) {
         this.nombre = nombre;
