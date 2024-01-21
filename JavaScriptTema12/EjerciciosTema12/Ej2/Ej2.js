@@ -1,6 +1,6 @@
-window.onload = inicializaEventos;
+window.onload = InicializaEventos;
 
-function inicializaEventos() {
+function InicializaEventos() {
     document.getElementById("btn").addEventListener("click",enviar, false)
 }
 
