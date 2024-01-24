@@ -18,7 +18,7 @@ function InicializaEventos() {
     CargarEnTabla();
 
 }
-function PeticionPersonas() {
+async function PeticionPersonas() {
     let miPeticion = new XMLHttpRequest();
     miPeticion.open("GET", "https://crudjuan.azurewebsites.net/api/personas");
     miPeticion.onreadystatechange = function () {
@@ -32,7 +32,7 @@ function PeticionPersonas() {
     miPeticion.send();
 }
 
-function PeticionDepartamentos() {
+async function PeticionDepartamentos() {
     let miPeticion = new XMLHttpRequest();
     miPeticion.open("GET", "https://crudjuan.azurewebsites.net/api/departamentos");
     miPeticion.onreadystatechange = function () {
