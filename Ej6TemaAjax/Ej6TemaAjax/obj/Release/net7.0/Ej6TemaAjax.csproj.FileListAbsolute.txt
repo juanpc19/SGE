@@ -1,0 +1,5 @@
+C:\Users\jperez\Documents\GitHub\SGE\Ej6TemaAjax\Ej6TemaAjax\obj\Release\net7.0\Ej6TemaAjax.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jperez\Documents\GitHub\SGE\Ej6TemaAjax\Ej6TemaAjax\obj\Release\net7.0\Ej6TemaAjax.AssemblyInfoInputs.cache
+C:\Users\jperez\Documents\GitHub\SGE\Ej6TemaAjax\Ej6TemaAjax\obj\Release\net7.0\Ej6TemaAjax.AssemblyInfo.cs
+C:\Users\jperez\Documents\GitHub\SGE\Ej6TemaAjax\Ej6TemaAjax\obj\Release\net7.0\Ej6TemaAjax.csproj.CoreCompileInputs.cache
+C:\Users\jperez\Documents\GitHub\SGE\Ej6TemaAjax\Ej6TemaAjax\obj\Release\net7.0\Ej6TemaAjax.MvcApplicationPartsAssemblyInfo.cache

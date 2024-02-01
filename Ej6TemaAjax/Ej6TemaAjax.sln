@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ej6TemaAjax", "Ej6TemaAjax\Ej6TemaAjax.csproj", "{C059FFDB-E5B0-48B1-83E5-18F736C6621B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ej6TemaAjax", "Ej6TemaAjax\Ej6TemaAjax.csproj", "{C059FFDB-E5B0-48B1-83E5-18F736C6621B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidades", "CapaEntidades\CapaEntidades.csproj", "{212BC45A-68AD-466C-BEB7-E7950707BC63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaBL", "CapaBL\CapaBL.csproj", "{ED08C755-F36F-4840-9A61-BA58B95C3D5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDAL", "CapaDAL\CapaDAL.csproj", "{22AE3692-8432-428E-AE0F-ED74BC155FC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{C059FFDB-E5B0-48B1-83E5-18F736C6621B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C059FFDB-E5B0-48B1-83E5-18F736C6621B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C059FFDB-E5B0-48B1-83E5-18F736C6621B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{212BC45A-68AD-466C-BEB7-E7950707BC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212BC45A-68AD-466C-BEB7-E7950707BC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212BC45A-68AD-466C-BEB7-E7950707BC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212BC45A-68AD-466C-BEB7-E7950707BC63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED08C755-F36F-4840-9A61-BA58B95C3D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED08C755-F36F-4840-9A61-BA58B95C3D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED08C755-F36F-4840-9A61-BA58B95C3D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED08C755-F36F-4840-9A61-BA58B95C3D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22AE3692-8432-428E-AE0F-ED74BC155FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22AE3692-8432-428E-AE0F-ED74BC155FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22AE3692-8432-428E-AE0F-ED74BC155FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22AE3692-8432-428E-AE0F-ED74BC155FC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

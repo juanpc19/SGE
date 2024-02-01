@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CapaEntidades;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,9 +11,17 @@ namespace Ej6TemaAjax.Controllers.API
     {
         // GET: api/<MarcasController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            IActionResult salida;
+
+            List<clsMarca> listadoMarcas = new List<clsMarca>();
+            try
+            {
+                listadoMarcas= cls
+            }
+            return salida;
+
         }
 
         // GET api/<MarcasController>/5

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "CapaEntidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/CapaEntidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CapaEntidades.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CapaEntidades/1.0.0": {
+      "type": "project",
+      "path": "../CapaEntidades/CapaEntidades.csproj",
+      "msbuildProject": "../CapaEntidades/CapaEntidades.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "CapaEntidades >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\jperez\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\Ej6TemaAjax\\CapaEntidades\\CapaEntidades.csproj": {
+              "projectPath": "C:\\Users\\jperez\\Documents\\GitHub\\SGE\\Ej6TemaAjax\\CapaEntidades\\CapaEntidades.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
