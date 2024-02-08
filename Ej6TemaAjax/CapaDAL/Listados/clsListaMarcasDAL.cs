@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 
 namespace CapaDAL.Listados
 {
-    public class clsListaMarcas
+    public class clsListaMarcasDAL
     {
 
-        public static List<clsMarca> listadoMarcasDAL()
+        public static List<clsMarca> ListadoMarcasDAL()
         {
 
             List<clsMarca> listado = new List<clsMarca>();
             SqlCommand command = new SqlCommand();
             SqlDataReader reader;
-            clsMarca oDepartamento;
+            clsMarca oMarca;
             SqlConnection connection = new clsMyConnectionDAL().getConnection();
 
             command.Connection = connection;
-            command.CommandText = "SELECT * FROM departamentos";
+            command.CommandText = "SELECT * FROM marcas";
 
             connection.Close();
             connection.Open();
@@ -32,10 +32,10 @@ namespace CapaDAL.Listados
             {
                 while (reader.Read())
                 {
-                    oDepartamento = new clsMarca();
-                    oDepartamento.Id = (int)reader["ID"];
-                    oDepartamento.Nombre = (string)reader["Nombre"];
-                    listado.Add(oDepartamento);
+                    oMarca = new clsMarca();
+                    oMarca.Id = (int)reader["Id"];
+                    oMarca.Nombre = (string)reader["Nombre"];
+                    listado.Add(oMarca);
                 }
             }
 
