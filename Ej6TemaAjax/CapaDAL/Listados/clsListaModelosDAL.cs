@@ -14,8 +14,7 @@ namespace CapaDAL.Listados
         public static List<clsModelo> ListadoModelosDAL()
         {
 
-            List<clsModelo> listado = new List<clsModelo>();
-            List<clsModelo> listadoFiltrado = new List<clsModelo>();
+            List<clsModelo> listado = new List<clsModelo>(); 
             SqlCommand command = new SqlCommand();
             SqlDataReader reader;
             clsModelo oModelo;

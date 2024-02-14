@@ -10,7 +10,6 @@ namespace CapaBL.Listados
 {
     public class clsListaMarcasBL
     {
-        
         public static List<clsMarca> ListadoMarcasBl()
         {
             

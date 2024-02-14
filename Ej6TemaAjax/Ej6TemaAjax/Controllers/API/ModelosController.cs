@@ -1,4 +1,5 @@
 ﻿using CapaBL.Listados;
+using CapaBL.Manejadora;
 using CapaEntidades;
 using Microsoft.AspNetCore.Mvc;
 
@@ -54,11 +55,22 @@ namespace Ej6TemaAjax.Controllers.API
         public IActionResult Put(int id, [FromBody] clsModelo modeloRecibido)
         {
             IActionResult respuestaApi;
+            int numeroFilasAfectadas;
+
             try
             {
-                respuestaApi = Ok();
+                numeroFilasAfectadas = clsManejadoraModeloBL.editModeloBL(modeloRecibido);
+                if (numeroFilasAfectadas == 0)
+                {
+                    respuestaApi = NotFound();
+                }
+                else
+                {
+                    respuestaApi = Ok();
+                }
+                
             }
-            catch (Exception ex)
+            catch  
             {
                 respuestaApi = BadRequest();
             }

@@ -11,26 +11,28 @@ namespace CapaDAL.Manejadora
 {
     public class clsManejadoraModeloDAL
     {
-        public static void editModeloDAL(clsModelo modelo)
+        public static int editModeloDAL(clsModelo modelo)
         {
             SqlConnection connection = new clsMyConnectionDAL().getConnection();
             SqlCommand command = new SqlCommand();
+            int numeroFilasAfectadas;
 
             command.Parameters.AddWithValue("@Id", modelo.Id);
             command.Parameters.AddWithValue("@IdMarca", modelo.IdMarca);
             command.Parameters.AddWithValue("@Nombre", modelo.Nombre);
             command.Parameters.AddWithValue("@Precio", modelo.Precio);
+ 
 
-  
-
-            command.CommandText = "UPDATE Modelos SET Precio = @Precio " +
-                       +
-                      "IDDepartamento = @IDDepartamento WHERE ID = @ID";
+            command.CommandText = "UPDATE Modelos SET Precio = @Precio, " +
+                                 "IdMarca = @IdMarca, " +
+                                 "Nombre = @Nombre " +
+                                 "WHERE ID = @Id";
 
             command.Connection = connection;
 
-            command.ExecuteNonQuery();
+            numeroFilasAfectadas = command.ExecuteNonQuery();
 
+            return numeroFilasAfectadas;
 
         }
     }
