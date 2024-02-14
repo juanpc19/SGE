@@ -1,4 +1,5 @@
-﻿using CapaEntidades;
+﻿using CapaBL.Listados;
+using CapaEntidades;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -14,14 +15,25 @@ namespace Ej6TemaAjax.Controllers.API
         public IActionResult Get()
         {
             IActionResult salida;
-
             List<clsMarca> listadoMarcas = new List<clsMarca>();
             try
             {
-                listadoMarcas= cls
+                listadoMarcas = clsListaMarcasBL.ListadoMarcasBl();
+
+                if (listadoMarcas.Count() == 0)
+                {
+                    salida = NoContent();
+                }
+                else
+                {
+                    salida = Ok(listadoMarcas);
+                }
+            }
+            catch 
+            {
+                salida = BadRequest();
             }
             return salida;
-
         }
 
         // GET api/<MarcasController>/5

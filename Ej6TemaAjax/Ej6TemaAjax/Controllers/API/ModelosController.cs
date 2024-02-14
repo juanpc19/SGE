@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CapaBL.Listados;
+using CapaEntidades;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,9 +12,28 @@ namespace Ej6TemaAjax.Controllers.API
     {
         // GET: api/<ModelosController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            IActionResult salida;
+            List<clsModelo> listadoModelos = new List<clsModelo>();
+            try
+            {
+                listadoModelos = clsListaModelosBL.ListadoModelosBL();
+
+                if (listadoModelos.Count() == 0)
+                {
+                    salida = NoContent();
+                }
+                else
+                {
+                    salida = Ok(listadoModelos);
+                }
+            }
+            catch
+            {
+                salida = BadRequest();
+            }
+            return salida;
         }
 
         // GET api/<ModelosController>/5
@@ -30,8 +51,19 @@ namespace Ej6TemaAjax.Controllers.API
 
         // PUT api/<ModelosController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] clsModelo modeloRecibido)
         {
+            IActionResult respuestaApi;
+            try
+            {
+                respuestaApi = Ok();
+            }
+            catch (Exception ex)
+            {
+                respuestaApi = BadRequest();
+            }
+
+            return respuestaApi;
         }
 
         // DELETE api/<ModelosController>/5

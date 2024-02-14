@@ -25,7 +25,6 @@ namespace EjTema10ADO.NET.Controllers.API
         {
             IActionResult salida;
             List<clsPersona> listadoCompleto = new List<clsPersona>();
-         
             try
             {             
                 listadoCompleto = clsListaPersonasBL.listadoPersonasBL();
