@@ -11,10 +11,11 @@ window.onload = InicializaEventos;
 //https://ej6temaajaxjuan.azurewebsites.net/api/modelos
 
 
-//datos a usar 
+//elementos html
 var misMarcas;
 var misModelos;
 var miP;
+//variables globales
 var listaMarcas;
 var listaModelos;
 var listaModelosPorMarca;
@@ -24,19 +25,20 @@ async function InicializaEventos() {
     misModelos = document.getElementById("modelos");
     miP = document.getElementById("textoCarga");
     misMarcas.addEventListener("change", CargarListadoModelos);
+    //crear boton y darle listener
     await PeticionMarcas();
     await PeticionModelos();
 
     //recorro el array de listamarcas y voy creando los options del select con sus valores
     for (var i = 0; i < listaMarcas.length; i++) {
         var option = document.createElement("option", false);//creo un option y lo añado a la lista
-        //option.value = listaMarcas[i].nombre;
+        option.value = listaMarcas[i].id;
         option.text = listaMarcas[i].nombre;
          
         misMarcas.add(option);
     }
 
-    option.defaultSelected = false;
+    //option.defaultSelected = false;
   
 }
 
@@ -49,7 +51,7 @@ async function InicializaEventos() {
 function PeticionMarcas() {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
-        miPeticion.open("GET", "https://ej6temaajaxjuan.azurewebsites.net/api/marcas");
+        miPeticion.open("GET", "http://localhost:5116/api/marcas");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
                 miP.innerHTML = "Cargando";
@@ -70,7 +72,7 @@ function PeticionMarcas() {
 function PeticionModelos() {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
-        miPeticion.open("GET", "https://ej6temaajaxjuan.azurewebsites.net/api/modelos");
+        miPeticion.open("GET", "http://localhost:5116/api/modelos");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
                 miP.innerHTML = "Cargando";
@@ -78,6 +80,7 @@ function PeticionModelos() {
                 miP.innerHTML = "";
                 if (miPeticion.status == 200) {
                     listaModelos = JSON.parse(miPeticion.responseText);
+                    listaModelos = modelosData.map(modelo => new clsModelo(modelo.id, modelo.idMarca, modelo.nombre, modelo.precio));
                     resolve();
                 } else {
                     reject("Error al recoger datos de marcas de la api")
@@ -89,13 +92,29 @@ function PeticionModelos() {
 }
 
 function CargarListadoModelos() {
-    
+
+    var marcaSeleccionada = misMarcas.options[misMarcas.selectedIndex].value;
+    marcaSeleccionada.id;
+    listaModelosPorMarca = listaModelos.filter(x => x.idMarca == marcaSeleccionada.label);
+
+    //misModelos.clear();
+
     for (var i = 0; i < listaModelosPorMarca.length; i++) {
+
         var option = document.createElement("option");
-        option.value = listaModelosAudi[i];
-        option.text = listaModelosAudi[i];
+        option.text = listaModelosPorMarca[i].nombre;
         misModelos.add(option);
+
+
     }
+
+    //for (var i = 0; i < listaModelos.length; i++) {
+    //    var option = document.createElement("option");
+         
+    //    option.text = listaModelosPorMarca[i];
+    //    listaModelosPorMarca.add(option);
+    //}
+
 }
 
 
