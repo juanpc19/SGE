@@ -33,7 +33,7 @@ namespace CapaDAL.Listados
                 {
                     oModelo = new clsModelo();
                     oModelo.Id = (int)reader["Id"];
-                    oModelo.Id = (int)reader["IdMarca"]; 
+                    oModelo.IdMarca = (int)reader["IdMarca"]; 
                     oModelo.Nombre = (string)reader["Nombre"];
                     oModelo.Precio = (int)reader["Precio"];
                     listado.Add(oModelo);
