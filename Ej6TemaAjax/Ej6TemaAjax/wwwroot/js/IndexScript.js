@@ -15,6 +15,7 @@ window.onload = InicializaEventos;
 var misMarcas;
 var misModelos;
 var miP;
+var inputText;
 //variables globales
 var listaMarcas;
 var listaModelos;
@@ -24,17 +25,19 @@ async function InicializaEventos() {
     misMarcas = document.getElementById("marcas");
     misModelos = document.getElementById("modelos");
     miP = document.getElementById("textoCarga");
+    miBoton = document.getElementById("btn");
     misMarcas.addEventListener("change", CargarListadoModelos);
+    miBoton.addEventListener("click", EnviarNuevosPrecios);
+
     //crear boton y darle listener
     await PeticionMarcas();
     await PeticionModelos();
 
     //recorro el array de listamarcas y voy creando los options del select con sus valores
-    for (var i = 0; i < listaMarcas.length; i++) {
-        var option = document.createElement("option", false);//creo un option y lo añado a la lista
+    for (let i = 0; i < listaMarcas.length; i++) {
+        let option = document.createElement("option", false);//creo un option y lo añado a la lista
         option.value = listaMarcas[i].id;
         option.text = listaMarcas[i].nombre;
-         
         misMarcas.add(option);
     }
 
@@ -42,15 +45,12 @@ async function InicializaEventos() {
   
 }
 
-//cargar listado modelos se encarga  de cargar listado modelos por marca segun mar selec  evaluado en switch,
-//una vez tengo los listados los meto en elementos html edsde inicializa eventos,
-//cargarlistados es asyncrono
-//si peticion listado correcta cargo enlista marcas y en caso modelos filtro por id y cargo en lista modelos
-//hacer esta vaina en local
+//revisar ths in hacer put de precio recorriendo tabla 
 
 function PeticionMarcas() {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
+        let arrayDatosMarcas;
         miPeticion.open("GET", "http://localhost:5116/api/marcas");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
@@ -58,7 +58,8 @@ function PeticionMarcas() {
             } else if (miPeticion.readyState == 4) {
                 miP.innerHTML = "";
                 if (miPeticion.status == 200) {
-                    listaMarcas = JSON.parse(miPeticion.responseText);
+                    arrayDatosMarcas = JSON.parse(miPeticion.responseText);
+                    listaMarcas = arrayDatosMarcas.map(marca => new clsMarca(marca.id, marca.nombre));
                     resolve();
                 } else {
                     reject("Error al recoger datos de marcas de la api")
@@ -72,6 +73,7 @@ function PeticionMarcas() {
 function PeticionModelos() {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
+        let arrayDatosModelos;
         miPeticion.open("GET", "http://localhost:5116/api/modelos");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
@@ -79,8 +81,8 @@ function PeticionModelos() {
             } else if (miPeticion.readyState == 4) {
                 miP.innerHTML = "";
                 if (miPeticion.status == 200) {
-                    listaModelos = JSON.parse(miPeticion.responseText);
-                    listaModelos = modelosData.map(modelo => new clsModelo(modelo.id, modelo.idMarca, modelo.nombre, modelo.precio));
+                    arrayDatosModelos = JSON.parse(miPeticion.responseText);
+                    listaModelos = arrayDatosModelos.map(modelo => new clsModelo(modelo.id, modelo.idMarca, modelo.nombre, modelo.precio));
                     resolve();
                 } else {
                     reject("Error al recoger datos de marcas de la api")
@@ -93,32 +95,38 @@ function PeticionModelos() {
 
 function CargarListadoModelos() {
 
-    var marcaSeleccionada = misMarcas.options[misMarcas.selectedIndex].value;
-    marcaSeleccionada.id;
-    listaModelosPorMarca = listaModelos.filter(x => x.idMarca == marcaSeleccionada.label);
+    let marcaSeleccionada = misMarcas.options[misMarcas.selectedIndex].value;//recojo marca seleccionada (id guardado en el .value) en select por user
+    let oMarca = listaMarcas.find(x => x.id == marcaSeleccionada);//la uso para encontrar la cls marca con ese id
+    
+    listaModelosPorMarca = listaModelos.filter(x => x.idMarca == oMarca.id);
+    misModelos.innerHTML = "";
+     
+    for (let i = 0; i < listaModelosPorMarca.length; i++) {
+        let fila = misModelos.insertRow(misModelos.length);
+        let celdaNombre = fila.insertCell(0);
+        let celdaPrecio = fila.insertCell(1);
+        
+        let inputPrecio = document.createElement("input");
+        inputPrecio.type = "text";
+        celdaPrecio.appendChild(inputPrecio);
 
-    //misModelos.clear();
-
-    for (var i = 0; i < listaModelosPorMarca.length; i++) {
-
-        var option = document.createElement("option");
-        option.text = listaModelosPorMarca[i].nombre;
-        misModelos.add(option);
-
-
+        celdaNombre.innerHTML = listaModelosPorMarca[i].nombre;
+        inputPrecio.value = listaModelosPorMarca[i].precio;    
     }
+}
 
-    //for (var i = 0; i < listaModelos.length; i++) {
-    //    var option = document.createElement("option");
-         
-    //    option.text = listaModelosPorMarca[i];
-    //    listaModelosPorMarca.add(option);
-    //}
+function EnviarNuevosPrecios() {
 
 }
 
+//for (let i = 0; i < listaModelosPorMarca.length; i++) {
 
-
+//    let option = document.createElement("option");
+//    option.value = listaModelosPorMarca[i].id;
+//    option.text = listaModelosPorMarca[i].nombre;
+//    inputText.placeholder = listaModelosPorMarca[i].precio;
+//    misModelos.add(option);
+//}
 
 class clsModelo {
     constructor(id, idMarca, nombre, precio) {
@@ -141,44 +149,4 @@ class clsMarca {
  
 
 
-
-//EJ DE PICKERS RE MARCAS Y MODELOS
-//function CargarListadoModelos() {
-
-//    //extraigo el valor del select de marcas para usarlo en el switch
-//    var marcaSeleccionada = misMarcas.options[misMarcas.selectedIndex].value;
-
-//    //segun la opcion seleccion dada recorro un array de string y doy sus valores al select html vaciandolo antes
-//    switch (marcaSeleccionada) {
-//        case "Audi":
-//            misModelos.innerHTML = "";//para vaciar el select
-//            for (var i = 0; i < listaModelosAudi.length; i++) {
-//                var option = document.createElement("option");
-//                option.value = listaModelosAudi[i];
-//                option.text = listaModelosAudi[i];
-//                misModelos.add(option);
-//            }
-//            break;
-
-//        case "Seat":
-//            misModelos.innerHTML = "";
-//            for (var i = 0; i < listaModelosSeat.length; i++) {
-//                var option = document.createElement("option");
-//                option.value = listaModelosSeat[i];
-//                option.text = listaModelosSeat[i];
-//                misModelos.add(option);
-//            }
-//            break;
-
-//        case "Mercedes":
-//            misModelos.innerHTML = "";
-//            for (var i = 0; i < listaModelosMercedes.length; i++) {
-//                var option = document.createElement("option");
-//                option.value = listaModelosMercedes[i];
-//                option.text = listaModelosMercedes[i];
-//                misModelos.add(option);
-//            }
-//            break;
-
-//    }
-//}
+ 
