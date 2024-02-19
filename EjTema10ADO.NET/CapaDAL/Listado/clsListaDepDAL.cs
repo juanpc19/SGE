@@ -25,7 +25,7 @@ namespace CapaDAL.Listado
             SqlConnection connection = new clsMyConnectionDAL().getConnection();
 
             command.Connection = connection;
-            command.CommandText = "SELECT * FROM departamentos";
+            command.CommandText = "SELECT * FROM Departamentos";
 
             connection.Close();
             connection.Open();
@@ -47,6 +47,31 @@ namespace CapaDAL.Listado
            
 
             return listado;
+        }
+        public static int CuentaDepsListadoDAL()
+        {
+            int cantidad = 0;
+            SqlCommand command = new SqlCommand();
+            SqlDataReader reader;
+            SqlConnection connection = new clsMyConnectionDAL().getConnection();
+
+            command.Connection = connection;
+            command.CommandText = "SELECT COUNT(*) FROM Departamentos";
+
+            connection.Close();
+            connection.Open();
+            reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                reader.Read();
+                cantidad = reader.GetInt32(0);
+            }
+
+            reader.Close();
+            connection.Close();
+
+            return cantidad;
         }
     }
 }

@@ -25,31 +25,6 @@ namespace CapaDAL.Manejadoras
         }
 
         /// <summary>
-        /// funcion que borra una persona de la base de datos a partir de param entrada id y devuelve filas afectadas por borrado
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public static int deletePersonaDAL(int id)
-
-        {
-            int numeroFilasAfectadas = 0;
-
-            SqlConnection connection = new clsMyConnectionDAL().getConnection();
-            SqlCommand command = new SqlCommand();
-             
-            command.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
-            command.CommandText = "DELETE FROM Personas WHERE ID=@id";
-            command.Connection = connection;
-
-            
-            numeroFilasAfectadas = command.ExecuteNonQuery();
-            
-
-            return numeroFilasAfectadas;
-
-        }
-
-        /// <summary>
         /// funcion que crea una persona a partir de la recibida de capa BL<UI, y la inserta en la BBDD
         /// </summary>
         /// <param name="persona"></param>
@@ -69,18 +44,19 @@ namespace CapaDAL.Manejadoras
                 "VALUES(@Nombre,@Apellidos,@Telefono,@Direccion,@Foto,@FechaNacimiento,@IDDepartamento) ";
             command.Connection = connection;
 
-            command.ExecuteNonQuery();            
+            command.ExecuteNonQuery();
 
         }
 
         /// <summary>
-        /// edita una persona de la base de datos recibida por paramteros
+        /// edita una persona de la base de datos recibida por parametros
         /// </summary>
         /// <param name="persona"></param>
-        public static void editPersonaDAL(clsPersona persona)
+        public static int editPersonaDAL(clsPersona persona)
         {
             SqlConnection connection = new clsMyConnectionDAL().getConnection();
             SqlCommand command = new SqlCommand();
+            int numeroFilasAfectadas = 0;
 
             command.Parameters.AddWithValue("@ID", persona.Id);
             command.Parameters.AddWithValue("@Nombre", persona.Nombre);
@@ -97,21 +73,33 @@ namespace CapaDAL.Manejadoras
 
             command.Connection = connection;
 
-            command.ExecuteNonQuery();
+            numeroFilasAfectadas = command.ExecuteNonQuery();
 
-            
+            return numeroFilasAfectadas;
         }
 
-            /// <summary>
-            /// funcion que devuelve id de la ultima persona de la lista extrida de la base de datos se usara solo en en create de DAL, BL no necesita copia
-            /// </summary>
-            /// <returns></returns>
-            private static int getNewId()
+
+        /// <summary>
+        /// funcion que borra una persona de la base de datos a partir de param entrada id y devuelve filas afectadas por borrado
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static int deletePersonaDAL(int id)
         {
-            List<clsPersona> listaPersonas = clsListaPersonasDAL.listadoPersonasDAL();
-            int id = listaPersonas.Last().Id;
+            int numeroFilasAfectadas = 0;
 
-            return id;
+            SqlConnection connection = new clsMyConnectionDAL().getConnection();
+            SqlCommand command = new SqlCommand();
+
+            command.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
+            command.CommandText = "DELETE FROM Personas WHERE ID=@id";
+            command.Connection = connection;
+
+            numeroFilasAfectadas = command.ExecuteNonQuery();
+
+            return numeroFilasAfectadas;
         }
+
+        
     }
 }

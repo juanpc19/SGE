@@ -66,11 +66,9 @@ namespace CrudAjax.Controllers.API
         // POST api/<PersonasController>
         [HttpPost]
         public IActionResult Post([FromBody] clsPersona persona)
-        {
-            //REQUIERE POSTMAN
+        { 
             IActionResult respuestaApi;
-            int contadorPreInsert = 0;
-            //= clsListaPersonasBL.cuentaPersonasListadoBL();
+            int contadorPreInsert = 0; 
             int contadorPostInsert = 0;
             string newlyCreatedResourceURI = "/api/personas/" + persona.Id; //end point donde añado persona + id de la persona que he añadido
 
@@ -79,7 +77,7 @@ namespace CrudAjax.Controllers.API
             {
                 clsManejadoraPersonaBL.createPersonaBL(persona);
 
-                //contadorPostInsert = clsListaPersonasBL.cuentaPersonasListadoBL();
+                contadorPostInsert = clsListaPersonasBL.CuentaPersonasListadoBL();
 
                 if (contadorPreInsert < contadorPostInsert)
                 {
@@ -109,7 +107,7 @@ namespace CrudAjax.Controllers.API
 
             try
             {
-                numeroFilasAfectadas = clsManejadoraPersonaBL.editPersonaBL(persona);//devolver algos
+                numeroFilasAfectadas = clsManejadoraPersonaBL.editPersonaBL(persona); 
                 if (numeroFilasAfectadas == 0)
                 {
                     respuestaApi = NotFound();
@@ -132,7 +130,6 @@ namespace CrudAjax.Controllers.API
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            //REQUIERE POSTMAN
             IActionResult respuestaApi;
             int numFilasAfectadas = 0;
             try

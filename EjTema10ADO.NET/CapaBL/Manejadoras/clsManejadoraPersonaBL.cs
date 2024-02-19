@@ -25,29 +25,7 @@ namespace CapaDAL.Manejadoras
             return oPersona;
         }
 
-        /// <summary>
-        /// FUNCION QUE DEVUELVE EL NUMERO DE FILAS AFECTADAS  AL BORRAR LA PERSONA QUE RECIBE APLICANDO LAS REGLAS DE NEGOCIO
-        /// Post: mi salida sera 0 cuando no haya errores, 1 si se ha borrado, -1 si hay error en borrado en bl
-        /// </summary>
-        /// <param name="id">id de la persona</param>
-        /// <returns>devuelve el numero de personas afectadas</returns>
-        public static int deletePersonaBL(int id)
-        {
-            int numeroFilasAfectadas = 0;
-
-            DateTime fechaActual = DateTime.Now;
-
-            if (fechaActual.DayOfWeek == DayOfWeek.Friday)
-            {
-                numeroFilasAfectadas = -1;
-            }
-            else
-            {
-                numeroFilasAfectadas = clsManejadoraPersonaDAL.deletePersonaDAL(id);
-            }
-            return numeroFilasAfectadas;
-
-        }
+   
 
         /// <summary>
         /// Funcion que aplicara reglas de negocio pertinentes antes de darle a la capa DAL una persona que añadir a la BBDD
@@ -62,9 +40,39 @@ namespace CapaDAL.Manejadoras
         /// Funcion que aplicara reglas de negocio pertinentes antes de darle a la capa DAL una persona que editar en la BBDD
         /// </summary>
         /// <param name="persona"></param>
-        public static void editPersonaBL(clsPersona persona)
+        public static int editPersonaBL(clsPersona persona)
         {
-            clsManejadoraPersonaDAL.editPersonaDAL(persona);
+            int numeroFilasAfectadas = 0;
+
+            numeroFilasAfectadas = clsManejadoraPersonaDAL.editPersonaDAL(persona);
+
+            return numeroFilasAfectadas; 
+        }
+
+        /// <summary>
+        /// FUNCION QUE DEVUELVE EL NUMERO DE FILAS AFECTADAS  AL BORRAR LA PERSONA QUE RECIBE APLICANDO LAS REGLAS DE NEGOCIO
+        /// Post: mi salida sera 0 cuando no haya errores, 1 si se ha borrado, -1 si hay error en borrado en bl
+        /// </summary>
+        /// <param name="id">id de la persona</param>
+        /// <returns>devuelve el numero de personas afectadas</returns>
+        public static int deletePersonaBL(int id)
+        {
+            int numeroFilasAfectadas = 0;
+
+            //DateTime fechaActual = DateTime.Now;
+
+            //if (fechaActual.DayOfWeek == DayOfWeek.Friday)
+            //{
+            //    numeroFilasAfectadas = -1;
+            //}
+            //else
+            //{
+            //    numeroFilasAfectadas = clsManejadoraPersonaDAL.deletePersonaDAL(id);
+            //}
+
+            numeroFilasAfectadas = clsManejadoraPersonaDAL.deletePersonaDAL(id);
+
+            return numeroFilasAfectadas;
 
         }
     }

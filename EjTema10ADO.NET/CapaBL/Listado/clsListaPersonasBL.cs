@@ -1,4 +1,5 @@
-﻿using CapaDAL.Manejadoras;
+﻿using CapaDAL.Conexion;
+using CapaDAL.Manejadoras;
 using CapaEntidades;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,12 @@ namespace CapaDAL.Listado
             return listado;
         }
 
-        
+        public static int CuentaPersonasListadoBL()
+        {
+            int cantidad = clsListaPersonasDAL.CuentaPersonasListadoDAL();
+
+            return cantidad;
+        }
     }
+    
 }

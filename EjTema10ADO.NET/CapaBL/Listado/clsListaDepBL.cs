@@ -21,5 +21,12 @@ namespace CapaBL.Listado
             //NO EXISTEN REGLAS 
             return listado;
         }
+
+        public static int CuentaDepsListadoBL()
+        {
+            int cantidad = clsListaDepDAL.CuentaDepsListadoDAL();
+
+            return cantidad;
+        }
     }
 }
