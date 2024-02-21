@@ -2,20 +2,96 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrudAnarquico</title>
     <script src="js/ScriptCrud.js"></script>
+
+    <style>
+        /* Styles for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
+
 </head>
 <body>
 
-
     <p id="textoCarga"></p>
 
-
     <table id="listaPersonas" border="1">
-         
     </table>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Form for modifying persona data -->
+            <form id="modifyForm">
+
+                <label for="nombre">nombre:</label>
+                <input type="text" id="nombre">
+                <br>
+                <label for="apellidos">apellidos:</label>
+                <input type="text" id="apellidos">
+                <br>
+                <label for="telefono">telefono:</label>
+                <input type="text" id="telefono">
+                <br>
+                <label for="direccion">direccion:</label>
+                <input type="text" id="direccion">
+                <br>
+                <label for="foto">foto:</label>
+                <input type="text" id="foto">
+                <br>
+                <label for="fechaNac">fechaNac:</label>
+                <input type="date" id="fechaNac">
+                <br>
+                <label for="idDepartamento">idDepartamento:</label>
+                <input type="date" id="idDepartamento">
+
+                <br>
+                <!-- Add more fields as needed -->
+                <br>
+
+                <button type="button" onclick="ConfirmChanges()">Confirmar</button>
+                <button type="button" onclick="CloseModal()">Cancelar</button>
+            </form>
+        </div>
+
+    </div>
 
 </body>
 </html>

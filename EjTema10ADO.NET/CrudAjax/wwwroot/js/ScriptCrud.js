@@ -162,9 +162,57 @@ function DepByPersonasId(idDepartamento) {
 }
 
 //ESTE METODO RECIBE EL ID DE LA PERSONA A MODIFICAR LA BUSCA EN LA LISTA DE PERSONAS Y CARGA LOS DATOS EN LA PANTALLA DE MODIFICAR (MODAL)
-function CargaPantallaModificarPersona() {
+function CargaPantallaModificarPersona(idPersona) {
+    let persona = listaPersonas.find(per => per.id == idPersona);
+    document.getElementById("nombre").value = persona.nombre;
+    document.getElementById("apellidos").value = persona.apellidos;
+    document.getElementById("telefono").value = persona.telefono;
+    document.getElementById("direccion").value = persona.direccion;
+    document.getElementById("foto").value = persona.foto;
+    let fecha = FromDateTimeToDate(persona.fechaFec);
+    document.getElementById("fechaFec").value = fecha;//pasar a formato sin tiempo
+    document.getElementById("idDepartamento").value = persona.idDepartamento;
+
+
+    OpenModal();//deberia pasar datos de persona al modal antes de open
+}
+
+///abre el modal en pulsar editar
+function OpenModal() {
+    document.getElementById("myModal").style.display = "block";
+    // Populate the form with persona data if needed
+}
+
+//cierra el modal en cancelar
+function CloseModal() {
+    document.getElementById("myModal").style.display = "none";
+    // Clear the form if needed
+}
+//hace peticion put y cierra el modal
+function ConfirmChanges() {
+    PeticionModificarPersona(persona);
+    CloseModal(); // Close the modal after confirming changes
+}
+
+function FromDateTimeToDate(fechaRecibida) {
+
+
+    return fechaRecibida.toISOString().split('T')[0];//esto js lo siguiente es c#
+
+          // Given DateTime
+       // DateTime fechaRecibida = DateTime.Now;
+
+        // Convert DateTime to Date
+        //DateTime dateOnly = fechaRecibida.Date;
 
 }
+function FromDateToDateTime(fechaRecibida) {
+
+        // Convert Date back to DateTime
+       // DateTime convertedDateTime = dateOnly.Add(fechaRecibida.TimeOfDay);
+
+}
+
 
 class clsPersona {
     constructor(id, nombre, apellidos, telefono, direccion, foto, fechaNac, idDepartamento) {
