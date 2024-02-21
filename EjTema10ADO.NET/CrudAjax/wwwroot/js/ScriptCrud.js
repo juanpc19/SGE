@@ -94,6 +94,8 @@ function PeticionModificarPersona(personaModificable) {
 
 function CargarPersonasEnTabla() {
 
+    misPersonas.innerHTML = "";
+
     let headerRow = misPersonas.insertRow(0);
     let headers = ["Foto", "Nombre", "Apellidos", "NombreDepartamento", "", "", ""];
 
@@ -113,8 +115,8 @@ function CargarPersonasEnTabla() {
         let cellFoto = row.insertCell(1);
         let foto = document.createElement("img");
         foto.src = persona.foto;
-        foto.width = 200; 
-        foto.height = 200; 
+        foto.width = 200;
+        foto.height = 200;
         cellFoto.appendChild(foto);
 
         let cellNombre = row.insertCell(2);
@@ -141,76 +143,125 @@ function CargarPersonasEnTabla() {
         imgBotonPut.src = persona.foto; //edito la imagen del boton a partir de ruta
         imgBotonPut.width = 50;
         imgBotonPut.height = 50;
-        
+
         btnModificar.appendChild(imgBotonPut);//agrego la imagen al boton
         btnModificar.addEventListener("click", function (event) {
-            
-            let rowIndex = event.currentTarget.parentElement.parentElement.rowIndex;//fila en la que se da el evento
-            
-            let firstCellContent = misPersonas.rows[rowIndex].cells[0].textContent;//uso fila para encontrar celda donde se da el evento
-      
-            CargaPantallaModificarPersona(firstCellContent);//le paso el id de la persona al metodo
+
+            let filaEvento = event.currentTarget.parentElement.parentElement.rowIndex;//fila en la que se da el evento
+
+            let celdaIdEvento = misPersonas.rows[filaEvento].cells[0].textContent;//uso fila para encontrar celdaId donde se da el evento y extraigo el id
+
+            CargaPantallaModificarPersona(celdaIdEvento);//le paso el id de la persona al metodo
         });
         cellModificar.appendChild(btnModificar);//agrego el boton a la celda
     }
 }
 
-//DEVUELVE EL NOMBRE DEL DEPARTAMENTO A PARTIR DE IDDEPARTAMENTO DE LA PERSONA
+//DEVUELVE EL NOMBRE DEL DEPARTAMENTO A PARTIR DE IDDEPARTAMENTO DE LA PERSONA, realizando busqueda sobre listaDeps actuales
 function DepByPersonasId(idDepartamento) {
     let dep = listaDeps.find(dep => dep.id == idDepartamento);
     return dep.nombre;//AQUI PUEDE DEVOLVER EL DEP COMPLETO DE SER NECESARIO
 }
 
+//DEVUELVE LA PERSONA A PARTIR DE ID RECIBIDO, realizando busqueda sobre listaPersonas actuales
+function DepByPersonasId(id) {
+    let per = listaPersonas.find(per => per.id == id);
+    return per; 
+}
+
 //ESTE METODO RECIBE EL ID DE LA PERSONA A MODIFICAR LA BUSCA EN LA LISTA DE PERSONAS Y CARGA LOS DATOS EN LA PANTALLA DE MODIFICAR (MODAL)
 function CargaPantallaModificarPersona(idPersona) {
     let persona = listaPersonas.find(per => per.id == idPersona);
+    document.getElementById("id").value = persona.id;
     document.getElementById("nombre").value = persona.nombre;
     document.getElementById("apellidos").value = persona.apellidos;
     document.getElementById("telefono").value = persona.telefono;
     document.getElementById("direccion").value = persona.direccion;
     document.getElementById("foto").value = persona.foto;
-    let fecha = FromDateTimeToDate(persona.fechaFec);
-    document.getElementById("fechaFec").value = fecha;//pasar a formato sin tiempo
+    let fecha = FromDateTimeToDate(persona.fechaNac);//paso a formato sin hora
+    document.getElementById("fechaNac").value = fecha;
     document.getElementById("idDepartamento").value = persona.idDepartamento;
 
-
-    OpenModal();//deberia pasar datos de persona al modal antes de open
+    OpenModal();//una vez los datos estan cargados en el modal lo abro
 }
 
-///abre el modal en pulsar editar
+async function RecargarListaPersonas() {
+    await PeticionPersonas();
+    CargarPersonasEnTabla();
+}
+
+///abre el modal al pulsar editar
 function OpenModal() {
     document.getElementById("myModal").style.display = "block";
-    // Populate the form with persona data if needed
 }
 
-//cierra el modal en cancelar
+//cierra el modal al pulsar cancelar
 function CloseModal() {
     document.getElementById("myModal").style.display = "none";
     // Clear the form if needed
 }
 //hace peticion put y cierra el modal
-function ConfirmChanges() {
-    PeticionModificarPersona(persona);
+async function ConfirmChanges() {
+    //recorrer modal y guardar datos en persona
+    let persona = new clsPersona();
+
+    persona.id = document.getElementById("id").value;
+    persona.nombre = document.getElementById("nombre").value;
+    persona.apellidos = document.getElementById("apellidos").value;
+    persona.telefono = document.getElementById("telefono").value;
+    persona.direccion = document.getElementById("direccion").value;
+    persona.foto = document.getElementById("foto").value;
+
+    let fecha = document.getElementById("fechaNac").value;
+    
+    persona.fechaNac = FromDateToDateTime(fecha);
+
+
+    persona.idDepartamento = document.getElementById("idDepartamento").value;
+
+    
+    await PeticionModificarPersona(persona);
+
+    await PeticionPersonas();
+
+    CargarPersonasEnTabla();
+
     CloseModal(); // Close the modal after confirming changes
+
+    
 }
 
+//metodo para convertir fecha con hora a fecha sin hora
 function FromDateTimeToDate(fechaRecibida) {
+    let fechaDate;
 
-
-    return fechaRecibida.toISOString().split('T')[0];//esto js lo siguiente es c#
-
-          // Given DateTime
-       // DateTime fechaRecibida = DateTime.Now;
-
-        // Convert DateTime to Date
-        //DateTime dateOnly = fechaRecibida.Date;
-
+    if (typeof fechaRecibida === 'string') {//comprueba si fecha es tipo string
+        fechaDate = new Date(fechaRecibida);//si lo es lo convierte a fecha
+    } else if (fechaRecibida instanceof Date) {
+        // fechaRecibida is already a Date object
+        fechaDate = fechaRecibida;
+    } else {//si no es string ni fecha lanza error 
+        console.error('Invalid fechaRecibida:', fechaRecibida);
+    }
+    fechaDate = fechaDate.toISOString().split('T')[0];
+    return fechaDate;//devuelve fecha en formato yyyy-mm-dd
 }
+
 function FromDateToDateTime(fechaRecibida) {
+    let fechaDateTime;
 
-        // Convert Date back to DateTime
-       // DateTime convertedDateTime = dateOnly.Add(fechaRecibida.TimeOfDay);
+    if (typeof fechaRecibida === 'string') {
+        fechaDateTime = new Date(fechaRecibida); // Convert string to Date
+    } else if (fechaRecibida instanceof Date) {
+        fechaDateTime = new Date(fechaRecibida); // Create a new Date object
+    } else {
+        console.error('Invalid fechaRecibida:', fechaRecibida);
+    }
 
+    // Set the time part to 00:00:00
+    fechaDateTime.setHours(0, 0, 0, 0);
+
+    return fechaDateTime;
 }
 
 
