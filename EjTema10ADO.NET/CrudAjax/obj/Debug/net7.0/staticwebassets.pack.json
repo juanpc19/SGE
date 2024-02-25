@@ -9,6 +9,26 @@
       "PackagePath": "staticwebassets\\PaginaCrud.html"
     },
     {
+      "Id": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\agregar_persona.png",
+      "PackagePath": "staticwebassets\\Resources\\Imagenes\\agregar_persona.png"
+    },
+    {
+      "Id": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\borrar_persona.png",
+      "PackagePath": "staticwebassets\\Resources\\Imagenes\\borrar_persona.png"
+    },
+    {
+      "Id": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\lista_deps.png",
+      "PackagePath": "staticwebassets\\Resources\\Imagenes\\lista_deps.png"
+    },
+    {
+      "Id": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\lista_personas.png",
+      "PackagePath": "staticwebassets\\Resources\\Imagenes\\lista_personas.png"
+    },
+    {
+      "Id": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\modificar_persona.png",
+      "PackagePath": "staticwebassets\\Resources\\Imagenes\\modificar_persona.png"
+    },
+    {
       "Id": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

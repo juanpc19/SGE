@@ -69,10 +69,9 @@ namespace CrudAjax.Controllers.API
         // POST api/<DepartamentosController>
         [HttpPost]
         public IActionResult Post([FromBody] clsDepartamento departamento)
-        { 
+        {
             IActionResult respuestaApi;
             int contadorPreInsert = 0;
-            //= clsListaPersonasBL.cuentaPersonasListadoBL();
             int contadorPostInsert = 0;
             string newlyCreatedResourceURI = "/api/departamentos/" + departamento.Id; //end point donde añado persona + id de la persona que he añadido
 
@@ -81,7 +80,7 @@ namespace CrudAjax.Controllers.API
             {
                 clsManejadoraDepartamentoBL.createDepBL(departamento);
 
-                //contadorPostInsert = clsListaPersonasBL.cuentaPersonasListadoBL();
+                contadorPostInsert = clsListaDepBL.CuentaDepsListadoBL();
 
                 if (contadorPreInsert < contadorPostInsert)
                 {

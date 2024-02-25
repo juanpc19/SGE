@@ -1,7 +1,9 @@
-﻿using CapaDAL.Listado;
+﻿using CapaDAL.Conexion;
+using CapaDAL.Listado;
 using CapaEntidades;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,5 +30,6 @@ namespace CapaBL.Listado
 
             return cantidad;
         }
-    }
+  
+    }  
 }

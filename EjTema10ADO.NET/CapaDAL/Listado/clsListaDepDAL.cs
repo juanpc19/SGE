@@ -73,5 +73,6 @@ namespace CapaDAL.Listado
 
             return cantidad;
         }
+
     }
 }

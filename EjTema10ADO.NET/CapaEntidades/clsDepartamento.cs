@@ -10,26 +10,26 @@ namespace CapaEntidades
     {
         #region atributos
         private int id;
-        private string nombre;
+        private string nombreDep;
         #endregion
 
         #region construtores
         public clsDepartamento()
         {
             id = 0;
-            nombre = "";
+            nombreDep = "";
         }
 
-        public clsDepartamento(int id, string nombre)
+        public clsDepartamento(int id, string nombreDep)
         {
             this.id = id;
-            this.nombre = nombre;   
+            this.nombreDep = nombreDep;   
         }
         #endregion
 
         #region propiedades
         public int Id {  get { return id; } set { id = value; } }
-        public string NombreDep { get {  return nombre; } set { nombre = value; } }
+        public string NombreDep { get {  return nombreDep; } set { nombreDep = value; } }
         #endregion
 
     }

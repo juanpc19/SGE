@@ -42,15 +42,72 @@
                 text-decoration: none;
                 cursor: pointer;
             }
+
+
+        .botonFlotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF; /* Set the background color */
+            color: #fff; /* Set the text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .top-center-buttons {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #fff; /* Set the background color */
+            padding: 10px 0;
+            z-index: 2;
+        }
+
+            /* Style for top center buttons */
+            .top-center-buttons button {
+                background-color: #007BFF; /* Set the background color */
+                color: #fff; /* Set the text color */
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                margin: 0 10px;
+            }
     </style>
 
 </head>
 <body>
 
+    <div class="top-center-buttons">
+        <!-- BOTON DE LISTA PERSONAS -->
+        <button id="botonListaPersonas" onclick="CargarPersonasEnTabla()">
+            <img src="Resources/Imagenes/lista_personas.png" alt="Button Image" style="width: 20px; height: 20px; margin-right: 5px;">
+            Lista Personas
+        </button>
+
+        <!-- BOTON DE LISTA DEPS -->
+        <button id="botonListaDeps" onclick="CargarDepartamentosEnTabla()">
+            <img src="Resources/Imagenes/lista_deps.png" alt="Button Image" style="width: 20px; height: 20px; margin-right: 5px;">
+            Lista Departamentos
+        </button>
+    </div>
+
     <p id="textoCarga"></p>
 
     <table id="listaPersonas" border="1">
     </table>
+
+    <!-- BOTON DE AGREGAR PERSONAS/DEP LE CAMBIO EL ON CLICK EN JS -->
+    <button id="botonAgregar" onclick="OpenModalPost()" class="botonFlotante">
+        <img src="Resources/Imagenes/agregar_persona.png" alt="Button Image" style="width: 20px; height: 20px; margin-right: 5px;">
+    </button>
+
 
     <!-- DIV PRINCIPAL DE MODAL PUT SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
     <div id="modalPut" class="modal">
@@ -61,44 +118,41 @@
             <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
             <span class="close" onclick="CloseModalPut()">&times;</span>
 
+            <img id="imagenPut" src="" alt="Image Description">
+
             <form>
-
                 <input type="hidden" id="idPut"> <!-- input oculto para id facilita manejo de informacion al hacer el put -->
-
-                <br>
-                <label for="nombre">Nombre:</label>
+                <label for="nombrePut">Nombre:</label>
                 <input type="text" id="nombrePut">
                 <br>
-                <label for="apellidos">Apellidos:</label>
+                <label for="apellidosPut">Apellidos:</label>
                 <input type="text" id="apellidosPut">
                 <br>
-                <label for="telefono">Telefono:</label>
+                <label for="telefonoPut">Telefono:</label>
                 <input type="text" id="telefonoPut">
                 <br>
-                <label for="direccion">Direccion:</label>
+                <label for="direccionPut">Direccion:</label>
                 <input type="text" id="direccionPut">
                 <br>
-                <label for="foto">foto:</label>
+                <label for="fotoPut">foto:</label>
                 <input type="text" id="fotoPut">
                 <br>
-                <label for="fechaNac">FechaNac:</label>
+                <label for="fechaNacPut">FechaNac:</label>
                 <input type="date" id="fechaNacPut">
                 <br>
-                <label for="idDepartamento">IdDepartamento:</label>
+                <label for="idDepartamentoPut">IdDepartamento:</label>
                 <input type="text" id="idDepartamentoPut">
-
                 <br>
-
                 <br>
                 <!-- botones de confirmar y cancelar -->
-                <button type="button" onclick="ConfirmChangesPut()">Confirmar</button>
+                <button type="button" onclick="ConfirmPut()">Confirmar</button>
                 <button type="button" onclick="CloseModalPut()">Cancelar</button>
             </form>
         </div>
 
     </div>
 
-    <!-- DIV PRINCIPAL DE MODAL POST SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <!-- DIV PRINCIPAL DE MODAL <P></P>OST SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
     <div id="modalPost" class="modal">
 
         <!-- DIV DE VENTANA INTERNA DEL MODAL -->
@@ -109,36 +163,32 @@
 
             <form>
 
-                <label for="id">Id:</label>
-                <input type="text" id="idPost"> <!-- input oculto para id facilita manejo de informacion al hacer el post -->
-
-                <br>
-                <label for="nombre">Nombre:</label>
+                <label for="nombrePost">Nombre:</label>
                 <input type="text" id="nombrePost">
                 <br>
-                <label for="apellidos">Apellidos:</label>
+                <label for="apellidosPost">Apellidos:</label>
                 <input type="text" id="apellidosPost">
                 <br>
-                <label for="telefono">Telefono:</label>
+                <label for="telefonoPost">Telefono:</label>
                 <input type="text" id="telefonoPost">
                 <br>
-                <label for="direccion">Direccion:</label>
+                <label for="direccionPost">Direccion:</label>
                 <input type="text" id="direccionPost">
                 <br>
-                <label for="foto">Foto:</label>
+                <label for="fotoPost">Foto:</label>
                 <input type="text" id="fotoPost">
                 <br>
-                <label for="fechaNac">FechaNac:</label>
+                <label for="fechaNacPost">FechaNac:</label>
                 <input type="date" id="fechaNacPost">
                 <br>
-                <label for="idDepartamento">IdDepartamento:</label>
+                <label for="idDepartamentoPost">IdDepartamento:</label>
                 <input type="text" id="idDepartamentoPost">
 
                 <br>
 
                 <br>
                 <!-- botones de confirmar y cancelar -->
-                <button type="button" onclick="ConfirmChangesPost()">Confirmar</button>
+                <button type="button" onclick="ConfirmPost()">Confirmar</button>
                 <button type="button" onclick="CloseModalPost()">Cancelar</button>
             </form>
         </div>
@@ -154,44 +204,116 @@
             <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
             <span class="close" onclick="CloseModalDelete()">&times;</span>
 
+            <img id="imagenDelete" src="" alt="Image Description">
+
             <form>
 
                 <input type="hidden" id="idDelete"> <!-- input oculto para id facilita manejo de informacion al hacer el delete -->
 
-                <br>
-
-                <label for="nombre">Nombre:</label>
+                <label for="nombreDelete">Nombre:</label>
                 <label id="nombreDelete"></label>
                 <br>
-                <label for="apellidos">Apellidos:</label>
+                <label for="apellidosDelete">Apellidos:</label>
                 <label id="apellidosDelete"></label>
                 <br>
-                <label for="telefono">Telefono:</label>
+                <label for="telefonoDelete">Telefono:</label>
                 <label id="telefonoDelete"></label>
                 <br>
-                <label for="direccion">Direccion:</label>
+                <label for="direccionDelete">Direccion:</label>
                 <label id="direccionDelete"></label>
                 <br>
-                <label for="foto">Foto:</label>
+                <label for="fotoDelete">Foto:</label>
                 <label id="fotoDelete"></label>
                 <br>
-                <label for="fechaNac">FechaNac:</label>
+                <label for="fechaNacDelete">FechaNac:</label>
                 <label id="fechaNacDelete"></label>
                 <br>
-                <label for="idDepartamento">IdDepartamento:</label>
+                <label for="idDepartamentoDelete">IdDepartamento:</label>
                 <label id="idDepartamentoDelete"></label>
-
 
                 <br>
 
                 <br>
                 <!-- botones de confirmar y cancelar -->
-                <button type="button" onclick="ConfirmChangesDelete()">Confirmar</button>
+                <button type="button" onclick="ConfirmDelete()">Confirmar</button>
                 <button type="button" onclick="CloseModalDelete()">Cancelar</button>
             </form>
         </div>
 
     </div>
 
+
+    <!-- DIV PRINCIPAL DE MODAL PUT SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <div id="modalPutDep" class="modal">
+
+        <!-- DIV DE VENTANA INTERNA DEL MODAL -->
+        <div class="modal-content">
+
+            <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
+            <span class="close" onclick="CloseModalPutDep()">&times;</span>
+
+            <form>
+                <input type="hidden" id="idPutDep"> <!-- input oculto para id facilita manejo de informacion al hacer el put -->
+                <label for="nombrePutDep">Nombre:</label>
+                <input type="text" id="nombrePutDep">
+                <br>
+                <br>
+                <!-- botones de confirmar y cancelar -->
+                <button type="button" onclick="ConfirmPutDep()">Confirmar</button>
+                <button type="button" onclick="CloseModalPutDep()">Cancelar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- DIV PRINCIPAL DE MODAL PUT SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <div id="modalPostDep" class="modal">
+
+        <!-- DIV DE VENTANA INTERNA DEL MODAL -->
+        <div class="modal-content">
+
+            <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
+            <span class="close" onclick="CloseModalPostDep()">&times;</span>
+
+            <form>
+                
+                <label for="nombrePostDep">Nombre:</label>
+                <input type="text" id="nombrePostDep">
+                <br>
+                <br>
+                <!-- botones de confirmar y cancelar -->
+                <button type="button" onclick="ConfirmPostDep()">Confirmar</button>
+                <button type="button" onclick="CloseModalPostDep()">Cancelar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- DIV PRINCIPAL DE MODAL PUT SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <div id="modalDeleteDep" class="modal">
+
+        <!-- DIV DE VENTANA INTERNA DEL MODAL -->
+        <div class="modal-content">
+
+            <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
+            <span class="close" onclick="CloseModalDeleteDep()">&times;</span>
+
+            <form>
+                <input type="hidden" id="idDeleteDep"> <!-- input oculto para id facilita manejo de informacion al hacer el put -->
+
+                <label for="nombreDeleteDep">Nombre Departamento:</label>
+                <label id="nombreDeleteDep"></label>
+
+              
+
+                <br>
+                <br>
+                <!-- botones de confirmar y cancelar -->
+                <button type="button" onclick="ConfirmDeleteDep()">Confirmar</button>
+                <button type="button" onclick="CloseModalDeleteDep()">Cancelar</button>
+            </form>
+        </div>
+
+    </div>
 </body>
 </html>
