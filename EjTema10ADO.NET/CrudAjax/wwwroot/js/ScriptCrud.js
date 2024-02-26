@@ -6,8 +6,8 @@
 window.onload = InicializaEventos;
 
 //elementos html
-var misDeps;
-var misPersonas;
+ 
+var miTabla;
 var miP;
 
 //variables globales
@@ -16,7 +16,7 @@ var listaPersonas;
 
 //hara carga inicial perparando los deps y las personas ademas de localizar algunos elementos html y cargara las personas en la tabla
 async function InicializaEventos() {
-    misPersonas = document.getElementById("listaPersonas");
+    miTabla = document.getElementById("miTablaCrud");
     miP = document.getElementById("textoCarga");
 
     await PeticionDepartamentos();
@@ -40,9 +40,9 @@ function PeticionDepartamentos() {
                     arrayDatosDeps = JSON.parse(miPeticion.responseText);//esto es un array de objetos de api con el nombre accesible con nombreDep
                     //esto crea departamentos con el id y el nombre de mi entidad accesible con nombre, pero para acceder a el nombre del objeto de la api se accede con nombreDep para darselo a nombre
                     listaDeps = arrayDatosDeps.map(departamento => new clsDepartamento(departamento.id, departamento.nombreDep));
-                    resolve();
+                    resolve();//devuelvo la resolucion de la promesa
                 } else {
-                    reject("Error al recoger datos de deps de la api")
+                    reject("Error al recoger datos de deps de la api")//devuelvo el rechazo de la promesa
                 }
             }
         };
@@ -220,15 +220,14 @@ function PeticionDeleteDepartamento(idDepartamentoBorrar) {
     });
 }
 
-//cargara o recargara personas en tabla a partir de listaPersonas
-
+//cargara o recargara personas en tabla a partir de listaPersonas ademas cambia el metodo llamado en click de boton agregar a agregar persona
 function CargarPersonasEnTabla() {
 
-    misPersonas.innerHTML = "";//vacio la tabla para poder usar la funcion para recargar
+    miTabla.innerHTML = "";//vacio la tabla para poder usar la funcion para recargar
 
     CambiaAgregarPersona();//cambio el modal al que el boton agregar llama en evento para reutilizar el boton
 
-    let headerRow = misPersonas.insertRow(0);
+    let headerRow = miTabla.insertRow(0);
     let headers = ["Foto", "Nombre", "Apellidos", "NombreDepartamento", "Put", "Delete"];
 
     for (let i = 0; i < headers.length; i++) {//headers
@@ -238,7 +237,7 @@ function CargarPersonasEnTabla() {
 
     for (let i = 0; i < listaPersonas.length; i++) {
         let persona = listaPersonas[i];
-        let row = misPersonas.insertRow(i + 1); // empiezo insertando por i+1 para saltarme headers
+        let row = miTabla.insertRow(i + 1); // empiezo insertando por i+1 para saltarme headers
 
         let cellIdOculto = row.insertCell(0);
         cellIdOculto.hidden = true; // oculto la celda id
@@ -279,7 +278,7 @@ function CargarPersonasEnTabla() {
         btnModificar.appendChild(imgBotonPut);//agrego la imagen al boton
         btnModificar.addEventListener("click", function (event) {//agrego evento al boton
             let filaEvento = event.currentTarget.parentElement.parentElement.rowIndex;//fila en la que se da el evento
-            let celdaIdEvento = misPersonas.rows[filaEvento].cells[0].textContent;//uso fila para encontrar celdaId donde se da el evento y extraigo el id
+            let celdaIdEvento = miTabla.rows[filaEvento].cells[0].textContent;//uso fila para encontrar celdaId donde se da el evento y extraigo el id
             CargaPantallaPutPersona(celdaIdEvento);//le paso el id de la persona al metodo
         });
         cellModificar.appendChild(btnModificar);//agrego el boton a la celda
@@ -295,7 +294,7 @@ function CargarPersonasEnTabla() {
         btnDelete.appendChild(imgBotonDelete);
         btnDelete.addEventListener("click", function (event) {
             let filaEvento = event.currentTarget.parentElement.parentElement.rowIndex;
-            let celdaIdEvento = misPersonas.rows[filaEvento].cells[0].textContent;
+            let celdaIdEvento = miTabla.rows[filaEvento].cells[0].textContent;
 
             CargaPantallaDeletePersona(celdaIdEvento);
         });
@@ -303,14 +302,14 @@ function CargarPersonasEnTabla() {
     }
 }
 
-//cargara o recargara departamentos en tabla a partir de listaDepartamentos
+//cargara o recargara departamentos en tabla a partir de listaDepartamentos ademas cambia el metodo llamado en click de boton agregar a agregar dep
 function CargarDepartamentosEnTabla() {
 
-    misPersonas.innerHTML = "";//vacio la tabla para poder usar la funcion para recargar
+    miTabla.innerHTML = "";//vacio la tabla para poder usar la funcion para recargar
 
     CambiaAgregarDep();//cambio el modal al que el boton agregar llama en evento para reutilizar el boton
 
-    let headerRow = misPersonas.insertRow(0);
+    let headerRow = miTabla.insertRow(0);
     let headers = ["NombreDepartamento", "Put", "Delete"];
 
     for (let i = 0; i < headers.length; i++) {//headers
@@ -320,7 +319,7 @@ function CargarDepartamentosEnTabla() {
 
     for (let i = 0; i < listaDeps.length; i++) {
         let departamento = listaDeps[i];
-        let row = misPersonas.insertRow(i + 1); // empiezo insertando por i+1 para saltarme headers
+        let row = miTabla.insertRow(i + 1); // empiezo insertando por i+1 para saltarme headers
 
         let cellIdOculto = row.insertCell(0);
         cellIdOculto.hidden = true; // oculto la celda id
@@ -342,8 +341,8 @@ function CargarDepartamentosEnTabla() {
         btnModificar.appendChild(imgBotonPut);//agrego la imagen al boton
         btnModificar.addEventListener("click", function (event) {//agrego evento al boton
             let filaEvento = event.currentTarget.parentElement.parentElement.rowIndex;//fila en la que se da el evento
-            let celdaIdEvento = misPersonas.rows[filaEvento].cells[0].textContent;//uso fila para encontrar celdaId donde se da el evento y extraigo el id
-            CargaPantallaPutDep(celdaIdEvento);//le paso el id de la persona al metodo
+            let celdaIdEvento = miTabla.rows[filaEvento].cells[0].textContent;//uso fila para encontrar celdaId donde se da el evento y extraigo el id
+            CargaPantallaPutDep(celdaIdEvento);//le paso el id del dep al metodo
         });
         cellModificar.appendChild(btnModificar);//agrego el boton a la celda
 
@@ -358,7 +357,7 @@ function CargarDepartamentosEnTabla() {
         btnDelete.appendChild(imgBotonDelete);
         btnDelete.addEventListener("click", function (event) {
             let filaEvento = event.currentTarget.parentElement.parentElement.rowIndex;
-            let celdaIdEvento = misPersonas.rows[filaEvento].cells[0].textContent;
+            let celdaIdEvento = miTabla.rows[filaEvento].cells[0].textContent;
 
             CargaPantallaDeleteDep(celdaIdEvento);
         });
@@ -369,7 +368,7 @@ function CargarDepartamentosEnTabla() {
 //DEVUELVE EL NOMBRE DEL DEPARTAMENTO A PARTIR DE IDDEPARTAMENTO DE LA PERSONA, realizando busqueda sobre listaDeps actuales
 function DepByPersonaId(idDepartamento) {
     let dep = listaDeps.find(dep => dep.id == idDepartamento);
-    return dep.nombre;//AQUI PUEDE DEVOLVER EL DEP COMPLETO DE SER NECESARIO
+    return dep.nombreDep;//AQUI PUEDE DEVOLVER EL DEP COMPLETO DE SER NECESARIO
 }
 
 //metodo para convertir fecha con hora a fecha sin hora
@@ -404,6 +403,22 @@ function FromDateToDateTime(fechaRecibida) {
     fechaDateTime.setHours(0, 0, 0, 0);//devuelve fecha en formato yyyy-mm-ddT00:00:00
 
     return fechaDateTime;
+}
+
+//cambia evento click de boton flotante agregar y su imagen a persona
+function CambiaAgregarPersona() {
+    let botonAgregar = document.getElementById("botonAgregar");
+    botonAgregar.onclick = function () {
+        OpenModalPost();
+    };
+}
+
+//cambia evento click de boton flotante agregar y su imagen a dep
+function CambiaAgregarDep() {
+    let botonAgregar = document.getElementById("botonAgregar");
+    botonAgregar.onclick = function () {
+        OpenModalPostDep();//por implementar
+    };
 }
 
 //ESTE METODO RECIBE EL ID DE LA PERSONA A MODIFICAR LA BUSCA EN LA LISTA DE PERSONAS Y CARGA LOS DATOS EN LA PANTALLA DE MODIFICAR (MODALPUT)
@@ -462,7 +477,7 @@ function OpenModalPost() {
     document.getElementById("modalPost").style.display = "block";
 }
 
-//cierra el modal de post vaciandolo 
+//cierra el modal de post vaciandolo para siguiente post 
 function CloseModalPost() {
     document.getElementById("nombrePost").value = "";//borro los datos
     document.getElementById("apellidosPost").value = "";
@@ -525,6 +540,7 @@ function CloseModalDelete() {
 }
 
 //hace peticion delete, peticion lista personas, cierra el modal y recarga la tabla
+
 async function ConfirmDelete() {
 
     let idPersonaBorrar = document.getElementById("idDelete").value;//extraido el id a partir del campo id en modal
@@ -537,6 +553,104 @@ async function ConfirmDelete() {
 
     CargarPersonasEnTabla(); // vuelvo a cargar la lista en la tabla
 }
+
+//ESTE METODO RECIBE EL ID DEl dep A MODIFICAR Lo BUSCA EN LA LISTA DE DEPS Y CARGA LOS DATOS EN LA PANTALLA DE modificar (MODALputDEP)
+function CargaPantallaPutDep(idDep) {
+    let departamento = listaDeps.find(dep => dep.id == idDep);//encuentro persona
+
+    document.getElementById("idPutDep").value = departamento.id;//cargo sus datos
+    document.getElementById("nombrePutDep").value = departamento.nombreDep;
+ 
+    OpenModalPutDep();//una vez los datos estan cargados en el modal lo abro
+}
+
+//abre el modal de putdep al pulsar boton editar
+function OpenModalPutDep() {
+    document.getElementById("modalPutDep").style.display = "block";
+}
+
+//cierra el modal de putdep al pulsar cancelar
+function CloseModalPutDep() {
+    document.getElementById("modalPutDep").style.display = "none";
+}
+
+//hace peticion put, peticion lista deps, cierra el modal y recarga la tabla
+async function ConfirmPutDep() {
+    let departamento = new clsDepartamento();//instancio persona
+
+    departamento.id = document.getElementById("idPutDep").value;// le doy valores exatraidos de modal
+    departamento.nombreDep = document.getElementById("nombrePutDep").value;
+ 
+
+    await PeticionModificarDepartamento(departamento);//hago peticion put y la espero
+
+    await PeticionDepartamentos();//vuelvo a hacer petición de personas para actualizar listaPersonas con la persona modificada y la espero
+
+    CloseModalPutDep(); //cierro el modal antes de recargar listado
+
+    CargarDepartamentosEnTabla();//recargo listado de personas en tabla
+}
+
+//abre el modal de post al pulsar boton agregar
+function OpenModalPostDep() {
+    document.getElementById("modalPostDep").style.display = "block";
+}
+
+//cierra el modal de post al pulsar cancelar
+function CloseModalPostDep() {
+    document.getElementById("modalPostDep").style.display = "none";
+}
+
+//hace peticion post, peticion lista deps, cierra el modal y recarga la tabla
+async function ConfirmPostDep() {
+    let departamento = new clsDepartamento();//instancio persona
+
+    departamento.nombreDep = document.getElementById("nombrePostDep").value;
+
+
+    await PeticionPostDepartamento(departamento);//hago peticion put y la espero
+
+    await PeticionDepartamentos();//vuelvo a hacer petición de personas para actualizar listaPersonas con la persona modificada y la espero
+
+    CloseModalPostDep(); //cierro el modal antes de recargar listado
+
+    CargarDepartamentosEnTabla();//recargo listado de personas en tabla
+}
+
+//ESTE METODO RECIBE EL ID DEl dep A BORRAR Lo BUSCA EN LA LISTA DE DEPS Y CARGA LOS DATOS EN LA PANTALLA DE BORRAR (MODALDELETEDEP)
+function CargaPantallaDeleteDep(idDep) {
+    let departamento = listaDeps.find(dep => dep.id == idDep);
+    document.getElementById("idDeleteDep").value = departamento.id;
+    document.getElementById("nombreDeleteDep").textContent = departamento.nombreDep;
+
+    OpenModalDeleteDep();//una vez los datos estan cargados en el modal lo abro
+}
+
+//abre el modal de deletedep al pulsar boton borrar
+function OpenModalDeleteDep() {
+    document.getElementById("modalDeleteDep").style.display = "block";
+}
+
+//cierra el modal de deletedep al pulsar cancelar
+function CloseModalDeleteDep() {
+    document.getElementById("modalDeleteDep").style.display = "none";
+}
+
+//hace peticion delete, peticion lista personas, cierra el modal y recarga la tabla
+async function ConfirmDeleteDep() {
+     
+  
+    let idDepartamentoBorrar = document.getElementById("idDeleteDep").value;
+
+    await PeticionDeleteDepartamento(idDepartamentoBorrar);//hago peticion put y la espero
+
+    await PeticionDepartamentos();//vuelvo a hacer petición de personas para actualizar listaPersonas con la persona modificada y la espero
+
+    CloseModalDeleteDep(); //cierro el modal antes de recargar listado
+
+    CargarDepartamentosEnTabla();//recargo listado de personas en tabla
+}
+
 
 //clase persona
 class clsPersona {
@@ -560,129 +674,28 @@ class clsDepartamento {
     }
 }
 
-//cambia evento click de boton flotante agregar y su imagen a persona
-function CambiaAgregarPersona() {
-    let botonAgregar = document.getElementById("botonAgregar");
-    botonAgregar.onclick = function () { 
-        OpenModalPost();
-    };
-}
 
-//cambia evento click de boton flotante agregar y su imagen a dep
-function CambiaAgregarDep() {
-    let botonAgregar = document.getElementById("botonAgregar");
-    botonAgregar.onclick = function () {
-        OpenModalPostDep();//por implementar
-    };
-}
-
-/*
- problema con el delete a la hora de mostrar el modal el resto de la funcionalidad parece estar bien,
- cuando arregle eso cambiar el id de la tabla en el html y el js por legibilidad
-poner las tablas bonitas y cuidar espacios arriba y abajo
-*/
+//acabar con colores de tablas, dar a cada td un class en creacion para evitar enreos en css
 
 
-function CargaPantallaPutDep(idDep) {
-    let departamento = listaDeps.find(dep => dep.id == idDep);//encuentro persona
+//// Example of dynamically creating a row with cells, buttons, and an image
+//function createTableRow() {
+//    var tableBody = document.getElementById("tableBody");
 
-    document.getElementById("idPutDep").value = departamento.id;//cargo sus datos
-    document.getElementById("nombrePutDep").value = departamento.nombreDep;
- 
-    OpenModalPutDep();//una vez los datos estan cargados en el modal lo abro
-}
+//    var newRow = document.createElement("tr");
 
-//abre el modal de put al pulsar boton editar
-function OpenModalPutDep() {
-    document.getElementById("modalPutDep").style.display = "block";
-}
+//    var cell1 = document.createElement("td");
+//    cell1.textContent = "Data 1";
 
-//cierra el modal de put al pulsar cancelar
-function CloseModalPutDep() {
-    document.getElementById("modalPutDep").style.display = "none";
-}
+//    var cell2 = document.createElement("td");
+//    var button = document.createElement("button");
+//    button.textContent = "Click me";
+//    button.classList.add("dynamic-button"); // Assign a class
+//    cell2.appendChild(button);
 
-//hace peticion put, peticion lista personas, cierra el modal y recarga la tabla
-async function ConfirmPutDep() {
-    let departamento = new clsDepartamento();//instancio persona
-
-    departamento.id = document.getElementById("idPutDep").value;// le doy valores exatraidos de modal
-    departamento.nombreDep = document.getElementById("nombrePutDep").value;
- 
-
-    await PeticionModificarDepartamento(departamento);//hago peticion put y la espero
-
-    await PeticionDepartamentos();//vuelvo a hacer petición de personas para actualizar listaPersonas con la persona modificada y la espero
-
-    CloseModalPutDep(); //cierro el modal antes de recargar listado
-
-    CargarDepartamentosEnTabla();//recargo listado de personas en tabla
-}
-
-
-
-
-function CargaPantallaPostDep() {
-
-    OpenModalPostDep();//una vez los datos estan cargados en el modal lo abro
-}
-
-//abre el modal de put al pulsar boton editar
-function OpenModalPostDep() {
-    document.getElementById("modalPostDep").style.display = "block";
-}
-
-//cierra el modal de put al pulsar cancelar
-function CloseModalPostDep() {
-    document.getElementById("modalPostDep").style.display = "none";
-}
-
-//hace peticion put, peticion lista personas, cierra el modal y recarga la tabla
-async function ConfirmPostDep() {
-    let departamento = new clsDepartamento();//instancio persona
-
-    departamento.nombreDep = document.getElementById("nombrePostDep").value;
-
-
-    await PeticionPostDepartamento(departamento);//hago peticion put y la espero
-
-    await PeticionDepartamentos();//vuelvo a hacer petición de personas para actualizar listaPersonas con la persona modificada y la espero
-
-    CloseModalPostDep(); //cierro el modal antes de recargar listado
-
-    CargarDepartamentosEnTabla();//recargo listado de personas en tabla
-}
-
-
-function CargaPantallaDeleteDep(idDep) {
-    let departamento = listaDeps.find(dep => dep.id == idDep);
-    document.getElementById("idDeleteDep").value = departamento.id;
-    document.getElementById("nombreDeleteDep").value = departamento.nombreDep;
-
-    OpenModalDeleteDep();//una vez los datos estan cargados en el modal lo abro
-}
-
-//abre el modal de put al pulsar boton editar
-function OpenModalDeleteDep() {
-    document.getElementById("modalDeleteDep").style.display = "block";
-}
-
-//cierra el modal de put al pulsar cancelar
-function CloseModalDeleteDep() {
-    document.getElementById("modalDeleteDep").style.display = "none";
-}
-
-//hace peticion put, peticion lista personas, cierra el modal y recarga la tabla
-async function ConfirmDeleteDep() {
-     
-  
-    let idDepartamentoBorrar = document.getElementById("idDeleteDep").value;
-
-    await PeticionDeleteDepartamento(idDepartamentoBorrar);//hago peticion put y la espero
-
-    await PeticionDepartamentos();//vuelvo a hacer petición de personas para actualizar listaPersonas con la persona modificada y la espero
-
-    CloseModalDeleteDep(); //cierro el modal antes de recargar listado
-
-    CargarDepartamentosEnTabla();//recargo listado de personas en tabla
-}
+//    var cell3 = document.createElement("td");
+//    var image = document.createElement("img");
+//    image.src = "path/to/image.jpg";
+//    image.alt = "Image Description";
+//    image.classList.add("dynamic-image"); // Assign a class
+//    cell3.appendChild(image);
