@@ -104,7 +104,7 @@ function PeticionModificarDepartamento(depModificable) {
     return new Promise((resolve, reject) => {
 
         let miPeticion = new XMLHttpRequest();
-        miPeticion.open("PUT", "http://localhost:5188/api/departamentos/" + depModificable.id);
+        miPeticion.open("PUT", "http://localhost:5188/api/departamentos" + depModificable.id);
         miPeticion.setRequestHeader("Content-Type", "application/json");//especifico el tipo de contenido que voy a enviar, necesario porque es un put
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
@@ -225,14 +225,17 @@ function CargarPersonasEnTabla() {
 
     miTabla.innerHTML = "";//vacio la tabla para poder usar la funcion para recargar
 
+    //miTabla.style.width = '90%';//doy ancho a tabla con porcentaje para adaptar a la carga de las personas (mas tds)
+
     CambiaAgregarPersona();//cambio el modal al que el boton agregar llama en evento para reutilizar el boton
 
-    let headerRow = miTabla.insertRow(0);
-    let headers = ["Foto", "Nombre", "Apellidos", "NombreDepartamento", "Put", "Delete"];
+    let headerRow = miTabla.insertRow(0);//inserto fila
+    let headers = ["Foto", "Nombre", "Apellidos", "NombreDepartamento", "Editar", "Eliminar"];
 
-    for (let i = 0; i < headers.length; i++) {//headers
+    for (let i = 0; i < headers.length; i++) {//recorro fila poniendo los headers
         let headerCell = headerRow.insertCell(i);
         headerCell.textContent = headers[i];
+        headerCell.classList.add("headers");//creo estilo css con js, asi puedo asignar a esta celda un estilo desde el css automaticamente
     }
 
     for (let i = 0; i < listaPersonas.length; i++) {
@@ -244,36 +247,34 @@ function CargarPersonasEnTabla() {
         cellIdOculto.textContent = persona.id; //le doy el id
 
         let cellFoto = row.insertCell(1);//guardo referencia de celda en variable para modificacion posterior
+        cellFoto.classList.add("td-foto");  
         let foto = document.createElement("img");
-        foto.src = persona.foto;
-        foto.width = 100;
-        foto.height = 100;
+        foto.classList.add("foto");
+        foto.src = persona.foto; 
         cellFoto.appendChild(foto);//le agrego la foto a la celda
 
         let cellNombre = row.insertCell(2);
-        cellNombre.textContent = persona.nombre;
-        cellNombre.width = 200;
-        cellNombre.height = 100;
+        cellNombre.classList.add("td-nombre");
+        cellNombre.textContent = persona.nombre; 
 
         let cellApellidos = row.insertCell(3);
-        cellApellidos.textContent = persona.apellidos;
-        cellApellidos.width = 200;
-        cellApellidos.height = 100;
+        cellApellidos.classList.add("td-apellidos");
+        cellApellidos.textContent = persona.apellidos; 
 
         let nombreDep = DepByPersonaId(persona.idDepartamento)//USO METODO PARA ASINGAR NOMBRE DE DEPARTAMENTO A FILA DE TABLA LISTA PERSONAS
 
         let cellNombreDep = row.insertCell(4);
-        cellNombreDep.textContent = nombreDep;
-        cellNombreDep.width = 200;
-        cellNombreDep.height = 100;
+        cellNombreDep.classList.add("td-nombreDep");
+        cellNombreDep.textContent = nombreDep; 
 
         let cellModificar = row.insertCell(5);//creo y localizo en variables la celda, el boton y la imagen
+        cellModificar.classList.add("td-accion");
         let btnModificar = document.createElement("button");
+        btnModificar.classList.add("td-accion-button");
         let imgBotonPut = document.createElement("img");
+        imgBotonPut.classList.add("td-accion-button-img");
 
-        imgBotonPut.src = "Resources/Imagenes/modificar_persona.png"; //edito la imagen del boton a partir de ruta
-        imgBotonPut.width = 50;
-        imgBotonPut.height = 50;
+        imgBotonPut.src = "Resources/Imagenes/modificar_persona.png"; //edito la imagen del boton a partir de ruta 
 
         btnModificar.appendChild(imgBotonPut);//agrego la imagen al boton
         btnModificar.addEventListener("click", function (event) {//agrego evento al boton
@@ -284,12 +285,13 @@ function CargarPersonasEnTabla() {
         cellModificar.appendChild(btnModificar);//agrego el boton a la celda
 
         let cellDelete = row.insertCell(6);
+        cellDelete.classList.add("td-accion");
         let btnDelete = document.createElement("button");
+        btnDelete.classList.add("td-accion-button");
         let imgBotonDelete = document.createElement("img");
+        imgBotonDelete.classList.add("td-accion-button-img");
 
-        imgBotonDelete.src = "Resources/Imagenes/borrar_persona.png";
-        imgBotonDelete.width = 50;
-        imgBotonDelete.height = 50;
+        imgBotonDelete.src = "Resources/Imagenes/borrar_persona.png"; 
 
         btnDelete.appendChild(imgBotonDelete);
         btnDelete.addEventListener("click", function (event) {
@@ -307,14 +309,17 @@ function CargarDepartamentosEnTabla() {
 
     miTabla.innerHTML = "";//vacio la tabla para poder usar la funcion para recargar
 
+    //miTabla.style.width = '50%';//doy ancho a tabla con porcentaje para adaptar a la carga de los departamentos (menos tds)
+
     CambiaAgregarDep();//cambio el modal al que el boton agregar llama en evento para reutilizar el boton
 
     let headerRow = miTabla.insertRow(0);
-    let headers = ["NombreDepartamento", "Put", "Delete"];
+    let headers = ["NombreDepartamento", "Editar", "Eliminar"];
 
     for (let i = 0; i < headers.length; i++) {//headers
         let headerCell = headerRow.insertCell(i);
         headerCell.textContent = headers[i];
+        headerCell.classList.add("headers");
     }
 
     for (let i = 0; i < listaDeps.length; i++) {
@@ -327,16 +332,16 @@ function CargarDepartamentosEnTabla() {
 
         let cellNombreDep = row.insertCell(1);
         cellNombreDep.textContent = departamento.nombreDep;
-        cellNombreDep.width = 200;
-        cellNombreDep.height = 100;
+        cellNombreDep.classList.add("td-nombreDep");
 
         let cellModificar = row.insertCell(2);//creo y localizo en variables la celda, el boton y la imagen
+        cellModificar.classList.add("td-accion");
         let btnModificar = document.createElement("button");
+        btnModificar.classList.add("td-accion-button");
         let imgBotonPut = document.createElement("img");
+        imgBotonPut.classList.add("td-accion-button-img");
 
         imgBotonPut.src = "Resources/Imagenes/modificar_persona.png"; //edito la imagen del boton a partir de ruta
-        imgBotonPut.width = 50;
-        imgBotonPut.height = 50;
 
         btnModificar.appendChild(imgBotonPut);//agrego la imagen al boton
         btnModificar.addEventListener("click", function (event) {//agrego evento al boton
@@ -347,12 +352,13 @@ function CargarDepartamentosEnTabla() {
         cellModificar.appendChild(btnModificar);//agrego el boton a la celda
 
         let cellDelete = row.insertCell(3);
+        cellDelete.classList.add("td-accion");
         let btnDelete = document.createElement("button");
+        btnDelete.classList.add("td-accion-button");
         let imgBotonDelete = document.createElement("img");
+        imgBotonDelete.classList.add("td-accion-button-img");
 
         imgBotonDelete.src = "Resources/Imagenes/borrar_persona.png";
-        imgBotonDelete.width = 50;
-        imgBotonDelete.height = 50;
 
         btnDelete.appendChild(imgBotonDelete);
         btnDelete.addEventListener("click", function (event) {
@@ -675,27 +681,3 @@ class clsDepartamento {
 }
 
 
-//acabar con colores de tablas, dar a cada td un class en creacion para evitar enreos en css
-
-
-//// Example of dynamically creating a row with cells, buttons, and an image
-//function createTableRow() {
-//    var tableBody = document.getElementById("tableBody");
-
-//    var newRow = document.createElement("tr");
-
-//    var cell1 = document.createElement("td");
-//    cell1.textContent = "Data 1";
-
-//    var cell2 = document.createElement("td");
-//    var button = document.createElement("button");
-//    button.textContent = "Click me";
-//    button.classList.add("dynamic-button"); // Assign a class
-//    cell2.appendChild(button);
-
-//    var cell3 = document.createElement("td");
-//    var image = document.createElement("img");
-//    image.src = "path/to/image.jpg";
-//    image.alt = "Image Description";
-//    image.classList.add("dynamic-image"); // Assign a class
-//    cell3.appendChild(image);

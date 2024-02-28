@@ -7,6 +7,10 @@
     <script src="js/ScriptCrud.js"></script>
 
     <style>
+        body {
+            background-color: #3e2e4f   
+        }
+
         /* estilo del modal */
         .modal {
             display: none;
@@ -24,9 +28,9 @@
         /* estilo del modal con contenido */
         .modal-content {
             background-color: #3e2e4f; /* morado */
-            margin: 10px auto; /* Adjust this value for margin in all directions */
+            margin: 30px auto; /* Adjust this value for margin in all directions */
             padding: 10px;
-            border: 2px solid #ff7500ff; /* naranja */
+            border: 5px groove #ff7500ff; /* naranja */
             width: 25%;
             text-align: start;
             color: #fff; /* color del texto blanco*/
@@ -41,7 +45,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                border: 2px solid #ff7500ff; /* Orange */
+                border: 5px groove #ff7500ff; /* Orange */
             }
             /*estilo del img dentro del modal con contenido*/
             .modal-content img {
@@ -64,7 +68,7 @@
                 margin: 5px; /* Adjust this value as needed */
             }
 
-        /*estilo de la x ce cerrar del modal dentro del modal con contenido*/
+        /*estilo de la x de cerrar del modal dentro del modal con contenido*/
         .close {
             color: #aaa;
             float: right;
@@ -80,7 +84,7 @@
             }
 
 
-        /* estilo del boton confirmar */
+        /* estilo del boton confirmar del modal*/
         button[type="button"] {
             background-color: #ff7500ff; /* naranja para el confirmar */
             padding: 10px 10px;
@@ -91,7 +95,7 @@
             margin: 5px;
         }
 
-            /* estilo del boton cancelar */
+            /* estilo del boton cancelar del modal*/
             button[type="button"]:last-child {
                 background-color: #808080; /*gris para el cancelar*/
                 color: #fff;
@@ -112,94 +116,119 @@
             right: 0; /* Ensure it spans the entire width */
             display: flex;
             justify-content: center;
-            border: 2px solid #ff7500ff;
+            border: 5px groove #ff7500ff;
             background-color: #e9dbdb;
             color: #fff;
-            z-index: 2;
+            z-index: 0;
             cursor: pointer;
-            padding: 10px 0; /* Adjusted padding */
+            padding: 5px 0; /* Adjusted padding */
+            align-items: center;
         }
 
-            /* estilo para los botones superiores */
-            .top-center-buttons button {
-                background-color: #3e2e4f;
-                color: #fff;
-                margin: 5px;
-                padding: 20px 10px;
-                border: 2px solid #ff7500ff;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 16px;
-                margin: 10px;
-            }
+        /*estilo para botones de listados*/
+        .botonListaPersonas, .botonListaDeps {
+            background-color: #3e2e4f;
+            color: #fff;
+            margin: 5px;
+            padding: 10px 10px;
+            border: 5px groove #ff7500ff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 5px;
+            text-align: center;
+            vertical-align: middle;
+            display: flex; /* Use flexbox */
+            flex-direction: row; /* Stack children vertically */
+            justify-content: center; /* Center children vertically */
+            align-items: center; /* Center children horizontally */
+        }
 
         /* estilo para el boton flotante */
         .botonFlotante {
             position: fixed;
             bottom: 50px; /*posicion del boton*/
             right: 50px; /*posicion del boton*/
-            width: 100px;
-            height: 100px;
-            background-color: #3e2e4f;
-            color: #fff;
-            border: 2px solid #ff7500ff;
-            border-radius: 5px;
+            width: 120px;
+            height: 120px;
+            background-color: #e9dbdb; /* White background for the button */
+            border: 5px groove #ff7500ff;
+            border-radius: 45px;
             cursor: pointer;
             font-size: 16px;
         }
 
+            /* estilo para el fondo de la imagen dentro del botón */
+            .botonFlotante img {
+                background-color: #3e2e4f; /* Purple background for the image */
+                border-radius: 45px; /* Optional: add border-radius to match the button */
+            }
+
+        /*tabla*/
         .tablamen {
-            margin-top: 120px; /* Adjust this value as needed */
-            width: 100%;
-            border: 2px solid #ff7500ff; /* Orange border */
+            margin: 160px auto; /* 120 px top auto resto */
+            border: 5px groove #ff7500ff; /* Orange border */
             background-color: #3e2e4f; /* GRIS FONDO */
         }
 
-            /* Style for table headers */
-            .tablamen th {
-                background-color: #3e2e4f; /* Purple background */
-                color: #fff; /* White text */
-                padding: 5px;
-            }
+        /*encabezados */
+        .headers {
+            border: 5px groove #ff7500ff;
+            background-color: #3e2e4f;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            /*centrar esto*/
+        }
 
-            /* Style for table cells (td) */
-            .tablamen td {
-                border: 1px solid #ff7500ff; /* Orange border */
-                padding: 5px;
-                background-color: #3e2e4f;
-            }
+        /*celda */
+        .td-foto {
+            border: 5px groove #ff7500ff;
+            background-color: #e9dbdb;
+            color: #fff;
+            padding: 5px;
+            width: 236px;
+            height: 100px;
+            max-width: 236px;
+            max-height: 100px;
+        }
 
-                /* Style for buttons within table cells */
-                .tablamen td button {
-                    background-color: #ff7500ff; /* Orange */
-                    padding: 5px 5px;
-                    border: 2px solid black;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-                /* Style for buttons within table cells */
-                .tablamen td button {
-                    background-color: #ff7500ff; /* Orange */ 
-                    padding: 5px 5px;
-                    border: 2px solid black;
-                    border-radius: 5px;
-                    cursor:  ;
-                }
+        /*celda/foto*/
+        .foto {
+        }
 
-                .tablamen td img {
-                    max-width: 100%; /* Make sure images don't exceed the cell width */
-                    height: auto; /* Maintain aspect ratio */
-                    display: block; /* Remove default inline behavior */
-                    margin: 0 auto; /* Center the image within the cell */
-                    border: 1px solid black; /* Optional border for images */
-                }
+        /*celda nombre */
+        .td-nombre, .td-apellidos, .td-nombreDep {
+            border: 5px groove #ff7500ff;
+            background-color: #e9dbdb;
+            padding: 5px;
+            width: 180px; /* Set the width explicitly */
+            height: 100px;
+        }
 
-                .tablamen td:not(:empty) {
-                    background-color: #e9dbdb; /* Purple background color */
-                    color: #fff; /* White text color */
-                    padding: 10px; /* Adjust padding as needed */
-                    border: 1px solid #ffA500; /* Orange border */
-                }
+        /*celda accion*/
+        .td-accion {
+            border: 5px groove #ff7500ff;
+            background-color: #e9dbdb;
+            padding: 5px;
+            width: 120px; /* Set the width explicitly */
+            height: 100px;
+        }
+        /*celda accion/boton*/
+        .td-accion-button {
+            width: 120px;
+            height: 120px;
+            border: 5px groove #ff7500ff;
+            background-color: #3e2e4f;
+            cursor: pointer;
+        }
+        /*celda accion/boton/imagen*/
+        .td-accion-button-img {
+            width: 80px;
+            height: 80px; 
+            background-color: #3e2e4f;
+        }
+
     </style>
 
 </head>
@@ -207,30 +236,31 @@
 
     <div class="top-center-buttons">
         <!-- BOTON DE LISTA PERSONAS -->
-        <button id="botonListaPersonas" onclick="CargarPersonasEnTabla()">
-            <img src="Resources/Imagenes/lista_personas.png" alt="Button Image" style="width: 20px; height: 20px; margin-right: 5px;">
+        <button id="botonListaPersonas" onclick="CargarPersonasEnTabla()" class="botonListaPersonas">
+            <img src="Resources/Imagenes/lista_personas.png" alt="Button Image" style="width: 90px; height: 90px; margin-right: 5px; ">
             Lista Personas
         </button>
 
         <!-- BOTON DE LISTA DEPS -->
-        <button id="botonListaDeps" onclick="CargarDepartamentosEnTabla()">
-            <img src="Resources/Imagenes/lista_deps.png" alt="Button Image" style="width: 20px; height: 20px; margin-right: 5px;">
+        <button id="botonListaDeps" onclick="CargarDepartamentosEnTabla()" class="botonListaDeps">
+            <img src="Resources/Imagenes/lista_deps.png" alt="Button Image" style="width: 90px; height: 90px; margin-right: 5px; ">
             Lista Departamentos
         </button>
     </div>
 
     <p id="textoCarga"></p>
 
+    <!-- tabla  que ocontiene lista personas o lista deps segun determine el js al clickar en botones superiores -->
     <table id="miTablaCrud" class="tablamen">
     </table>
 
     <!-- BOTON DE AGREGAR PERSONAS/DEP LE CAMBIO EL ON CLICK EN JS -->
     <button id="botonAgregar" onclick="OpenModalPost()" class="botonFlotante">
-        <img src="Resources/Imagenes/agregar_persona.png" alt="Button Image" style="width: 20px; height: 20px; margin-right: 5px;">
+        <img src="Resources/Imagenes/agregar.png" alt="Button Image" style="width: 90px; height: 90px; background-color: #3e2e4f; ">
     </button>
 
 
-    <!-- DIV PRINCIPAL DE MODAL PUT SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <!-- DIV PRINCIPAL DE MODAL PUT  -->
     <div id="modalPut" class="modal">
 
         <!-- DIV DE VENTANA INTERNA DEL MODAL -->
@@ -271,7 +301,7 @@
 
     </div>
 
-    <!-- DIV PRINCIPAL DE MODAL <P></P>OST SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <!-- DIV PRINCIPAL DE MODAL POST  -->
     <div id="modalPost" class="modal">
 
         <!-- DIV DE VENTANA INTERNA DEL MODAL -->
@@ -310,7 +340,7 @@
 
     </div>
 
-    <!-- DIV PRINCIPAL DE MODAL DELETE SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <!-- DIV PRINCIPAL DE MODAL DELETE  -->
     <div id="modalDelete" class="modal">
 
         <!-- DIV DE VENTANA INTERNA DEL MODAL -->
@@ -354,7 +384,7 @@
     </div>
 
 
-    <!-- DIV PRINCIPAL DE MODAL PUT SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <!-- DIV PRINCIPAL DE MODAL PUTDEP  -->
     <div id="modalPutDep" class="modal">
 
         <!-- DIV DE VENTANA INTERNA DEL MODAL -->
@@ -381,7 +411,7 @@
 
     </div>
 
-    <!-- DIV PRINCIPAL DE MODAL PUT SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <!-- DIV PRINCIPAL DE MODAL POSTDEP  -->
     <div id="modalPostDep" class="modal">
 
         <!-- DIV DE VENTANA INTERNA DEL MODAL -->
@@ -408,7 +438,7 @@
 
     </div>
 
-    <!-- DIV PRINCIPAL DE MODAL PUT SU ONCLICK ME PERMITE CERRARLO AL HACER CLICK FUERA DE EL EN LA VENTA DE "ATRAS" -->
+    <!-- DIV PRINCIPAL DE MODAL DELETEDEP  -->
     <div id="modalDeleteDep" class="modal">
 
         <!-- DIV DE VENTANA INTERNA DEL MODAL -->
