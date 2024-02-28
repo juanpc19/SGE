@@ -1,0 +1,470 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrudAnarquico</title>
+    <script src="js/ScriptCrud.js"></script>
+
+    <style>
+        body {
+            background-color: #3e2e4f   
+        }
+
+        /* estilo del modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 120px;
+        }
+
+        /* estilo del modal con contenido */
+        .modal-content {
+            background-color: #3e2e4f; /* morado */
+            margin: 30px auto; /* Adjust this value for margin in all directions */
+            padding: 10px;
+            border: 5px groove #ff7500ff; /* naranja */
+            width: 25%;
+            text-align: start;
+            color: #fff; /* color del texto blanco*/
+        }
+            /*estilo del los h1 dentro del modal con contenido*/
+            .modal-content h1 {
+                margin: 5px; /*   */
+                text-align: center;
+            }
+            /*estilo del formularios dentro del modal con contenido*/
+            .modal-content form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 5px groove #ff7500ff; /* Orange */
+            }
+            /*estilo del img dentro del modal con contenido*/
+            .modal-content img {
+                display: block;
+                margin: 0 auto;
+                max-width: 50%;
+                height: auto;
+                margin-bottom: 15px;
+                border: 1px solid black;
+            }
+            /*estilo de los labels dentro del modal con contenido*/
+            .modal-content label {
+                margin: 5px; /* Adjust this value as needed */
+            }
+            /*estilo de los inputs dentro del modal con contenido*/
+            .modal-content input {
+                width: 25%;
+                padding: 5px; /* Adjust this value as needed */
+                box-sizing: border-box;
+                margin: 5px; /* Adjust this value as needed */
+            }
+
+        /*estilo de la x de cerrar del modal dentro del modal con contenido*/
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+
+        /* estilo del boton confirmar del modal*/
+        button[type="button"] {
+            background-color: #ff7500ff; /* naranja para el confirmar */
+            padding: 10px 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer; /*cambia imagen cursor en hoover*/
+            font-size: 16px;
+            margin: 5px;
+        }
+
+            /* estilo del boton cancelar del modal*/
+            button[type="button"]:last-child {
+                background-color: #808080; /*gris para el cancelar*/
+                color: #fff;
+                padding: 10px 10px;
+                border: 1px solid black;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                margin: 5px;
+            }
+
+
+        /* estilo del div que contiene los botones superiores */
+        .top-center-buttons {
+            position: fixed;
+            top: 0;
+            left: 0; /* Ensure it starts from the left edge */
+            right: 0; /* Ensure it spans the entire width */
+            display: flex;
+            justify-content: center;
+            border: 5px groove #ff7500ff;
+            background-color: #e9dbdb;
+            color: #fff;
+            z-index: 0;
+            cursor: pointer;
+            padding: 5px 0; /* Adjusted padding */
+            align-items: center;
+        }
+
+        /*estilo para botones de listados*/
+        .botonListaPersonas, .botonListaDeps {
+            background-color: #3e2e4f;
+            color: #fff;
+            margin: 5px;
+            padding: 10px 10px;
+            border: 5px groove #ff7500ff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 5px;
+            text-align: center;
+            vertical-align: middle;
+            display: flex; /* Use flexbox */
+            flex-direction: row; /* Stack children vertically */
+            justify-content: center; /* Center children vertically */
+            align-items: center; /* Center children horizontally */
+        }
+
+        /* estilo para el boton flotante */
+        .botonFlotante {
+            position: fixed;
+            bottom: 50px; /*posicion del boton*/
+            right: 50px; /*posicion del boton*/
+            width: 120px;
+            height: 120px;
+            background-color: #e9dbdb; /* White background for the button */
+            border: 5px groove #ff7500ff;
+            border-radius: 45px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            /* estilo para el fondo de la imagen dentro del botón */
+            .botonFlotante img {
+                background-color: #3e2e4f; /* Purple background for the image */
+                border-radius: 45px; /* Optional: add border-radius to match the button */
+            }
+
+        /*tabla*/
+        .tablamen {
+            margin: 160px auto; /* 120 px top auto resto */
+            border: 5px groove #ff7500ff; /* Orange border */
+            background-color: #3e2e4f; /* GRIS FONDO */
+        }
+
+        /*encabezados */
+        .headers {
+            border: 5px groove #ff7500ff;
+            background-color: #3e2e4f;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            /*centrar esto*/
+        }
+
+        /*celda */
+        .td-foto {
+            border: 5px groove #ff7500ff;
+            background-color: #e9dbdb;
+            color: #fff;
+            padding: 5px;
+            width: 236px;
+            height: 100px;
+            max-width: 236px;
+            max-height: 100px;
+        }
+
+        /*celda/foto*/
+        .foto {
+        }
+
+        /*celda nombre */
+        .td-nombre, .td-apellidos, .td-nombreDep {
+            border: 5px groove #ff7500ff;
+            background-color: #e9dbdb;
+            padding: 5px;
+            width: 180px; /* Set the width explicitly */
+            height: 100px;
+        }
+
+        /*celda accion*/
+        .td-accion {
+            border: 5px groove #ff7500ff;
+            background-color: #e9dbdb;
+            padding: 5px;
+            width: 120px; /* Set the width explicitly */
+            height: 100px;
+        }
+        /*celda accion/boton*/
+        .td-accion-button {
+            width: 120px;
+            height: 120px;
+            border: 5px groove #ff7500ff;
+            background-color: #3e2e4f;
+            cursor: pointer;
+        }
+        /*celda accion/boton/imagen*/
+        .td-accion-button-img {
+            width: 80px;
+            height: 80px; 
+            background-color: #3e2e4f;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="top-center-buttons">
+        <!-- BOTON DE LISTA PERSONAS -->
+        <button id="botonListaPersonas" onclick="CargarPersonasEnTabla()" class="botonListaPersonas">
+            <img src="Resources/Imagenes/lista_personas.png" alt="Button Image" style="width: 90px; height: 90px; margin-right: 5px; ">
+            Lista Personas
+        </button>
+
+        <!-- BOTON DE LISTA DEPS -->
+        <button id="botonListaDeps" onclick="CargarDepartamentosEnTabla()" class="botonListaDeps">
+            <img src="Resources/Imagenes/lista_deps.png" alt="Button Image" style="width: 90px; height: 90px; margin-right: 5px; ">
+            Lista Departamentos
+        </button>
+    </div>
+
+    <p id="textoCarga"></p>
+
+    <!-- tabla  que ocontiene lista personas o lista deps segun determine el js al clickar en botones superiores -->
+    <table id="miTablaCrud" class="tablamen">
+    </table>
+
+    <!-- BOTON DE AGREGAR PERSONAS/DEP LE CAMBIO EL ON CLICK EN JS -->
+    <button id="botonAgregar" onclick="OpenModalPost()" class="botonFlotante">
+        <img src="Resources/Imagenes/agregar.png" alt="Button Image" style="width: 90px; height: 90px; background-color: #3e2e4f; ">
+    </button>
+
+
+    <!-- DIV PRINCIPAL DE MODAL PUT  -->
+    <div id="modalPut" class="modal">
+
+        <!-- DIV DE VENTANA INTERNA DEL MODAL -->
+        <div class="modal-content">
+
+            <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
+            <span class="close" onclick="CloseModalPut()">&times;</span>
+
+            <h1>Editar persona</h1>
+
+            <img id="imagenPut" src="" alt="Image Description">
+
+            <form>
+                <input type="hidden" id="idPut"> <!-- input oculto para id facilita manejo de informacion al hacer el put -->
+                <label for="nombrePut">Nombre:</label>
+                <input type="text" id="nombrePut">
+                <label for="apellidosPut">Apellidos:</label>
+                <input type="text" id="apellidosPut">
+                <label for="telefonoPut">Telefono:</label>
+                <input type="text" id="telefonoPut">
+                <label for="direccionPut">Direccion:</label>
+                <input type="text" id="direccionPut">
+                <label for="fotoPut">Foto:</label>
+                <input type="text" id="fotoPut">
+                <label for="fechaNacPut">Fecha Nacimiento:</label>
+                <input type="date" id="fechaNacPut">
+                <label for="idDepartamentoPut">Id Departamento:</label>
+                <input type="text" id="idDepartamentoPut">
+
+                <div class="div-confirm-cancel">
+                    <!-- botones de confirmar y cancelar -->
+                    <button type="button" onclick="ConfirmPut()">Confirmar</button>
+                    <button type="button" onclick="CloseModalPut()">Cancelar</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- DIV PRINCIPAL DE MODAL POST  -->
+    <div id="modalPost" class="modal">
+
+        <!-- DIV DE VENTANA INTERNA DEL MODAL -->
+        <div class="modal-content">
+
+            <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
+            <span class="close" onclick="CloseModalPost()">&times;</span>
+
+            <h1>Añadir persona</h1>
+
+            <form>
+
+                <label for="nombrePost">Nombre:</label>
+                <input type="text" id="nombrePost">
+                <label for="apellidosPost">Apellidos:</label>
+                <input type="text" id="apellidosPost">
+                <label for="telefonoPost">Telefono:</label>
+                <input type="text" id="telefonoPost">
+                <label for="direccionPost">Direccion:</label>
+                <input type="text" id="direccionPost">
+                <label for="fotoPost">Foto:</label>
+                <input type="text" id="fotoPost">
+                <label for="fechaNacPost">Fecha Nacimiento:</label>
+                <input type="date" id="fechaNacPost">
+                <label for="idDepartamentoPost">Id Departamento:</label>
+                <input type="text" id="idDepartamentoPost">
+
+                <div class="div-confirm-cancel">
+                    <!-- botones de confirmar y cancelar -->
+                    <button type="button" onclick="ConfirmPost()">Confirmar</button>
+                    <button type="button" onclick="CloseModalPost()">Cancelar</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- DIV PRINCIPAL DE MODAL DELETE  -->
+    <div id="modalDelete" class="modal">
+
+        <!-- DIV DE VENTANA INTERNA DEL MODAL -->
+        <div class="modal-content">
+
+            <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
+            <span class="close" onclick="CloseModalDelete()">&times;</span>
+
+            <h1>Eliminar persona</h1>
+
+            <img id="imagenDelete" src="" alt="Image Description">
+
+            <form>
+
+                <input type="hidden" id="idDelete"> <!-- input oculto para id facilita manejo de informacion al hacer el delete -->
+
+                <label for="nombreDelete">Nombre:</label>
+                <label id="nombreDelete"></label>
+                <label for="apellidosDelete">Apellidos:</label>
+                <label id="apellidosDelete"></label>
+                <label for="telefonoDelete">Telefono:</label>
+                <label id="telefonoDelete"></label>
+                <label for="direccionDelete">Direccion:</label>
+                <label id="direccionDelete"></label>
+                <label for="fotoDelete">Foto:</label>
+                <label id="fotoDelete"></label>
+                <label for="fechaNacDelete">Fecha Nacimiento:</label>
+                <label id="fechaNacDelete"></label>
+                <label for="idDepartamentoDelete">Id Departamento:</label>
+                <label id="idDepartamentoDelete"></label>
+
+                <div class="div-confirm-cancel">
+                    <!-- botones de confirmar y cancelar -->
+                    <button type="button" onclick="ConfirmDelete()">Confirmar</button>
+                    <button type="button" onclick="CloseModalDelete()">Cancelar</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+
+    <!-- DIV PRINCIPAL DE MODAL PUTDEP  -->
+    <div id="modalPutDep" class="modal">
+
+        <!-- DIV DE VENTANA INTERNA DEL MODAL -->
+        <div class="modal-content">
+
+            <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
+            <span class="close" onclick="CloseModalPutDep()">&times;</span>
+
+            <h1>Editar departamento</h1>
+
+            <form>
+                <input type="hidden" id="idPutDep"> <!-- input oculto para id facilita manejo de informacion al hacer el put -->
+                <label for="nombrePutDep">Nombre departamento:</label>
+                <input type="text" id="nombrePutDep">
+
+                <div class="div-confirm-cancel">
+                    <!-- botones de confirmar y cancelar -->
+                    <button type="button" onclick="ConfirmPutDep()">Confirmar</button>
+                    <button type="button" onclick="CloseModalPutDep()">Cancelar</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- DIV PRINCIPAL DE MODAL POSTDEP  -->
+    <div id="modalPostDep" class="modal">
+
+        <!-- DIV DE VENTANA INTERNA DEL MODAL -->
+        <div class="modal-content">
+
+            <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
+            <span class="close" onclick="CloseModalPostDep()">&times;</span>
+
+            <h1>Añadir departamento</h1>
+
+            <form>
+
+                <label for="nombrePostDep">Nombre departamento:</label>
+                <input type="text" id="nombrePostDep">
+
+                <div class="div-confirm-cancel">
+                    <!-- botones de confirmar y cancelar -->
+                    <button type="button" onclick="ConfirmPostDep()">Confirmar</button>
+                    <button type="button" onclick="CloseModalPostDep()">Cancelar</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- DIV PRINCIPAL DE MODAL DELETEDEP  -->
+    <div id="modalDeleteDep" class="modal">
+
+        <!-- DIV DE VENTANA INTERNA DEL MODAL -->
+        <div class="modal-content">
+
+            <!-- ESTO ES PARA LA X DE CERRAR ARRIBA A LA DER -->
+            <span class="close" onclick="CloseModalDeleteDep()">&times;</span>
+
+            <h1>Eliminar departamento</h1>
+
+            <form>
+                <input type="hidden" id="idDeleteDep"> <!-- input oculto para id facilita manejo de informacion al hacer el put -->
+
+                <label for="nombreDeleteDep">Nombre departamento:</label>
+                <label id="nombreDeleteDep"></label>
+
+                <div class="div-confirm-cancel">
+                    <!-- botones de confirmar y cancelar -->
+                    <button type="button" onclick="ConfirmDeleteDep()">Confirmar</button>
+                    <button type="button" onclick="CloseModalDeleteDep()">Cancelar</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
+

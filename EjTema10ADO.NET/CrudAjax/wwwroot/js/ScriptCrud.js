@@ -3,10 +3,13 @@
 //http://localhost:5188/api/departamentos
 //http://localhost:5188/api/personas
 
+//https://crudajax.azurewebsites.net/api/personas
+//https://crudajax.azurewebsites.net/api/departamentos
+
 window.onload = InicializaEventos;
 
 //elementos html
- 
+
 var miTabla;
 var miP;
 
@@ -30,7 +33,7 @@ function PeticionDepartamentos() {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
         let arrayDatosDeps;
-        miPeticion.open("GET", "http://localhost:5188/api/departamentos");
+        miPeticion.open("GET", "https://crudajax.azurewebsites.net/api/departamentos");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
                 miP.innerHTML = "Cargando";
@@ -55,7 +58,7 @@ function PeticionPersonas() {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
         let arrayDatosPersonas;
-        miPeticion.open("GET", "http://localhost:5188/api/personas");
+        miPeticion.open("GET", "https://crudajax.azurewebsites.net/api/personas");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
                 miP.innerHTML = "Cargando";
@@ -79,7 +82,7 @@ function PeticionModificarPersona(personaModificable) {
     return new Promise((resolve, reject) => {
 
         let miPeticion = new XMLHttpRequest();
-        miPeticion.open("PUT", "http://localhost:5188/api/personas/" + personaModificable.id);
+        miPeticion.open("PUT", "https://crudajax.azurewebsites.net/api/personas" + "/" + personaModificable.id);
         miPeticion.setRequestHeader("Content-Type", "application/json");//especifico el tipo de contenido que voy a enviar, necesario porque es un put
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
@@ -87,10 +90,10 @@ function PeticionModificarPersona(personaModificable) {
             } else if (miPeticion.readyState == 4) {
                 miP.innerHTML = "";
                 if (miPeticion.status == 200) {
-                    alert("Departamento modificada correctamente");
+                    alert("Persona modificada correctamente");
                     resolve();
                 } else {
-                    alert("Error al modificar departamento", miPeticion.status);
+                    alert("Error al modificar persona", miPeticion.status);
                     reject();
                 }
             }
@@ -104,7 +107,7 @@ function PeticionModificarDepartamento(depModificable) {
     return new Promise((resolve, reject) => {
 
         let miPeticion = new XMLHttpRequest();
-        miPeticion.open("PUT", "http://localhost:5188/api/departamentos" + depModificable.id);
+        miPeticion.open("PUT", "https://crudajax.azurewebsites.net/api/departamentos" + "/" + depModificable.id);
         miPeticion.setRequestHeader("Content-Type", "application/json");//especifico el tipo de contenido que voy a enviar, necesario porque es un put
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
@@ -128,7 +131,7 @@ function PeticionModificarDepartamento(depModificable) {
 function PeticionPostPersona(persona) {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
-        miPeticion.open("POST", "http://localhost:5188/api/personas");
+        miPeticion.open("POST", "https://crudajax.azurewebsites.net/api/personas");
         miPeticion.setRequestHeader("Content-Type", "application/json");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
@@ -152,7 +155,7 @@ function PeticionPostPersona(persona) {
 function PeticionPostDepartamento(departamento) {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
-        miPeticion.open("POST", "http://localhost:5188/api/departamentos");
+        miPeticion.open("POST", "https://crudajax.azurewebsites.net/api/departamentos");
         miPeticion.setRequestHeader("Content-Type", "application/json");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
@@ -176,7 +179,7 @@ function PeticionPostDepartamento(departamento) {
 function PeticionDeletePersona(idPersonaBorrar) {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
-        miPeticion.open("DELETE", "http://localhost:5188/api/personas/" + idPersonaBorrar);
+        miPeticion.open("DELETE", "https://crudajax.azurewebsites.net/api/personas" + "/" + idPersonaBorrar);
         miPeticion.setRequestHeader("Content-Type", "application/json");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
@@ -200,7 +203,7 @@ function PeticionDeletePersona(idPersonaBorrar) {
 function PeticionDeleteDepartamento(idDepartamentoBorrar) {
     return new Promise((resolve, reject) => {
         let miPeticion = new XMLHttpRequest();
-        miPeticion.open("DELETE", "http://localhost:5188/api/departamentos/" + idDepartamentoBorrar);
+        miPeticion.open("DELETE", "https://crudajax.azurewebsites.net/api/departamentos" + "/" + idDepartamentoBorrar);
         miPeticion.setRequestHeader("Content-Type", "application/json");
         miPeticion.onreadystatechange = function () {
             if (miPeticion.readyState < 4) {
@@ -247,25 +250,25 @@ function CargarPersonasEnTabla() {
         cellIdOculto.textContent = persona.id; //le doy el id
 
         let cellFoto = row.insertCell(1);//guardo referencia de celda en variable para modificacion posterior
-        cellFoto.classList.add("td-foto");  
+        cellFoto.classList.add("td-foto");
         let foto = document.createElement("img");
         foto.classList.add("foto");
-        foto.src = persona.foto; 
+        foto.src = persona.foto;
         cellFoto.appendChild(foto);//le agrego la foto a la celda
 
         let cellNombre = row.insertCell(2);
         cellNombre.classList.add("td-nombre");
-        cellNombre.textContent = persona.nombre; 
+        cellNombre.textContent = persona.nombre;
 
         let cellApellidos = row.insertCell(3);
         cellApellidos.classList.add("td-apellidos");
-        cellApellidos.textContent = persona.apellidos; 
+        cellApellidos.textContent = persona.apellidos;
 
         let nombreDep = DepByPersonaId(persona.idDepartamento)//USO METODO PARA ASINGAR NOMBRE DE DEPARTAMENTO A FILA DE TABLA LISTA PERSONAS
 
         let cellNombreDep = row.insertCell(4);
         cellNombreDep.classList.add("td-nombreDep");
-        cellNombreDep.textContent = nombreDep; 
+        cellNombreDep.textContent = nombreDep;
 
         let cellModificar = row.insertCell(5);//creo y localizo en variables la celda, el boton y la imagen
         cellModificar.classList.add("td-accion");
@@ -291,7 +294,7 @@ function CargarPersonasEnTabla() {
         let imgBotonDelete = document.createElement("img");
         imgBotonDelete.classList.add("td-accion-button-img");
 
-        imgBotonDelete.src = "Resources/Imagenes/borrar_persona.png"; 
+        imgBotonDelete.src = "Resources/Imagenes/borrar_persona.png";
 
         btnDelete.appendChild(imgBotonDelete);
         btnDelete.addEventListener("click", function (event) {
@@ -477,7 +480,7 @@ async function ConfirmPut() {
 
     CargarPersonasEnTabla();//recargo listado de personas en tabla
 }
- 
+
 //abre el modal de post al hacer click en agregar
 function OpenModalPost() {
     document.getElementById("modalPost").style.display = "block";
@@ -566,7 +569,7 @@ function CargaPantallaPutDep(idDep) {
 
     document.getElementById("idPutDep").value = departamento.id;//cargo sus datos
     document.getElementById("nombrePutDep").value = departamento.nombreDep;
- 
+
     OpenModalPutDep();//una vez los datos estan cargados en el modal lo abro
 }
 
@@ -586,7 +589,7 @@ async function ConfirmPutDep() {
 
     departamento.id = document.getElementById("idPutDep").value;// le doy valores exatraidos de modal
     departamento.nombreDep = document.getElementById("nombrePutDep").value;
- 
+
 
     await PeticionModificarDepartamento(departamento);//hago peticion put y la espero
 
@@ -644,8 +647,8 @@ function CloseModalDeleteDep() {
 
 //hace peticion delete, peticion lista personas, cierra el modal y recarga la tabla
 async function ConfirmDeleteDep() {
-     
-  
+
+
     let idDepartamentoBorrar = document.getElementById("idDeleteDep").value;
 
     await PeticionDeleteDepartamento(idDepartamentoBorrar);//hago peticion put y la espero

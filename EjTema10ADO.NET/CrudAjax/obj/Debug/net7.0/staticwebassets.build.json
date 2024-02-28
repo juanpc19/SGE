@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/IRR8yIdBsJLvEVbkUWGiSB/Ag5YN87VoPrClWb1kL4=",
+  "Hash": "652uapkQc/3/uIEklZ4UfX/M09dPMHNbgqHFAw7HdrA=",
   "Source": "CrudAjax",
   "BasePath": "_content/CrudAjax",
   "Mode": "Default",
@@ -1105,12 +1105,12 @@
       "OriginalItemSpec": "wwwroot\\PaginaCrud.html"
     },
     {
-      "Identity": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\agregar_persona.png",
+      "Identity": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\agregar.png",
       "SourceId": "CrudAjax",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\",
       "BasePath": "_content/CrudAjax",
-      "RelativePath": "Resources/Imagenes/agregar_persona.png",
+      "RelativePath": "Resources/Imagenes/agregar.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1119,7 +1119,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Resources\\Imagenes\\agregar_persona.png"
+      "OriginalItemSpec": "wwwroot\\Resources\\Imagenes\\agregar.png"
     },
     {
       "Identity": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\borrar_persona.png",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Resources\\Imagenes\\borrar_persona.png"
+    },
+    {
+      "Identity": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\borrar_persona2.png",
+      "SourceId": "CrudAjax",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\",
+      "BasePath": "_content/CrudAjax",
+      "RelativePath": "Resources/Imagenes/borrar_persona2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Resources\\Imagenes\\borrar_persona2.png"
     },
     {
       "Identity": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\lista_deps.png",
@@ -1188,6 +1205,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Resources\\Imagenes\\modificar_persona.png"
+    },
+    {
+      "Identity": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\Resources\\Imagenes\\modificar_persona2.png",
+      "SourceId": "CrudAjax",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\wwwroot\\",
+      "BasePath": "_content/CrudAjax",
+      "RelativePath": "Resources/Imagenes/modificar_persona2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Resources\\Imagenes\\modificar_persona2.png"
     }
   ]
 }
