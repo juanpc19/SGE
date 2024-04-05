@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pjww+4fkfnv6lxwz/TEFuKNax0aWR+EMUASHoQxlUUNqcjmS1ivtc+x6K7xtrsuxIYNutdtJQIoTnI7bSzXdSw==",
+  "dgSpecHash": "IOWePpx/FnCMX71nb9kaswL1EIt988Es9YjCrnqEc6J+LUcG0QUyWI0dVqQmmZdPW15YW9v4JnMW+BmPTh5hUA==",
   "success": true,
-  "projectFilePath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
+  "projectFilePath": "D:\\CosasFormateo\\CosasGrado2\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

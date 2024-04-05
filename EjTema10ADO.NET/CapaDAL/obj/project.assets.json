@@ -4604,11 +4604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
+      "projectUniqueName": "D:\\CosasFormateo\\CosasGrado2\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
       "projectName": "CapaDAL",
-      "projectPath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
+      "projectPath": "D:\\CosasFormateo\\CosasGrado2\\SGE\\EjTema10ADO.NET\\CapaDAL\\CapaDAL.csproj",
       "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-      "outputPath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaDAL\\obj\\",
+      "outputPath": "D:\\CosasFormateo\\CosasGrado2\\SGE\\EjTema10ADO.NET\\CapaDAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4630,8 +4630,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
-              "projectPath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
+            "D:\\CosasFormateo\\CosasGrado2\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj": {
+              "projectPath": "D:\\CosasFormateo\\CosasGrado2\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj"
             }
           }
         }

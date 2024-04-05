@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lVaAlV/wp07f/fO9N//ylJ6cHa8+exG4NLjJsDQpF0LjBsOwfBS6U22l7DtZs298cFY+j2/geu19CYK6sbLpGA==",
+  "dgSpecHash": "cp27yle411VWKdyY5zmicjNjH8wbox/dV1MmICCBj3a8rrY2LAVMTGeV8Y4SPuDvYtf9Sqiwd+TIfWoAS3aGsA==",
   "success": true,
-  "projectFilePath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CrudAjax\\CrudAjax.csproj",
+  "projectFilePath": "D:\\CosasFormateo\\CosasGrado2\\SGE\\EjTema10ADO.NET\\CrudAjax\\CrudAjax.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NdIh4IZRdms3f9nf4QKSCpgmlngrmXaW1UDFmZHtTvWVLKq/XJO2rBsyo4rO8LHl2numAIYA68ru6M/QcPSKtw==",
+  "dgSpecHash": "o89zCdYV5Lr4ws7+uKEhx8/kmAUXH3TeLUc1a2ZZ5CesX//CiyNWpD62UXzHUujSZEZ+nVk9oOLtXtNhyp1Q2w==",
   "success": true,
-  "projectFilePath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
+  "projectFilePath": "D:\\CosasFormateo\\CosasGrado2\\SGE\\EjTema10ADO.NET\\EjTema10ADO.NET\\EjTema10ADO.NET.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9aET/qYiFDL3utxeN/kHVc9wsxM95oVOc4V7pNMsM5ow6Q7WEc0jb2c8/KdeFOJByQkX2ZcFX+jWLBwpeP8qfQ==",
+  "dgSpecHash": "2LMDjHzP2SX8YZVhR3PgTY88S37rbWW9kzFajpzfP6QNwe09sUJzBsBR6Dk3+dIXUHja96ykCQVdzWOyk092+w==",
   "success": true,
-  "projectFilePath": "D:\\cosas formateo\\Cosas grado 2\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
+  "projectFilePath": "D:\\CosasFormateo\\CosasGrado2\\SGE\\EjTema10ADO.NET\\CapaEntidades\\CapaEntidades.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
